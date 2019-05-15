@@ -23,7 +23,12 @@
       <th>Student ID</th>
       <th>First Name</th>
       <th>Last Name</th>
-      <th>Last Name</th>
+      <th>D.O.B</th>
+      <th>1st Line Address</th>
+      <th>Town</th>
+      <th>County</th>
+      <th>Country</th>
+      <th>Post Code</th>
 
       </tr>";
 
@@ -32,9 +37,14 @@
       while($row = mysqli_fetch_array($result)) {
          $data['content'] .= "<tr>
          <td> $row[studentid] </td>
-         <td> $row[dob] </td>
          <td> $row[firstname] </td>
          <td> $row[lastname] </td>
+         <td> $row[dob] </td>
+         <td> $row[house] </td>
+         <td> $row[town] </td>
+         <td> $row[county] </td>
+         <td> $row[counrty] </td>
+         <td> $row[postcode] </td>
          </tr>";
 
       }
