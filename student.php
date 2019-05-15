@@ -12,7 +12,7 @@
       echo template("templates/partials/nav.php");
 
       // Build SQL statment that selects a student's modules
-      $sql = "select * from studentmodules sm, module m where m.modulecode = sm.modulecode and sm.studentid = '" . $_SESSION['id'] ."';";
+      $sql = "select * from student sm, module m where m.modulecode = sm.modulecode and sm.studentid = '" . $_SESSION['id'] ."';";
 
       $result = mysqli_query($conn,$sql);
 
@@ -30,7 +30,12 @@
 
       // Display the modules within the html table
       while($row = mysqli_fetch_array($result)) {
-         $data['content'] .= "<tr><td> $row[studentid] </td><td> $row[dob] </td><td> $row[firstname] </td><td> $row[lastname] </td></tr>";
+         $data['content'] .= "<tr>
+         <td> $row[studentid] </td>
+         <td> $row[dob] </td>
+         <td> $row[firstname] </td>
+         <td> $row[lastname] </td>
+         </tr>";
 
       }
       $data['content'] .= "</table>";
