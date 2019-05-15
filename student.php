@@ -1,60 +1,50 @@
 <?php
-include("_includes/config.inc");
-include("_includes/dbconnect.inc");
-include("_includes/functions.inc");
 
-?>
+   include("_includes/config.inc");
+   include("_includes/dbconnect.inc");
+   include("_includes/functions.inc");
 
 
-<html>
-<head> Student Record </head>
-<body style="padding-top: 100px;" >
-<div class= "container">
+   // check logged in
+   if (isset($_SESSION['id'])) {
 
-  <?php
+      echo template("templates/partials/header.php");
+      echo template("templates/partials/nav.php");
 
- if(isset($_POST ['submitDeleteBtn']))
- {
-   $key= $_POST['btndelete'];
-   $result=mysqli_query($link,"SELECT * from student where id='$key'");
-   if (mysqli_num_rows($result)>0)
-   {
-     $queryDelete=mysqli_query($link,"DELETE * from test where id = '$key'");
+      // Build SQL statment that selects a student's modules
+        $sql = "select * from student sm, module m where m.module = sm.module and sm.studentid = '" . $_SESSION['id'] ."';";
+
+      $result = mysqli_query($conn,$sql);
+
+      // prepare page content
+      $data['content'] .= "<table border='1'>";
+      $data['content'] .= "<tr><th colspan='5' align='center'>Student Record</th></tr>";
+      $data['content'] .= "<tr>
+      <th>Student ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Last Name</th>
+      <th>Last Name</th>
+      <th>Last Name</th>
+      <th>Last Name</th>
+      <th>Last Name</th>
+      <th>Last Name</th>
+      </tr>";
+
+      // Display the modules within the html table
+      while($row = mysqli_fetch_array($result)) {
+         $data['content'] .= "<tr><td> $row[studentid] </td><td> $row[dob] </td><td> $row[firstname] </td><td> $row[lastname] </td>";
+         $data['content'] .= "<td> $row[house] </td> <td> $row[town] </td><td> $row[county] </td><td> $row[country] </td><td> $row[postcode] </td></tr>";
+      }
+      $data['content'] .= "</table>";
+
+      // render the template
+      echo template("templates/default.php", $data);
+
+   } else {
+      header("Location: index.php");
    }
- }
-   ?>
 
-  <table class='table' table border= "5px">
-  <tr>
-  <th> Student ID </th>
-    <th> First Name</th>
-      <th> Last Name </th>
-        <th> D.O.B </th>
-          <th> 1st Line Address</th>
-           <th> Town</th>
-            <th> County</th>
-             <th> Country</th>
-              <th>Post Code</th>
-  </tr>
+   echo template("templates/partials/footer.php");
 
-  <?php
-$sr=1;
-while($row= mysqli_fetch_array($fetchQuery))
-{
-  ?>
-  <tr>
-    <form action="" method= "post" role = "form">
-  <td><?php echo $sr ;?> </td>
-  <td><?php echo $row['name'] ;?> </td>
-    <td><?php echo $row['email'] ;?> </td>
-      <td><?php echo $row['phone_Number'] ;?> </td>
-        <td> <input type= "checkbox" name= "btndelete" value=<?php echo $row['ID'] ;?> required></td>
-        <td> <input type= "submit" name="submitDeleteBtn" class-= "btn btn-info">  </td>
-     </form>
-</tr>
-<?php $sr ++ ;}
 ?>
-    </table>
-</div>
-</body>
-</html>
