@@ -24,13 +24,13 @@
       <th>First Name</th>
       <th>Last Name</th>
       <th>Last Name</th>
-      
+
       </tr>";
 
 
       // Display the modules within the html table
       while($row = mysqli_fetch_array($result)) {
-         $data['content'] .= "<tr><td> $row[studentid] </td><td> $row[dob] </td><td> $row[firstname] </td><td> $row[lastname] </td>";
+         $data['content'] .= "<tr><td> $row[studentid] </td><td> $row[dob] </td><td> $row[firstname] </td><td> $row[lastname] </td></tr>";
 
       }
       $data['content'] .= "</table>";
