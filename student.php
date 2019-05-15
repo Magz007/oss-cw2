@@ -34,7 +34,8 @@
 
 
       // Display the modules within the html table
-      while($row = mysqli_fetch_array($result)) {
+      while($row = mysqli_fetch_array($result))
+       {
          $data['content'] .= "<tr>
          <td> $row[studentid] </td>
          <td> $row[firstname] </td>
@@ -45,6 +46,8 @@
          <td> $row[county] </td>
          <td> $row[country] </td>
          <td> $row[postcode] </td>
+         <td> <input type= "checkbox" name= "btndelete"  $row['Select'] ; required></td>
+         <td> <input type= "submit" name="submitDeleteBtn" class-= "btn btn-info">  </td>
          </tr>";
 
       }
