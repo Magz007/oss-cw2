@@ -30,6 +30,7 @@
       <th>Country</th>
       <th>Post Code</th>
 
+
       </tr>";
 
 
@@ -46,9 +47,14 @@
          <td> $row[county] </td>
          <td> $row[country] </td>
          <td> $row[postcode] </td>
-         <td> <input type= "checkbox" name= "btndelete"  $row['Select'] ; required></td>
-         
+
          </tr>";
+         $date['content'] = <tr>
+        <td> <input type= "checkbox" name= "btndelete" value= $row['Select'] ; required></td>
+        <td> <input type= "submit" name="submitDeleteBtn" class-= "btn btn-info">  </td>
+        </tr>
+
+
 
       }
       $data['content'] .= "</table>";
