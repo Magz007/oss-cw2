@@ -47,7 +47,7 @@
          <td> $row[country] </td>
          <td> $row[postcode] </td>
          <td> <input type= "checkbox" name= "btndelete"  $row['Select'] ; required></td>
-         <td> <input type= "submit" name="submitDeleteBtn" class-= "btn btn-info">  </td>
+         
          </tr>";
 
       }
