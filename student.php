@@ -49,6 +49,7 @@
          <td> $row[county] </td>
          <td> $row[country] </td>
          <td> $row[postcode] </td>
+         <td> $row [checkbox]</td>
           </tr>";
       }
 
