@@ -48,7 +48,7 @@
           <th>Select</th>
           </tr>";
 
-      
+
 <?php> $sr=1;
      while($row = mysqli_fetch_array($result))
 {?>
@@ -71,7 +71,10 @@
      </form>
 </tr>;
 
-}
+
+<?php $sr ++ ;}
+?>
+
 <?php
 
       $data['content'] .= "</table>";
