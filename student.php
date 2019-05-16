@@ -15,25 +15,40 @@
       $sql = "select * from student  where studentid =  '" . $_SESSION['id'] ."';";
 
       $result = mysqli_query($conn,$sql);
+      ?>
 
-      // prepare page content
-      $data['content'] .= "<table border='1'>";
-      $data['content'] .= "<tr><th colspan='5' align='center'>Student Records</th></tr>";
-      $data['content'] .= "<tr>
-      <th>Student ID</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>D.O.B</th>
-      <th>1st Line Address</th>
-      <th>Town</th>
-      <th>County</th>
-      <th>Country</th>
-      <th>Post Code</th>
-      <th>Select</th>
-      </tr>";
 
-?>
+      <html>
+      <head> Student Record</head>
+      <body style="padding-top: 100px;" >
+      <div class= "container">
+        <?php
+       if(isset($_POST ['submitDeleteBtn']))
+       {
+         $key= $_POST['btndelete'];
+         $result=mysqli_query($link,"SELECT * from student where id='$key'");
+         if (mysqli_num_rows($result)>0)
+         {
+           $queryDelete=mysqli_query($link,"DELETE * from student where id = '$key'");
+         }
+       }
+         ?>
 
+        <table class='table' table border= "5px">
+        <tr>
+          <th>Student ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>D.O.B</th>
+          <th>1st Line Address</th>
+          <th>Town</th>
+          <th>County</th>
+          <th>Country</th>
+          <th>Post Code</th>
+          <th>Select</th>
+          </tr>";
+
+      
 <?php> $sr=1;
      while($row = mysqli_fetch_array($result))
 {?>
@@ -52,7 +67,7 @@
              <td><?php echo $row['postcode'] ;?> </td>
 
         <td> <input type= "checkbox" name= "btndelete" value=<?php echo $row['checkbox'] ;?> required></td>
-        <td> <input type= "submit" name="submitDeleteBtn" class-= "btn btn-info">  </td>
+        <td> <input type= "Delete Record" name="submitDeleteBtn" class-= "btn btn-info">  </td>
      </form>
 </tr>;
 
