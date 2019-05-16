@@ -30,15 +30,13 @@
       <th>Country</th>
       <th>Post Code</th>
       <th>Select</th>
-
-
       </tr>";
 
 
       // Display the modules within the html table
-       $sr=1;
-      while($row = mysqli_fetch_array($result))
-       {
+
+     while($row = mysqli_fetch_array($result))
+        <tr> <td> <input type= "checkbox" name= "btndelete" value=<?php echo $row['checkbox'] ;?> required></td></tr>
 
          $data['content'] .= "<tr>
          <td> $row[studentid] </td>
@@ -50,15 +48,10 @@
          <td> $row[county] </td>
          <td> $row[country] </td>
          <td> $row[postcode] </td>
-         <td> <input type= "checkbox" name= "btndelete" value= $row[checkbox] > required></td>
-
-         </tr>";
-
-
-
-
-
+          </tr>";
       }
+
+
       $data['content'] .= "</table>";
 
       // render the template
