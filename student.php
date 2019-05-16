@@ -36,8 +36,8 @@
 
 
      while($row = mysqli_fetch_array($result))
+{
 
-      
 
          $data['content'] .= "<tr>
          <td> $row[studentid] </td>
@@ -58,7 +58,7 @@
       // render the template
       echo template("templates/default.php", $data);
 
-   } else {
+    else {
       header("Location: index.php");
    }
 
