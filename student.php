@@ -50,9 +50,10 @@
          <td> $row[county] </td>
          <td> $row[country] </td>
          <td> $row[postcode] </td>
+         <td> <input type= "checkbox" name= "btndelete" value= $row['checkbox'] > required></td>
 
          </tr>";
-        
+
 
 
 
