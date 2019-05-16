@@ -33,11 +33,11 @@
       </tr>";
 
 
-      // Display the modules within the html table
+
 
      while($row = mysqli_fetch_array($result))
 
-      $data ['content'].= " <tr> <td> <input type= "checkbox" value=  $row[checkbox] ; required></td></tr>";
+      
 
          $data['content'] .= "<tr>
          <td> $row[studentid] </td>
