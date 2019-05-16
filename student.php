@@ -37,7 +37,7 @@
 
      while($row = mysqli_fetch_array($result))
 
-      $data ['content'].=  <tr> <td> <input type= "checkbox" name= "btndelete" value= echo $row['checkbox'] ; required></td></tr>
+      $data ['content'].=  <tr> <td> <input type= "checkbox" value=  $row['checkbox'] ; required></td></tr>
 
          $data['content'] .= "<tr>
          <td> $row[studentid] </td>
