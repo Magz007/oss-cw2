@@ -52,13 +52,13 @@
          <td> $row[postcode] </td>
 
          </tr>";
-          $data['content']= " <tr>  <form action="" method= "post" role = "form">
+          $data['content']= " <tr> 
           <td> <input type= "checkbox" name= "btndelete" value= $row['Select'] ; required></td>
           <td> <input type= "submit" name="submitDeleteBtn" class-= "btn btn-info">  </td>
 
 
           </tr>"
-         
+
 
 
 
