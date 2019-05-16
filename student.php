@@ -32,27 +32,32 @@
       <th>Select</th>
       </tr>";
 
+?>
 
-
-
+<?php> $sr=1;
      while($row = mysqli_fetch_array($result))
-{
+{?>
 
+  <tr>
+    <form action="" method= "post" role = "form">
+  <td><?php echo $sr ;?> </td>
+  <td><?php echo $row['studentid'] ;?> </td>
+    <td><?php echo $row['firstname'] ;?> </td>
+      <td><?php echo $row['lastname'] ;?> </td>
+       <td><?php echo $row['dob'] ;?> </td>
+        <td><?php echo $row['house'] ;?> </td>
+          <td><?php echo $row['town'] ;?> </td>
+           <td><?php echo $row['county'] ;?> </td>
+           <td><?php echo $row['country'] ;?> </td>
+             <td><?php echo $row['postcode'] ;?> </td>
 
-         $data['content'] .= "<tr>
-         <td> $row[studentid] </td>
-         <td> $row[firstname] </td>
-         <td> $row[lastname] </td>
-         <td> $row[dob] </td>
-         <td> $row[house] </td>
-         <td> $row[town] </td>
-         <td> $row[county] </td>
-         <td> $row[country] </td>
-         <td> $row[postcode] </td>
-         <td> $row [checkbox]</td>
-          </tr>";
-      }
+        <td> <input type= "checkbox" name= "btndelete" value=<?php echo $row['checkbox'] ;?> required></td>
+        <td> <input type= "submit" name="submitDeleteBtn" class-= "btn btn-info">  </td>
+     </form>
+</tr>;
 
+}
+<?php>
 
       $data['content'] .= "</table>";
 
