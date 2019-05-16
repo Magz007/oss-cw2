@@ -57,7 +57,7 @@
 </tr>;
 
 }
-<?php>
+<?php
 
       $data['content'] .= "</table>";
 
