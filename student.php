@@ -57,26 +57,46 @@
                    <td><?php echo $row['country'] ;?> </td>
                     <td><?php echo $row['postcode'] ;?> </td>
                      <td> <input type= "checkbox" name= "records[]" value=<?php echo $row['studentid'] ;?> required></td>
-                      <td> <input type= "submit" name="btndelete" value="Delete" class-= "btn btn-info"> </td>
-     </form>
+                      <td> <button type= "button" name="btndelete" value="Delete" class-= "btn btn-info"> </td>
+  </form>
      </tr>
 
 
     <?php $sr ++ ;}?>
+
+
     <?php
+    // Codes the delete button
     if (isset($_POST['btndelete']))
     {
-      $numcheckbox= count($_POST['records']);
+      $Key= $_POST['records[]']
 
       $i=0;
-      while ($i<$numcheckbox)
+      while ($i<$Key)
       {
         $keyToDelete=$_POST['records'][$i];
-        $sql = "delete * from student  where studentid =  '" $keyToDelete"';";
+        $sql = "Delete * from student  where studentid =  '" $Key"';";
         $i++;
       }
 
     }
+
+
+    /*if(isset($_POST ['submitDeleteBtn']))
+     {
+       $key= $_POST['btndelete'];
+       $result=mysqli_query($link,"SELECT * from test where id='$key'");
+       if (mysqli_num_rows($result)>0)
+       {
+         $queryDelete=mysqli_query($link,"DELETE * from test where id = '$key'");
+       }
+     }
+*/
+
+
+
+
+
 
     ?>
 
