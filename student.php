@@ -44,10 +44,11 @@
     <form action="" method= "post" role = "form">
           <td><?php echo $sr ;?> </td>
     </tr>
-      
 
-      <?php
- $sr ++ }?>
+
+    <?php $sr ++ ;}
+?>
+
  <?php
 
       $data['content'] .= "</table>";
