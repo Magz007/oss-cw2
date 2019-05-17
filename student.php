@@ -16,24 +16,30 @@
     $sql = "select * from student  where studentid =  '" . $_SESSION['id'] ."';";
 
       $result = mysqli_query($conn,$sql);
-
-      // prepare page content
-      $data['content'] .= "<table border='1'>";
-      $data['content'] .= "<tr><th colspan='5' align='center'>Student Records</th></tr>";
-      $data['content'] .= "<tr>
-          <th> select </th>
-          <th>Student ID</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>D.O.B</th>
-          <th>1st Line Address</th>
-          <th>Town</th>
-          <th>County</th>
-          <th>Country</th>
-          <th>Post Code</th>
-
-          </tr>";
 ?>
+<html>
+<head> Delete Record </head>
+<body style="padding-top: 100px;" >
+<div class= "container">
+
+  <table class='table' table border= "5px">
+    <tr>
+      <th> Select </th>
+       <th>Student ID</th>
+        <th>First Name</th>
+         <th>Last Name</th>
+          <th>D.O.B</th>
+           <th>1st Line Address</th>
+            <th>Town</th>
+             <th>County</th>
+              <th>Country</th>
+               <th>Post Code</th>
+
+     </tr>";
+
+
+
+
 <?php
       // Display the students  within the html table
     $sr=1;
@@ -76,3 +82,7 @@
    echo template("templates/partials/footer.php");
 
 ?>
+</table>
+</div>
+</body>
+</html>
