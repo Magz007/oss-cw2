@@ -84,8 +84,8 @@
       // render the template
       echo template("templates/default.php", $data);
 
-
-  else
+}
+  if
  {
       header("Location: index.php");
   }
@@ -93,7 +93,7 @@
    echo template("templates/partials/footer.php");
 
 ?>
-}
+
 </table>
 </div>
 </body>
