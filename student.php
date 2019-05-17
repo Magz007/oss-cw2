@@ -55,7 +55,7 @@
       ?>
       <?php
  $sr ++ ?>
- <?php>
+ <?php
 
       $data['content'] .= "</table>";
 
