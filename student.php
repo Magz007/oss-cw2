@@ -74,7 +74,7 @@
       $i=0;
       while ($i<$Key)
       {
-        $keyToDelete=$_POST['records'][$i];
+        $keyToDelete=$_POST['records[]'][$i];
         $sql = "Delete * from student  where studentid =  '" . $_SESSION['$keyToDelete'] ."';";
         $i++;
       }
