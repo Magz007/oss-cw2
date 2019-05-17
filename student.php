@@ -37,7 +37,8 @@
       while($row = mysqli_fetch_array($result))
        {
          $data['content'] .= "<tr>
-         <td> $row[studentid] </td>
+
+         <td> $row[studentid]  </td>
          <td> $row[firstname] </td>
          <td> $row[lastname] </td>
          <td> $row[dob] </td>
@@ -45,10 +46,12 @@
          <td> $row[town] </td>
          <td> $row[county] </td>
          <td> $row[country] </td>";
+
          $data['content'] .= "<td> $row[postcode] </td></tr>";
+
       }
 
-      
+
       $data['content'] .= "</table>";
 
       // render the template
