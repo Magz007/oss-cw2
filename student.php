@@ -57,7 +57,7 @@
                    <td><?php echo $row['country'] ;?> </td>
                     <td><?php echo $row['postcode'] ;?> </td>
                      <td> <input type= "checkbox" name= "btndelete" value=<?php echo $row['studentid'] ;?> required></td>
-                      <td> <button type= "Delete" name="btndelete" class-= "btn btn-info">  </td>
+                      <td> <button type= "Submit" name="btndelete" class-= "btn btn-info">  </td>
      </form>
 
     </tr>
