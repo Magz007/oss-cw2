@@ -21,6 +21,7 @@
       $data['content'] .= "<table border='1'>";
       $data['content'] .= "<tr><th colspan='5' align='center'>Student Records</th></tr>";
       $data['content'] .= "<tr>
+          <th> select </th>
           <th>Student ID</th>
           <th>First Name</th>
           <th>Last Name</th>
@@ -43,6 +44,16 @@
     <tr>
     <form action="" method= "post" role = "form">
           <td><?php echo $sr ;?> </td>
+            <td><?php echo $row['studentid'] ;?> </td>
+             <td><?php echo $row['firstname'] ;?> </td>
+              <td><?php echo $row['lastname'] ;?> </td>
+               <td><?php echo $row['dob'] ;?> </td>
+                <td><?php echo $row['house'] ;?> </td>
+                 <td><?php echo $row['town'] ;?> </td>
+                  <td><?php echo $row['county'] ;?> </td>
+                   <td><?php echo $row['country'] ;?> </td>
+                    <td><?php echo $row['postcode'] ;?> </td>
+
     </tr>
 
 
