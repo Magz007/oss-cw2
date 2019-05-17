@@ -12,7 +12,7 @@
       echo template("templates/partials/nav.php");
 
       // Build SQL statment that selects a student's modules
-      $sql = "select * from studentmodules sm, module m where m.modulecode = sm.modulecode and sm.studentid = '" . $_SESSION['id'] ."';";
+    $sql = "select * from student  where studentid =  '" . $_SESSION['id'] ."';";
 
       $result = mysqli_query($conn,$sql);
 
