@@ -18,7 +18,7 @@
       $result = mysqli_query($conn,$sql);
 ?>
 <html>
-<head> Delete Record </head>
+<head> Student Records </head>
 <body style="padding-top: 100px;" >
 <div class= "container">
 
@@ -35,7 +35,7 @@
               <th>Country</th>
                <th>Post Code</th>
 
-     </tr>";
+     </tr>
 
 
 
