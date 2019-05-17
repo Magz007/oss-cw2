@@ -49,9 +49,9 @@
          <td> $row[country] </td>";
 
          $data['content'] .= "<td> $row[postcode] </td></tr>";
-       $sr ++
-      }
 
+      }
+ $sr ++
 
       $data['content'] .= "</table>";
 
