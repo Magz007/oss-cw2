@@ -6,12 +6,13 @@
 
 
    // check logged in
-   if (isset($_SESSION['id'])) {
+   if (isset($_SESSION['id']))
+    {
 
       echo template("templates/partials/header.php");
       echo template("templates/partials/nav.php");
 
-      // Build SQL statment that selects a student's modules
+      // Build SQL statment that selects a student's database
     $sql = "select * from student  where studentid =  '" . $_SESSION['id'] ."';";
 
       $result = mysqli_query($conn,$sql);
@@ -29,20 +30,32 @@
           <th>County</th>
           <th>Country</th>
           <th>Post Code</th>
-        
+
           </tr>";
 
-      // Display the modules within the html table
+      // Display the students  within the html table
       while($row = mysqli_fetch_array($result)) {
-         $data['content'] .= "<tr><td> $row[studentid] </td><td> $row[firstname] </td>";
-         $data['content'] .= "<td> $row[dob] </td></tr>";
+         $data['content'] .= "<tr>
+         <td> $row[studentid] </td>
+         <td> $row[firstname] </td>
+         <td> $row[lastname] </td>
+         <td> $row[dob] </td>
+         <td> $row[house] </td>
+         <td> $row[town] </td>
+         <td> $row[county] </td>
+         <td> $row[counrty] </td>";
+         $data['content'] .= "<td> $row[postcode] </td></tr>";
+
+
       }
       $data['content'] .= "</table>";
 
       // render the template
       echo template("templates/default.php", $data);
 
-   } else {
+   }
+   else
+   {
       header("Location: index.php");
    }
 
