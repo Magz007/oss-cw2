@@ -59,7 +59,7 @@
                   <td><?php echo $row['county'] ;?> </td>
                    <td><?php echo $row['country'] ;?> </td>
                     <td><?php echo $row['postcode'] ;?> </td>
-                     <td> <input type= "checkbox" name= "btndelete" value=<?php echo $row['select'] ;?> required></td>
+                     <td> <input type= "checkbox" name= "btndelete" value=<?php echo $row['studentid'] ;?> required></td>
 
     </tr>
 
