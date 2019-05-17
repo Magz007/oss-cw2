@@ -33,28 +33,21 @@
 
           </tr>";
 ?>
+<?php
       // Display the students  within the html table
-    <?php   $sr=1;?>
-    <?php
+    $sr=1;
+
       while($row = mysqli_fetch_array($result))
-       {
-         $data['content'] .= "<tr>
-        <td> $row[sr] </td>
-         <td> $row[studentid]  </td>
-         <td> $row[firstname] </td>
-         <td> $row[lastname] </td>
-         <td> $row[dob] </td>
-         <td> $row[house] </td>
-         <td> $row[town] </td>
-         <td> $row[county] </td>
-         <td> $row[country] </td>";
+       {?>
 
-         $data['content'] .= "<td> $row[postcode] </td></tr>";
+    <tr>
+    <form action="" method= "post" role = "form">
+          <td><?php echo $sr ;?> </td>
+    </tr>
+      
 
-      }
-      ?>
       <?php
- $sr ++ ?>
+ $sr ++ }?>
  <?php
 
       $data['content'] .= "</table>";
