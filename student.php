@@ -67,12 +67,12 @@
     if (isset($_POST['btndelete']))
     {
       $numcheckbox= count($_POST['records']);
-      
+
       $i=0;
       while ($i<$numcheckbox)
       {
         $deletekey= $_POST['records'][$i];
-        mysqli_query ('Delete from student where id = '$deletekey'')
+        $sql= 'Delete from student where id = '$deletekey'';
         $i++;
       }
 
