@@ -69,7 +69,7 @@
     // Codes the delete button
     if (isset($_POST['btndelete']))
     {
-      $Key= $_POST['records[]']
+      $Key= $_POST['records[]'];
 
       $i=0;
       while ($i<$Key)
