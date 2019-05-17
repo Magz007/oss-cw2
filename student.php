@@ -24,7 +24,7 @@
 
   <table class='table' table border= "5px">
     <tr>
-      <th> Select </th>
+      <th> </th>
        <th>Student ID</th>
         <th>First Name</th>
          <th>Last Name</th>
@@ -34,6 +34,7 @@
              <th>County</th>
               <th>Country</th>
                <th>Post Code</th>
+                <th> Select Checkbox </th>
 
      </tr>
 <?php
