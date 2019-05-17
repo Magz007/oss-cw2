@@ -34,10 +34,11 @@
           </tr>";
 
       // Display the students  within the html table
+      $sr=1;
       while($row = mysqli_fetch_array($result))
        {
          $data['content'] .= "<tr>
-
+        <td> $row[sr] </td>
          <td> $row[studentid]  </td>
          <td> $row[firstname] </td>
          <td> $row[lastname] </td>
@@ -48,7 +49,7 @@
          <td> $row[country] </td>";
 
          $data['content'] .= "<td> $row[postcode] </td></tr>";
-
+       $sr ++
       }
 
 
