@@ -85,7 +85,7 @@
       echo template("templates/default.php", $data);
 
 
-
+}
   else
  {
       header("Location: index.php");
