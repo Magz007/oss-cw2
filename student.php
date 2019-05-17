@@ -59,12 +59,25 @@
                      <td> <input type= "checkbox" name= "records[]" value=<?php echo $row['studentid'] ;?> required></td>
                       <td> <input type= "submit" name="btndelete" value="Delete" class-= "btn btn-info"> </td>
      </form>
+     </tr>
 
-    </tr>
 
+    <?php $sr ++ ;}?>
+    <?php
+    if (isset($_POST['btndelete']))
+    {
+      $numcheckbox= count($_POST['records'])
+      $i= 0;
+      while ($i<$numcheckbox)
+      {
+        $deletekey= $_POST['records'][$i];
+        mysqli_query ('Delete from student where id = '$deletekey'')
+        $i++;
+      }
 
-    <?php $sr ++ ;}
-?>
+    }
+
+    ?>
 
  <?php
 
