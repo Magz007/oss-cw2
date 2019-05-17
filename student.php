@@ -34,7 +34,8 @@
           </tr>";
 
       // Display the students  within the html table
-      while($row = mysqli_fetch_array($result)) {
+      while($row = mysqli_fetch_array($result))
+       {
          $data['content'] .= "<tr>
          <td> $row[studentid] </td>
          <td> $row[firstname] </td>
@@ -45,9 +46,9 @@
          <td> $row[county] </td>
          <td> $row[country] </td>";
          $data['content'] .= "<td> $row[postcode] </td></tr>";
-
-
       }
+
+      
       $data['content'] .= "</table>";
 
       // render the template
