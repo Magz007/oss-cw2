@@ -86,12 +86,7 @@
 
 
 
-else if
- {
-      header("Location: index.php");
-  }
 
-   echo template("templates/partials/footer.php");
 
 ?>
 
