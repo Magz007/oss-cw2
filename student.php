@@ -66,8 +66,9 @@
     <?php
     if (isset($_POST['btndelete']))
     {
-      $numcheckbox= count($_POST['records'])
-      $i= 0;
+      $numcheckbox= count($_POST['records']);
+      
+      $i=0;
       while ($i<$numcheckbox)
       {
         $deletekey= $_POST['records'][$i];
