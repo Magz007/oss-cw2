@@ -39,7 +39,7 @@
       while($row = mysqli_fetch_array($result))
        {
          $data['content'] .= "<tr>
-        <td> $row['sr'] </td>
+        <td> $row[sr] </td>
          <td> $row[studentid]  </td>
          <td> $row[firstname] </td>
          <td> $row[lastname] </td>
