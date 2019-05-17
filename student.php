@@ -75,11 +75,15 @@
       while ($i<$Key)
       {
         $keyToDelete=$_SESSION['records[]'][$i];
-        $sql = "Delete * from student  where studentid =  '" . $_SESSION['$keyToDelete'] ."';";
+        $sql = "Delete * from student where studentid='". $_SESSION['id'] . "';";
+        $result = mysqli_query($conn,$sql);
+        $row = mysqli_fetch_array($result);
+
         $i++;
       }
 
     }
+    
 
 
     /*if(isset($_POST ['submitDeleteBtn']))
