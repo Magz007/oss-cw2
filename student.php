@@ -72,7 +72,7 @@
       while ($i<$numcheckbox)
       {
         $deletekey= $_POST['records'][$i];
-        $sql= 'Delete from student where id = '$deletekey'';
+        $sql = "delete * from student  where studentid =  '" $deletekey"';";
         $i++;
       }
 
