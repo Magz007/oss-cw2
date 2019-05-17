@@ -22,7 +22,7 @@
 <body style="padding-top: 100px;" >
 <div class= "container">
 
-  <table class='table' table border= "5px">
+  <table class='table' table border= "1px">
     <tr>
       <th> </th>
        <th>Student ID</th>
@@ -57,7 +57,7 @@
                    <td><?php echo $row['country'] ;?> </td>
                     <td><?php echo $row['postcode'] ;?> </td>
                      <td> <input type= "checkbox" name= "btndelete" value=<?php echo $row['studentid'] ;?> required></td>
-                      <td> <button= "Submit" name="btndelete" class-= "btn btn-info">  </td>
+                      <td> <button type= "Delete" name="btndelete" class-= "btn btn-info">  </td>
      </form>
 
     </tr>
