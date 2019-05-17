@@ -67,14 +67,14 @@
 
     <?php
     // Codes the delete button
-    if (isset($_POST['btndelete']))
+    if (isset($_SESSION['btndelete']))
     {
-      $Key= $_POST['records[]'];
+      $Key= $_SESSION['records[]'];
 
       $i=0;
       while ($i<$Key)
       {
-        $keyToDelete=$_POST['records[]'][$i];
+        $keyToDelete=$_SESSION['records[]'][$i];
         $sql = "Delete * from student  where studentid =  '" . $_SESSION['$keyToDelete'] ."';";
         $i++;
       }
