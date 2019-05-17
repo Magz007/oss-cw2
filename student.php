@@ -6,86 +6,35 @@
 
 
    // check logged in
-   if (isset($_SESSION['id']))
-    {
+   if (isset($_SESSION['id'])) {
 
       echo template("templates/partials/header.php");
       echo template("templates/partials/nav.php");
 
-      // Build SQL statment that selects a student
-      $sql = "select * from student  where studentid =  '" . $_SESSION['id'] ."';";
+      // Build SQL statment that selects a student's modules
+      $sql = "select * from studentmodules sm, module m where m.modulecode = sm.modulecode and sm.studentid = '" . $_SESSION['id'] ."';";
 
       $result = mysqli_query($conn,$sql);
-      ?>
 
+      // prepare page content
+      $data['content'] .= "<table border='1'>";
+      $data['content'] .= "<tr><th colspan='5' align='center'>Modules</th></tr>";
+      $data['content'] .= "<tr><th>Code</th><th>Type</th><th>Level</th></tr>";
 
-
-
-        <?php
-       if(isset($_POST ['submitDeleteBtn']))
-       {
-         $key= $_POST['btndelete'];
-         $result=mysqli_query($link,"SELECT * from student where id='$key'");
-         if (mysqli_num_rows($result)>0)
-         {
-           $queryDelete=mysqli_query($link,"DELETE * from student where id = '$key'");
-         }
-       }
-         ?>
-
-        <table class='table' table border= "5px">
-        <tr>
-          <th>Student ID</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>D.O.B</th>
-          <th>1st Line Address</th>
-          <th>Town</th>
-          <th>County</th>
-          <th>Country</th>
-          <th>Post Code</th>
-          <th>Select</th>
-          </tr>";
-
-
-<?php> $sr=1;
-     while($row = mysqli_fetch_array($result))
-{?>
-
-  <tr>
-    <form action="" method= "post" role = "form">
-  <td><?php echo $sr ;?> </td>
-  <td><?php echo $row['studentid'] ;?> </td>
-    <td><?php echo $row['firstname'] ;?> </td>
-      <td><?php echo $row['lastname'] ;?> </td>
-       <td><?php echo $row['dob'] ;?> </td>
-        <td><?php echo $row['house'] ;?> </td>
-          <td><?php echo $row['town'] ;?> </td>
-           <td><?php echo $row['county'] ;?> </td>
-           <td><?php echo $row['country'] ;?> </td>
-             <td><?php echo $row['postcode'] ;?> </td>
-
-        <td><input type='checkbox' name='checkbox[]' value=<?php echo $row['studentid@'];?></td>
-
-     </form>
-</tr>;
-
-
-<?php $sr ++ ;}
-?>
-
-<?php
-
+      // Display the modules within the html table
+      while($row = mysqli_fetch_array($result)) {
+         $data['content'] .= "<tr><td> $row[modulecode] </td><td> $row[name] </td>";
+         $data['content'] .= "<td> $row[level] </td></tr>";
+      }
       $data['content'] .= "</table>";
 
       // render the template
       echo template("templates/default.php", $data);
 
-?>
-<?php
- else if
- {
+   } else {
       header("Location: index.php");
-  }
+   }
 
-   echo template("templates/partials/footer.php"); ?>
+   echo template("templates/partials/footer.php");
+
+?>
