@@ -68,8 +68,8 @@
            <td><?php echo $row['country'] ;?> </td>
              <td><?php echo $row['postcode'] ;?> </td>
 
-        <td> <input type= "checkbox" name= "btndelete" value=<?php echo $row['checkbox'] ;?> required></td>
-        <td> <input type= "Delete Record" name="submitDeleteBtn" class-= "btn btn-info">  </td>
+        <td><input type='checkbox' name='checkbox[]' value=<?php echo $row['studentid@'];?></td>
+
      </form>
 </tr>;
 
@@ -84,8 +84,9 @@
       // render the template
       echo template("templates/default.php", $data);
 
-  
-    else
+
+
+  else
  {
       header("Location: index.php");
   }
