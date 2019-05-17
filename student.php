@@ -19,10 +19,7 @@
       ?>
 
 
-      <html>
-      <head> Student Record</head>
-      <body style="padding-top: 100px;" >
-      <div class= "container">
+
 
         <?php
        if(isset($_POST ['submitDeleteBtn']))
@@ -84,13 +81,11 @@
       // render the template
       echo template("templates/default.php", $data);
 
-
-
-
-
 ?>
+<?php
+ else if
+ {
+      header("Location: index.php");
+  }
 
-</table>
-</div>
-</body>
-</html>
+   echo template("templates/partials/footer.php"); ?>
