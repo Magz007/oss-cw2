@@ -23,7 +23,7 @@ $studentid=$_POST["studentid"];
       $county= $_POST['county'];
         $country= $_POST['country'];
           $postcode= $_POST['postcode'];
-          $submitbtn= $_POST('submitbtn');
+
 
   if (isset($_POST['submitbtn']))
    {
