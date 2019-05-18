@@ -10,7 +10,7 @@ if (isset($_SESSION['id'])) {
 
    echo template("templates/partials/header.php");
    echo template("templates/partials/nav.php");
-
+ $sql= "select * from student"
   $db_seclected= mysqli_select_db($conn,$sql);
   if(!$db_seclected)
   {
