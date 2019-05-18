@@ -23,8 +23,9 @@ $studentid=$_POST["studentid"];
       $county= $_POST['county'];
         $country= $_POST['country'];
           $postcode= $_POST['postcode'];
+          $submitbtn= $_POST('submitbtn');
 
-  if (isset($_POST['submit']))
+  if (isset($_POST['submitbtn']))
    {
 
      $sql = "INSERT INTO student (studentid, password,firstname, lastname,dob,house,town,county,country,postcode,)
