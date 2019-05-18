@@ -23,14 +23,14 @@ $con = mysqli_connect("localhost", "root", "", "");
 <form action="" method= "post" role = "form">
 <br>
 
-FirstName  :<input type= "text" name="txtfristname"> <br><br>
+FirstName  :<input type= "text" name="fristname"> <br><br>
 Last Name:   <input type= "text" name="lastname"> <br><br>
 Date of Birth:<input type= "float" name="dob"> <br><br>
-Address:<input type= "text" name="1stLineAddress"> <br><br>
-Town :<input type= "text" name="Town"> <br><br>
-County: <input type= "text" name="County"> <br><br>
-Conutry: <input type= "text" name="Counrty"> <br><br>
-Post Code: <input type= "text" name="PostCode"> <br><br>
+Address:<input type= "text" name="house"> <br><br>
+Town :<input type= "text" name="town"> <br><br>
+County: <input type= "text" name="county"> <br><br>
+Conutry: <input type= "text" name="counrty"> <br><br>
+Post Code: <input type= "text" name="postCode"> <br><br>
 <input type= "submit" Value= "INSERT">
 </form>
 
