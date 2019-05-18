@@ -22,7 +22,8 @@ if (isset($_SESSION['id']))
 
 <form action="addstudent.php" method= "post" role = "form">
 <br>
-Student ID : <label type = "label " name ='studentid' value =<?php echo $sr ;?>> <br><br>
+Student ID :  <input type= "number" name="studentid"> <br><br>
+Password :    <input type="pwd" name="password"> <br><br>
 FirstName:    <input type= "text" name="fristname"> <br><br>
 Last Name:    <input type= "text" name="lastname">  <br><br>
 Date of Birth:<input type= "text" name="dob">       <br><br>
@@ -36,7 +37,8 @@ Post Code:    <input type= "text" name="postcode">  <br><br>
   <?php $sr ++ ;?>
 
 <?php
-
+$studentid=$_POST["studentid"];
+$password= $_POST["password"];
  $fristname= $_POST['fristname'];
   $lastname= $_POST['lastname'];
    $dob= $_POST['dob'];
@@ -48,8 +50,8 @@ Post Code:    <input type= "text" name="postcode">  <br><br>
 
  if (isset($_POST['insert']))
  {
-    $sql = "INSERT INTO student (firstname, lastname,dob,house,town,county,country,postcode,)
-     values ('fristname','lastname','dob','house', 'town', 'county', 'country' ,'postcode');";
+    $sql = "INSERT INTO student (studentid, password,firstname, lastname,dob,house,town,county,country,postcode,)
+     values ('$studentid','$password','$fristname','$lastname','$dob','$house', '$town', '  $county', '  $country' ,'  $postcode');";
 
     $result = mysqli_query($conn, $sql);
     $data['content'] = "<p>Inserted</p>";
@@ -70,7 +72,7 @@ Post Code:    <input type= "text" name="postcode">  <br><br>
 }
 else
  {
-   header("Location: index.php");
+   header("Location: index.php? addstudent= success");
 }
 
 echo template("templates/partials/footer.php");
