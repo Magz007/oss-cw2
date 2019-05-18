@@ -12,7 +12,7 @@ if (isset($_SESSION['id']))
    echo template("templates/partials/header.php");
    echo template("templates/partials/nav.php");
 
-
+$conn = mysqli_connect("localhost", "root", "", "");
 ?>
 
    <html>
@@ -30,18 +30,13 @@ Date of Birth:<input type= "float" name="dob"> <br><br>
 Town :<input type= "text" name="Town"> <br><br>
 County: <input type= "text" name="County"> <br><br>
 Conutry: <input type= "text" name="Counrty"> <br><br>
-Post Code: <input type= "text" name="Post Code"> <br><br>
-<input type= "Submit" name ="input" Value= "Submit">
+Post Code: <input type= "text" name="PostCode"> <br><br>
+<input type= "submit" Value= "INSERT">
 </form>
 
 <?php
-$sql= INSERT INTO  bnu.bseen.co.server student (  `dob`, `firstname`, `lastname`, `house`, `town`, `county`, `country`, `postcode`) VALUES
-(  'dob', 'firstname', 'lastname', '1stLineAddress', 'town', 'county', 'counrty', 'postcode');
 
-
-$db_seclected= mysqli_query($conn,$sql);
-
- if(!$db_seclected)
+ if(!mysqli_select_db($conn, 'bnu.bseen.co.server'))
  {
    echo "Failed to connect to MySQL: " . mysqli_connect_error();
    die();
