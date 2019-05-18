@@ -35,7 +35,7 @@ Post Code: <input type= "text" name="Post Code"> <br><br>
 </form>
 
 <?php
-$sql= INSERT INTO student (  `dob`, `firstname`, `lastname`, `house`, `town`, `county`, `country`, `postcode`) VALUES
+$sql= INSERT INTO  bnu.bseen.co.server student (  `dob`, `firstname`, `lastname`, `house`, `town`, `county`, `country`, `postcode`) VALUES
 (  'dob', 'firstname', 'lastname', '1stLineAddress', 'town', 'county', 'counrty', 'postcode');
 
 
