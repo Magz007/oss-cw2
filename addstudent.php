@@ -12,7 +12,7 @@ if (isset($_SESSION['id']))
    echo template("templates/partials/header.php");
    echo template("templates/partials/nav.php");
 
-   
+
 
 ?>
 
@@ -32,24 +32,27 @@ Town :        <input type= "text" name="town">      <br><br>
 County:       <input type= "text" name="county">    <br><br>
 Conutry:      <input type= "text" name="counrty">   <br><br>
 Post Code:    <input type= "text" name="postcode">  <br><br>
+             <input type= "submit" name="insert "value= "SUBMIT">
 
-<input type= "submit" name="insert "value= "SUBMIT">
 
 </form>
 
 <?php
+
+ $fristname= $_POST['fristname'];
+  $lastname= $_POST['lastname'];
+   $dob= $_POST['dob'];
+    $house= $_POST['house'];
+     $town= $_POST['town'];
+      $county= $_POST['county'];
+        $country= $_POST['country'];
+          $postcode= $_POST['postcode'];
+
  if (isset($_POST['insert']))
  {
-    $sql = "insert into student (firstname) values ('" . $_POST['firstname'] . "');";
-    $sql = "insert into student lastname values ('" .  $_SESSION['id'] . "','" . $_POST['lastname'] . "');";
-    $sql = "house ='" . $_POST['txtdob']  . "',";
-    $sql .= "1stLineAddress ='" . $_POST['txthouse']  . "',";
-    $sql .= "Town ='" . $_POST['txttown']  . "',";
-    $sql .= "County ='" . $_POST['txtcounty']  . "',";
-    $sql .= "Country ='" . $_POST['txtcountry']  . "',";
-    $sql .= "Postcode ='" . $_POST['txtpostcode']  . "' ";
-    $sql .= "where studentid = '" . $_SESSION['id'] . "';";
-    $result = mysqli_query($con,$sql);
+    $sql = "insert into student (firstname, lastname,dob,house,town,conuty,country,postcode,)
+     values ('fristname','lastname','dob','house', 'town', 'county', 'country' ,'postcode');";
+
 
     $data['content'] = "<p>Inserted</p>";
 
@@ -57,20 +60,20 @@ Post Code:    <input type= "text" name="postcode">  <br><br>
 
 }
 
- //else
- //{
+ else
+ {
     // Build a SQL statment to return the student record with the id that
     // matches that of the session variable.
-  //  $sql = "select * from student where studentid='". $_SESSION['id'] . "';";
-  //  $result = mysqli_query($conn,$sql);
-  //  $row = mysqli_fetch_array($result);
+ $sql = "select * from student where studentid='". $_SESSION['id'] . "';";
+  $result = mysqli_query($conn,$sql);
+ $row = mysqli_fetch_array($result);
 
 
 
    // render the template
-  // echo template("templates/default.php", $data);
+  echo template("templates/default.php", $data);
 
-//}
+}
 }
 else
  {
