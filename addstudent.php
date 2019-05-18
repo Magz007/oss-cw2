@@ -46,7 +46,7 @@ Post Code: <input type= "text" name="postCode"> <br><br>
   {
 
     // build an sql statment to update the student details
-    $sql = "INSERT INTO student  ("firstname ='" . $_POST['txtfirstname'] . "',")";
+    $sql = "INSERT INTO student 'firstname' value ( $_POST['txtfirstname'] )";
     $sql .= "INSERT INTO student lastname ='" . $_POST['txtlastname']  . "',";
     $sql .= "house ='" . $_POST['txtdob']  . "',";
     $sql .= "1stLineAddress ='" . $_POST['txthouse']  . "',";
