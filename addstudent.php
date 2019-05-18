@@ -1,7 +1,7 @@
 <?php
 
 include("_includes/config.inc");
-include("_includes/dbconnect.inc");
+	$conn = mysqli_connect("localhost", "root", "", "bnu.bseen.co.server");
 include("_includes/functions.inc");
 
 
@@ -33,17 +33,17 @@ $studentid=$_POST["studentid"];
 
     header("Location: index.php?addstudent=success");
 }
-// else
-// {
+ else
+ {
     // Build a SQL statment to return the student record with the id that
     // matches that of the session variable.
-// $result = mysqli_query($conn,$sql);
- //$row = mysqli_fetch_array($result);
+$result = mysqli_query($conn,$sql);
+ $row = mysqli_fetch_array($result);
    // render the template
-  //echo template("templates/default.php", $data);
+  echo template("templates/default.php", $data);
 
 //}
 
-//echo template("templates/partials/footer.php");
+echo template("templates/partials/footer.php");
 }
 ?>
