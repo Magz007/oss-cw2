@@ -20,14 +20,14 @@ if (isset($_SESSION['id'])) {
 <form action="" method= "post" role = "form">
 <br>
 
-First Name  :<input type= "text" name="fristname"> <br>
-Last Name:   <input type= "text" name="lastname"> <br>
-Date of Birth:<input type= "text" name="dob"> <br>
-1st Line Address:<input type= "text" name="1st Line Address"> <br>
-Town :<input type= "text" name="Town"> <br>
-County: <input type= "text" name="County"> <br>
-Conutry: <input type= "text" name="Counrty"> <br>
-Post Code: <input type= "text" name="Post Code"> <br>
+First Name  :<input type= "text" name="fristname"> <br><br>
+Last Name:   <input type= "text" name="lastname"> <br><br>
+Date of Birth:<input type= "text" name="dob"> <br><br>
+1st Line Address:<input type= "text" name="1st Line Address"> <br><br>
+Town :<input type= "text" name="Town"> <br><br>
+County: <input type= "text" name="County"> <br><br>
+Conutry: <input type= "text" name="Counrty"> <br><br>
+Post Code: <input type= "text" name="Post Code"> <br><br>
 <input type= "Submit" name ="input" Value= "Submit">
 </form>
 
