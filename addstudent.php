@@ -59,7 +59,7 @@ Post Code: <input type= "text" name="PostCode"> <br><br>
     $data['content'] = "<p>Your details have been updated</p>";
 
  }
- else 
+ else
  {
     // Build a SQL statment to return the student record with the id that
     // matches that of the session variable.
@@ -72,6 +72,7 @@ Post Code: <input type= "text" name="PostCode"> <br><br>
    // render the template
    echo template("templates/default.php", $data);
 
+}
 }
 else
  {
