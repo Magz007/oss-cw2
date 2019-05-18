@@ -11,9 +11,6 @@ if (isset($_SESSION['id']))
 
    echo template("templates/partials/header.php");
    echo template("templates/partials/nav.php");
-
-
-
 ?>
 
    <html>
@@ -21,11 +18,7 @@ if (isset($_SESSION['id']))
    <body style="padding-top: 100px;" >
    <div class= "container">
 
-<?PHP
-     $sr= 20000001;
-
-
-        ?>
+<?PHP     $sr= 20000001;        ?>
 
 <form action="addstudent.php" method= "post" role = "form">
 <br>
@@ -39,8 +32,6 @@ County:       <input type= "text" name="county">    <br><br>
 Conutry:      <input type= "text" name="country">   <br><br>
 Post Code:    <input type= "text" name="postcode">  <br><br>
              <input type= "submit" name="insert "value= "SUBMIT">
-
-
 </form>
   <?php $sr ++ ;}?>
 
@@ -66,7 +57,6 @@ Post Code:    <input type= "text" name="postcode">  <br><br>
   $result = mysqli_query($conn, $sql);
 
 }
-
  else
  {
     // Build a SQL statment to return the student record with the id that
@@ -74,13 +64,11 @@ Post Code:    <input type= "text" name="postcode">  <br><br>
  $sql = "select * from student where studentid='". $_SESSION['id'] . "';";
  $result = mysqli_query($conn,$sql);
  $row = mysqli_fetch_array($result);
-
-
-
    // render the template
   echo template("templates/default.php", $data);
 
 }
+
 }
 else
  {
