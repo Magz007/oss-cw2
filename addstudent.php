@@ -38,6 +38,7 @@ if (isset($_SESSION['id']))
 }
 }
 
+
  /*else
  {
     // Build a SQL statment to return the student record with the id that
@@ -51,5 +52,5 @@ $result = mysqli_query($conn,$sql);
 
 echo template("templates/partials/footer.php");
 
-}
+}*/
 ?>
