@@ -45,7 +45,7 @@ Post Code: <input type= "text" name="PostCode"> <br><br>
 $FirstName = $_POST['fristname'];
 $lastname= $_POST['lastname'];
 $dob= $_POST['dob'];
-$lineaddress=.$_POST['1stLineAddress'];
+$lineaddress=$_POST['1stLineAddress'];
 $town= $_POST['Town'];
 $county= $_POST['County'];
 $country=$_POST['Country'];
