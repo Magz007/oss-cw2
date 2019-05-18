@@ -26,8 +26,8 @@ if (isset($_SESSION['id']))
 
   if (isset($_POST['submitbtn']))
    {
-     $sql = "INSERT INTO student (firstname, lastname,dob,house,town,county,country,postcode,)
-     values ('$fristname','$lastname','$dob','$house', '$town', '  $county', '  $country' ,' $postcode');";
+     $sql = "INSERT INTO student (dob, firstname,lastname,house,town,county,country,postcode,)
+     values ('$dob','$fristname','$lastname','$house', '$town', ' $county', '$country' ,'$postcode');";
 
     mysqli_query($conn, $sql);
 
