@@ -12,7 +12,7 @@ if (isset($_SESSION['id']))
    echo template("templates/partials/header.php");
    echo template("templates/partials/nav.php");
 
-$conn = mysqli_connect("localhost", "root", "", "");
+$con = mysqli_connect("localhost", "root", "", "");
 ?>
 
    <html>
@@ -36,7 +36,7 @@ Post Code: <input type= "text" name="PostCode"> <br><br>
 
 <?php
 
- if(!mysqli_select_db($conn, 'bnu.bseen.co.server'))
+ if(!mysqli_select_db($con, 'bnu.bseen.co.server'))
  {
    echo "Failed to connect to MySQL: " . mysqli_connect_error();
    die();
