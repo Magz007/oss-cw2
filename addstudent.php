@@ -32,7 +32,7 @@ Town :        <input type= "text" name="town">      <br><br>
 County:       <input type= "text" name="county">    <br><br>
 Conutry:      <input type= "text" name="country">   <br><br>
 Post Code:    <input type= "text" name="postcode">  <br><br>
-             <input type= "submit" name="insert "value= "SUBMIT">
+             <button type= "button" name="insert" value= "SUBMIT">
 </form>
 
 
@@ -55,7 +55,7 @@ $password= $_POST["password"];
 
     $result = mysqli_query($conn, $sql);
     $data['content'] = "<p>Inserted</p>";
- header("Location: index.php? addstudent= success");
+ header("./Location: index.php? addstudent= success");
 }
 /* else
  {
