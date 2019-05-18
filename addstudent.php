@@ -30,7 +30,7 @@ Date of Birth:<input type= "text" name="dob">       <br><br>
 Address:      <input type= "text" name="house">     <br><br>
 Town :        <input type= "text" name="town">      <br><br>
 County:       <input type= "text" name="county">    <br><br>
-Conutry:      <input type= "text" name="counrty">   <br><br>
+Conutry:      <input type= "text" name="country">   <br><br>
 Post Code:    <input type= "text" name="postcode">  <br><br>
              <input type= "submit" name="insert "value= "SUBMIT">
 
