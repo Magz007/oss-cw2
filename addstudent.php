@@ -32,7 +32,7 @@ $studentid=$_POST["studentid"];
 
     mysqli_query($conn, $sql);
 
-    header("Location: index.php?addstudent=success");
+    header("Location: student.php?addstudent=success");
 }
 }
  else
