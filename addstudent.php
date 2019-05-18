@@ -45,5 +45,5 @@ $result = mysqli_query($conn,$sql);
 //
 }
 echo template("templates/partials/footer.php");
-}
+
 ?>
