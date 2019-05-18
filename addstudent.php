@@ -37,7 +37,8 @@ if (isset($_SESSION['id']))
     header("Location: index.php?addstudent=success");
 }
 }
- else
+
+ /*else
  {
     // Build a SQL statment to return the student record with the id that
     // matches that of the session variable.
