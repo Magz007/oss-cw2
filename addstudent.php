@@ -42,14 +42,14 @@ Post Code: <input type= "text" name="PostCode"> <br><br>
    die();
  }
 
-$FirstName =. $_POST['fristname'];
-$lastname= .$_POST['lastname'];
-$dob= .$_POST['dob'];
+$FirstName = $_POST['fristname'];
+$lastname= $_POST['lastname'];
+$dob= $_POST['dob'];
 $lineaddress=.$_POST['1stLineAddress'];
-$town= .$_POST['Town'];
-$county= .$_POST['County'];
-$country=. $_POST['Country'];
-$postcode= .$_POST['Postcode'];
+$town= $_POST['Town'];
+$county= $_POST['County'];
+$country=$_POST['Country'];
+$postcode=$_POST['Postcode'];
 
 $sql = "insert into student ('firstname','lastname','dob','house','town','county','country','postcode')
 values ('$FirstName','$lastname','$dob','$lineaddress','$town','$county','$conutry','$postcode')";
