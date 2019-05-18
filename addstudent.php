@@ -24,7 +24,8 @@ $studentid=$_POST["studentid"];
         $country= $_POST['country'];
           $postcode= $_POST['postcode'];
 
-  if (isset($_POST['submit'])) {
+  if (isset($_POST['submit']))
+   {
 
      $sql = "INSERT INTO student (studentid, password,firstname, lastname,dob,house,town,county,country,postcode,)
      values ('$studentid','$password','$fristname','$lastname','$dob','$house', '$town', '  $county', '  $country' ,' $postcode');";
@@ -32,6 +33,7 @@ $studentid=$_POST["studentid"];
     mysqli_query($conn, $sql);
 
     header("Location: index.php?addstudent=success");
+}
 }
  else
  {
@@ -45,5 +47,6 @@ $result = mysqli_query($conn,$sql);
 //}
 
 echo template("templates/partials/footer.php");
+
 }
 ?>
