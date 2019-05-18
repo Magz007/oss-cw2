@@ -51,13 +51,13 @@ $password= $_POST["password"];
  if (isset($_POST['insert']))
  {
     $sql = "INSERT INTO student (studentid, password,firstname, lastname,dob,house,town,county,country,postcode,)
-     values ('$studentid','$password','$fristname','$lastname','$dob','$house', '$town', '  $county', '  $country' ,'  $postcode');";
+     values ('$studentid','$password','$fristname','$lastname','$dob','$house', '$town', '  $county', '  $country' ,' $postcode');";
 
     $result = mysqli_query($conn, $sql);
     $data['content'] = "<p>Inserted</p>";
-
+ header("Location: index.php? addstudent= success");
 }
- else
+/* else
  {
     // Build a SQL statment to return the student record with the id that
     // matches that of the session variable.
@@ -67,13 +67,10 @@ $password= $_POST["password"];
    // render the template
   echo template("templates/default.php", $data);
 
-}
+}*/
 
 }
-else
- {
-   header("Location: index.php? addstudent= success");
-}
+
 
 echo template("templates/partials/footer.php");
 
