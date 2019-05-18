@@ -13,20 +13,20 @@ if (isset($_SESSION['id'])) {
 ?>
 
    <html>
-   <head> Student Records </head>
+   <head> Add New Student  </head>
    <body style="padding-top: 100px;" >
    <div class= "container">
 
 <form action="" method= "post" role = "form">
 
-<input type= "text" name="fristname"> <br>
-<input type= "text" name="lastname"> <br>
-<input type= "text" name="Date of Birth"> <br>
-<input type= "text" name="1st Line Address"> <br>
-<input type= "text" name="Town"> <br>
-<input type= "text" name="County"> <br>
-<input type= "text" name="Counrty"> <br>
-<input type= "text" name="Post Code"> <br>
+First Name  :<input type= "text" name="fristname"> <br>
+Last Name:   <input type= "text" name="lastname"> <br>
+Date of Birth:<input type= "text" name="dob"> <br>
+1st Line Address:<input type= "text" name="1st Line Address"> <br>
+Town :<input type= "text" name="Town"> <br>
+County: <input type= "text" name="County"> <br>
+Conutry: <input type= "text" name="Counrty"> <br>
+Post Code: <input type= "text" name="Post Code"> <br>
 <input type= "Submit" name ="input" Value= "Submit">
 </form>
 
