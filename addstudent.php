@@ -22,7 +22,7 @@ if (isset($_SESSION['id']))
 
   if (isset($_POST['submit']))
    {
-     $sql = "INSERT INTO student values('" .  $_SESSION['id'] . "','$fristname ');";
+     $sql = "INSERT INTO student values('" .  $_SESSION['id'] . "','$dob','$fristname','$lastname','$house', '$town', ' $county', '$country' ,'$postcode');";
 
 
 
