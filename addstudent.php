@@ -13,8 +13,7 @@ if (isset($_SESSION['id']))
    echo template("templates/partials/nav.php");
 
 
-$studentid=$_POST["studentid"];
- $password= $_POST["password"];
+
  $fristname= $_POST['fristname'];
   $lastname= $_POST['lastname'];
    $dob= $_POST['dob'];
@@ -27,9 +26,8 @@ $studentid=$_POST["studentid"];
 
   if (isset($_POST['submitbtn']))
    {
-
-     $sql = "INSERT INTO student (studentid, password,firstname, lastname,dob,house,town,county,country,postcode,)
-     values ('$studentid','$password','$fristname','$lastname','$dob','$house', '$town', '  $county', '  $country' ,' $postcode');";
+     $sql = "INSERT INTO student (firstname, lastname,dob,house,town,county,country,postcode,)
+     values ('$fristname','$lastname','$dob','$house', '$town', '  $county', '  $country' ,' $postcode');";
 
     mysqli_query($conn, $sql);
 
