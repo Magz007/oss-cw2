@@ -23,15 +23,17 @@ $con = mysqli_connect("localhost", "root", "", "");
 <form action="" method= "post" role = "form">
 <br>
 
-FirstName  :<input type= "text" value=""="fristname"> <br><br>
-Last Name:   <input type= "text" value=""="lastname"> <br><br>
-Date of Birth:<input type= "float" value=""="dob"> <br><br>
-Address:<input type= "text" value=""="house"> <br><br>
-Town :<input type= "text" value=""="town"> <br><br>
-County: <input type= "text" value=""="county"> <br><br>
-Conutry: <input type= "text" value=""="counrty"> <br><br>
-Post Code: <input type= "text" value=""="postCode"> <br><br>
+FirstName:    <input type= "text" value="fristname"> <br><br>
+Last Name:    <input type= "text" value="lastname"> <br><br>
+Date of Birth:<input type= "text" value="dob"> <br><br>
+Address:      <input type= "text" value="house"> <br><br>
+Town :        <input type= "text" value="town"> <br><br>
+County:       <input type= "text" value="county"> <br><br>
+Conutry:      <input type= "text" value="counrty"> <br><br>
+Post Code:     <input type= "text" value="postCode"> <br><br>
+
 <input type= "submit" value= "insert">
+
 </form>
 
 <?php
@@ -45,8 +47,7 @@ Post Code: <input type= "text" value=""="postCode"> <br><br>
  if (isset($_POST['insert']))
   {
 
-
-    $sql = "INSERT INTO student ('firstname') values ( $_POST['firstname'] )";
+    $sql = "INSERT INTO student (firstname) VALUES( 'firstname' )";
     $sql .= "INSERT INTO student lastname ='" . $_POST['txtlastname']  . "',";
     $sql .= "house ='" . $_POST['txtdob']  . "',";
     $sql .= "1stLineAddress ='" . $_POST['txthouse']  . "',";
