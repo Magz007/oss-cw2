@@ -45,5 +45,5 @@ $studentid=$_POST["studentid"];
 //}
 
 //echo template("templates/partials/footer.php");
-
+}
 ?>
