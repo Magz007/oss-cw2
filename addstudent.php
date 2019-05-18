@@ -56,13 +56,6 @@ $sql = "insert into student values ('" .  $_SESSION['id'] . "','" . $_POST['firs
 $value= $_POST['Post code'];
 $sql = "insert into student values ('" .  $_SESSION['id'] . "','" . $_POST['firstname'] . "');";
 
-if(!mysqli_query($sql))
-{
-  die ('Error'. mysql_error())
-}
-
-
-
    // render the template
    echo template("templates/default.php", $data);
 
