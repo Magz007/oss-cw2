@@ -31,7 +31,7 @@ if (isset($_SESSION['id']))
 
     mysqli_query($conn, $sql);
 
-    header("Location: student.php?addstudent=success");
+    header("Location: index.php?addstudent=success");
 }
 }
  else
