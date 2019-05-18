@@ -12,10 +12,11 @@ if (isset($_SESSION['id']))
    echo template("templates/partials/header.php");
    echo template("templates/partials/nav.php");
 
- $query= INSERT INTO `student` (  `dob`, `firstname`, `lastname`, `house`, `town`, `county`, `country`, `postcode`) VALUES
+ $sql= INSERT INTO `student` (  `dob`, `firstname`, `lastname`, `house`, `town`, `county`, `country`, `postcode`) VALUES
  (  'dob', 'firstname', 'lastname', '1stLineAddress', 'town', 'county', 'counrty', 'postcode');
+
  mysql_query($query);
- $db_seclected= mysqli_select_db($conn,$query);
+ $db_seclected= mysqli_select_db($conn,$sql);
 
   if(!$db_seclected)
   {
