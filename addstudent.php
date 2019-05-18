@@ -18,12 +18,12 @@ if (isset($_SESSION['id']))
    <body style="padding-top: 100px;" >
    <div class= "container">
 
-<?PHP     $sr= 20000001;        ?>
+
 
 <form action="addstudent.php" method= "post" role = "form">
 <br>
 Student ID :  <input type= "number" name="studentid"> <br><br>
-Password :    <input type="pwd" name="password"> <br><br>
+Password :    <input type="pwd" name="password">    <br><br>
 FirstName:    <input type= "text" name="fristname"> <br><br>
 Last Name:    <input type= "text" name="lastname">  <br><br>
 Date of Birth:<input type= "text" name="dob">       <br><br>
@@ -34,7 +34,7 @@ Conutry:      <input type= "text" name="country">   <br><br>
 Post Code:    <input type= "text" name="postcode">  <br><br>
              <input type= "submit" name="insert "value= "SUBMIT">
 </form>
-  <?php $sr ++ ;?>
+
 
 <?php
 $studentid=$_POST["studentid"];
