@@ -50,7 +50,7 @@ Post Code:    <input type= "text" name="postcode">  <br><br>
 
  if (isset($_POST['insert']))
  {
-    $sql = "insert into student (firstname, lastname,dob,house,town,conuty,country,postcode,)
+    $sql = "insert into student (firstname, lastname,dob,house,town,county,country,postcode,)
      values ('fristname','lastname','dob','house', 'town', 'county', 'country' ,'postcode');";
 
 
