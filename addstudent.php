@@ -31,7 +31,7 @@ Town :<input type= "text" value=""="town"> <br><br>
 County: <input type= "text" value=""="county"> <br><br>
 Conutry: <input type= "text" value=""="counrty"> <br><br>
 Post Code: <input type= "text" value=""="postCode"> <br><br>
-<input type= "submit" value=""= "INSERT">
+<input type= "submit" value= "insert">
 </form>
 
 <?php
@@ -42,7 +42,7 @@ Post Code: <input type= "text" value=""="postCode"> <br><br>
    die();
  }
 
- if (isset($_POST['submit']))
+ if (isset($_POST['insert']))
   {
 
 
