@@ -48,13 +48,11 @@ Post Code:    <input type= "text" name="postcode">  <br><br>
 
  if (isset($_POST['insert']))
  {
-    $sql = "insert into student (firstname, lastname,dob,house,town,county,country,postcode,)
+    $sql = "INSERT INTO student (firstname, lastname,dob,house,town,county,country,postcode,)
      values ('fristname','lastname','dob','house', 'town', 'county', 'country' ,'postcode');";
 
-
+    $result = mysqli_query($conn, $sql);
     $data['content'] = "<p>Inserted</p>";
-
-  $result = mysqli_query($conn, $sql);
 
 }
  else
