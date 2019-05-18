@@ -48,14 +48,14 @@ Post Code: <input type= "text" name="PostCode"> <br><br>
     // build an sql statment to update the student details
     $sql = " firstname ='" . $_POST['txtfirstname'] . "',";
     $sql .= "lastname ='" . $_POST['txtlastname']  . "',";
-      $sql .= "house ='" . $_POST['txtdob']  . "',";
+    $sql .= "house ='" . $_POST['txtdob']  . "',";
     $sql .= "house ='" . $_POST['txthouse']  . "',";
     $sql .= "town ='" . $_POST['txttown']  . "',";
     $sql .= "county ='" . $_POST['txtcounty']  . "',";
     $sql .= "country ='" . $_POST['txtcountry']  . "',";
     $sql .= "postcode ='" . $_POST['txtpostcode']  . "' ";
     $sql .= "where studentid = '" . $_SESSION['id'] . "';";
-    $result = mysqli_query($conn,$sql);
+    $result = mysqli_query($con,$sql);
 
     $data['content'] = "<p>Inserted</p>";
 
