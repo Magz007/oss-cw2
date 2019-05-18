@@ -42,17 +42,30 @@ Post Code: <input type= "text" name="PostCode"> <br><br>
    die();
  }
 
-$FirstName = $_POST['fristname'];
-$lastname= $_POST['lastname'];
-$dob= $_POST['dob'];
-$lineaddress=$_POST['1stLineAddress'];
-$town= $_POST['Town'];
-$county= $_POST['County'];
-$country=$_POST['Country'];
-$postcode=$_POST['Postcode'];
+ if (isset($_POST['submit']))
+  {
 
-$sql = "insert into student ('firstname','lastname','dob','house','town','county','country','postcode')
-values ('$FirstName','$lastname','$dob','$lineaddress','$town','$county','$conutry','$postcode')";
+    // build an sql statment to update the student details
+    $sql = "update student set firstname ='" . $_POST['txtfirstname'] . "',";
+    $sql .= "lastname ='" . $_POST['txtlastname']  . "',";
+    $sql .= "house ='" . $_POST['txthouse']  . "',";
+    $sql .= "town ='" . $_POST['txttown']  . "',";
+    $sql .= "county ='" . $_POST['txtcounty']  . "',";
+    $sql .= "country ='" . $_POST['txtcountry']  . "',";
+    $sql .= "postcode ='" . $_POST['txtpostcode']  . "' ";
+    $sql .= "where studentid = '" . $_SESSION['id'] . "';";
+    $result = mysqli_query($conn,$sql);
+
+    $data['content'] = "<p>Your details have been updated</p>";
+
+ }
+ else if
+ {
+    // Build a SQL statment to return the student record with the id that
+    // matches that of the session variable.
+    $sql = "select * from student where studentid='". $_SESSION['id'] . "';";
+    $result = mysqli_query($conn,$sql);
+    $row = mysqli_fetch_array($result);
 
 
 
