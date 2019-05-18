@@ -11,7 +11,7 @@ if (isset($_SESSION['id'])) {
    echo template("templates/partials/header.php");
    echo template("templates/partials/nav.php");
 
-  $db_seclected= mysqli_select_db(student,$conn);
+  $db_seclected= mysqli_select_db($conn,$sql);
   if(!$db_seclected)
   {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
