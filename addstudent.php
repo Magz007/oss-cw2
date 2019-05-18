@@ -52,7 +52,7 @@ $country= $_POST['Country'];
 $postcode= $_POST['Postcode'];
 
 $sql = "insert into student ('firstname','lastname','dob','house','town','county','country','postcode')
-values ('fristname','lastname','dob','lineaddress','town','county','conutry','postcode')";
+values ('$fristname','$lastname','$dob','$lineaddress','$town','$county','$conutry','$postcode')";
 
 
 
