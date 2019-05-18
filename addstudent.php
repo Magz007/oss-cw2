@@ -12,7 +12,7 @@ if (isset($_SESSION['id']))
    echo template("templates/partials/header.php");
    echo template("templates/partials/nav.php");
 
-$con = mysqli_connect("localhost", "root", "", "");
+
 ?>
 
    <html>
@@ -38,7 +38,7 @@ Post Code:     <input type="text"name="postcode"> <br><br>
 
 <?php
 
- if(!mysqli_select_db($con,'bnu.bseen.co.server'))
+ if(!mysqli_select_db($conn,$sql))
  {
    echo "Failed to connect to MySQL: " . mysqli_connect_error();
    die();
@@ -48,8 +48,8 @@ Post Code:     <input type="text"name="postcode"> <br><br>
   {
 
     $sql = "insert into student (firstname) values ('" .  $_SESSION['id'] . "','" . $_POST['firstname'] . "');";
-    $sql .= "INSERT INTO student lastname ='" . $_POST['txtlastname']  . "',";
-    $sql .= "house ='" . $_POST['txtdob']  . "',";
+   $sql = "insert into student lastname values ('" .  $_SESSION['id'] . "','" . $_POST['lastname'] . "');";
+    $sql = "house ='" . $_POST['txtdob']  . "',";
     $sql .= "1stLineAddress ='" . $_POST['txthouse']  . "',";
     $sql .= "Town ='" . $_POST['txttown']  . "',";
     $sql .= "County ='" . $_POST['txtcounty']  . "',";
