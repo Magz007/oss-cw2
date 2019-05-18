@@ -39,7 +39,7 @@ $sql= INSERT INTO `student` (  `dob`, `firstname`, `lastname`, `house`, `town`, 
 (  'dob', 'firstname', 'lastname', '1stLineAddress', 'town', 'county', 'counrty', 'postcode');
 
 
-$db_seclected= mysqli_select_db($conn,$sql);
+$db_seclected= mysqli_query($conn,$sql);
 
  if(!$db_seclected)
  {
