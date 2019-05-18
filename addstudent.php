@@ -33,7 +33,7 @@ Post Code: <input type= "text" name="Post Code"> <br><br>
 
 <?php
    // if the form has been submitted
-   if (isset($_POST['submit'])) {
+   if (isset($_POST['Submit'])) {
 
       // build an sql statment to update the student details
       $sql = "update student set firstname ='" . $_POST['txtfirstname'] . "',";
@@ -46,7 +46,7 @@ Post Code: <input type= "text" name="Post Code"> <br><br>
       $sql .= "where studentid = '" . $_SESSION['id'] . "';";
       $result = mysqli_query($conn,$sql);
 
-      $data['content'] = "<p>Your details have been updated</p>";
+      $data['content'] = "<p>Your Details have been added to the Database</p>";
 
    }
    else {
@@ -56,32 +56,7 @@ Post Code: <input type= "text" name="Post Code"> <br><br>
       $result = mysqli_query($conn,$sql);
       $row = mysqli_fetch_array($result);
 
-      // using <<<EOD notation to allow building of a multi-line string
-      // see http://stackoverflow.com/questions/6924193/what-is-the-use-of-eod-in-php for info
-      // also http://stackoverflow.com/questions/8280360/formatting-an-array-value-inside-a-heredoc
-      $data['content'] = <<<EOD
-
-   <h2>My Details</h2>
-   <form name="frmdetails" action="" method="post">
-   First Name :
-   <input name="txtfirstname" type="text" value="{$row['firstname']}" /><br/>
-   Surname :
-   <input name="txtlastname" type="text"  value="{$row['lastname']}" /><br/>
-   Number and Street :
-   <input name="txthouse" type="text"  value="{$row['house']}" /><br/>
-   Town :
-   <input name="txttown" type="text"  value="{$row['town']}" /><br/>
-   County :
-   <input name="txtcounty" type="text"  value="{$row['county']}" /><br/>
-   Country :
-   <input name="txtcountry" type="text"  value="{$row['country']}" /><br/>
-   Postcode :
-   <input name="txtpostcode" type="text"  value="{$row['postcode']}" /><br/>
-   <input type="submit" value="Save" name="submit"/>
-   </form>
-
-EOD;
-
+    
    }
 
    // render the template
