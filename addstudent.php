@@ -45,19 +45,19 @@ Post Code: <input type= "text" name="PostCode"> <br><br>
 $value= $_POST['fristname'];
 $sql = "insert into student values ('" .  $_SESSION['id'] . "','" . $_POST['firstname'] . "');";
 $value= $_POST['lastname'];
-$sql = "insert into student values ('" .  $_SESSION['id'] . "','" . $_POST['firstname'] . "');";
+$sql = "insert into student values ('" .  $_SESSION['id'] . "','" . $_POST['lastname'] . "');";
 $value= $_POST['dob'];
-$sql = "insert into student values ('" .  $_SESSION['id'] . "','" . $_POST['firstname'] . "');";
-$value= $_POST['1st Line Address'];
-$sql = "insert into student values ('" .  $_SESSION['id'] . "','" . $_POST['firstname'] . "');";
+$sql = "insert into student values ('" .  $_SESSION['id'] . "','" . $_POST['dob'] . "');";
+$value= $_POST['1stLineAddress'];
+$sql = "insert into student values ('" .  $_SESSION['id'] . "','" . $_POST['house'] . "');";
 $value= $_POST['Town'];
-$sql = "insert into student values ('" .  $_SESSION['id'] . "','" . $_POST['firstname'] . "');";
+$sql = "insert into student values ('" .  $_SESSION['id'] . "','" . $_POST['town'] . "');";
 $value= $_POST['county'];
-$sql = "insert into student values ('" .  $_SESSION['id'] . "','" . $_POST['firstname'] . "');";
+$sql = "insert into student values ('" .  $_SESSION['id'] . "','" . $_POST['county'] . "');";
 $value= $_POST['Country'];
-$sql = "insert into student values ('" .  $_SESSION['id'] . "','" . $_POST['firstname'] . "');";
-$value= $_POST['Post code'];
-$sql = "insert into student values ('" .  $_SESSION['id'] . "','" . $_POST['firstname'] . "');";
+$sql = "insert into student values ('" .  $_SESSION['id'] . "','" . $_POST['country'] . "');";
+$value= $_POST['Postcode'];
+$sql = "insert into student values ('" .  $_SESSION['id'] . "','" . $_POST['postcode'] . "');";
 
    // render the template
    echo template("templates/default.php", $data);
