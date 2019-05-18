@@ -59,7 +59,7 @@ Post Code: <input type= "text" name="PostCode"> <br><br>
     $data['content'] = "<p>Your details have been updated</p>";
 
  }
- else if
+ else 
  {
     // Build a SQL statment to return the student record with the id that
     // matches that of the session variable.
