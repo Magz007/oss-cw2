@@ -21,9 +21,15 @@ if (isset($_SESSION['id']))
    <body style="padding-top: 100px;" >
    <div class= "container">
 
+<?PHP
+     $sr= 20000001;
+
+       while($row = mysqli_fetch_array($result))
+        {?>
+
 <form action="addstudent.php" method= "post" role = "form">
 <br>
-
+Student ID : <label type = "label " name ='studentid' value =<?php echo $sr ;?>> <br><br>
 FirstName:    <input type= "text" name="fristname"> <br><br>
 Last Name:    <input type= "text" name="lastname">  <br><br>
 Date of Birth:<input type= "text" name="dob">       <br><br>
@@ -36,6 +42,7 @@ Post Code:    <input type= "text" name="postcode">  <br><br>
 
 
 </form>
+  <?php $sr ++ ;}?>
 
 <?php
 
@@ -65,7 +72,7 @@ Post Code:    <input type= "text" name="postcode">  <br><br>
     // Build a SQL statment to return the student record with the id that
     // matches that of the session variable.
  $sql = "select * from student where studentid='". $_SESSION['id'] . "';";
-  $result = mysqli_query($conn,$sql);
+ $result = mysqli_query($conn,$sql);
  $row = mysqli_fetch_array($result);
 
 
