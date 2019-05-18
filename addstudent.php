@@ -46,6 +46,20 @@ Post Code: <input type= "text" name="Post Code"> <br><br>
 </form>
 
 <?php
+$sql= INSERT INTO `student` (  `dob`, `firstname`, `lastname`, `house`, `town`, `county`, `country`, `postcode`) VALUES
+(  'dob', 'firstname', 'lastname', '1stLineAddress', 'town', 'county', 'counrty', 'postcode');
+
+mysql_query($query);
+$db_seclected= mysqli_select_db($conn,$sql);
+
+ if(!$db_seclected)
+ {
+   echo "Failed to connect to MySQL: " . mysqli_connect_error();
+   die();
+ }
+
+
+
 $value= $_POST['fristname'];
 $sql = "insert into student values ('" .  $_SESSION['id'] . "','" . $_POST['firstname'] . "');";
 $value= $_POST['lastname'];
