@@ -6,18 +6,23 @@ include("_includes/functions.inc");
 
 
 // check logged in
-if (isset($_SESSION['id'])) {
+if (isset($_SESSION['id']))
+{
 
    echo template("templates/partials/header.php");
    echo template("templates/partials/nav.php");
 
- $sql= "select * from student";
- $db_seclected= mysqli_select_db($conn,$sql);
+ $query= INSERT INTO `student` (  `dob`, `firstname`, `lastname`, `house`, `town`, `county`, `country`, `postcode`) VALUES
+ (  'dob', 'firstname', 'lastname', '1stLineAddress', 'town', 'county', 'counrty', 'postcode');
+ mysql_query($query);
+ $db_seclected= mysqli_select_db($conn,$query);
+
   if(!$db_seclected)
   {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
     die();
   }
+
 ?>
 
    <html>
@@ -31,7 +36,7 @@ if (isset($_SESSION['id'])) {
 First Name  :<input type= "text" name="fristname"> <br><br>
 Last Name:   <input type= "text" name="lastname"> <br><br>
 Date of Birth:<input type= "float" name="dob"> <br><br>
-1st Line Address:<input type= "text" name="1st Line Address"> <br><br>
+1st Line Address:<input type= "text" name="1stLineAddress"> <br><br>
 Town :<input type= "text" name="Town"> <br><br>
 County: <input type= "text" name="County"> <br><br>
 Conutry: <input type= "text" name="Counrty"> <br><br>
