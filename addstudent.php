@@ -22,8 +22,7 @@ if (isset($_SESSION['id']))
 
   if (isset($_POST['submit']))
    {
-     $sql = "INSERT INTO student values('" .  $_SESSION['id'] . "','$dob','$fristname','$lastname','$house', '$town', ' $county', '$country' ,'$postcode');";
-
+     $sql = "insert into student values('" .  $_SESSION['id'] . "','$dob','$fristname','$lastname','$house', '$town', ' $county', '$country' ,'$postcode');";
      $result = mysqli_query($conn, $sql);
      $data['content'] .= "<p>student " . $_POST['submit'] . " has been updated </p>";
 
