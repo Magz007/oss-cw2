@@ -24,8 +24,8 @@ if (isset($_SESSION['id']))
 <?PHP
      $sr= 20000001;
 
-       while($row = mysqli_fetch_array($result))
-        {?>
+
+        ?>
 
 <form action="addstudent.php" method= "post" role = "form">
 <br>
