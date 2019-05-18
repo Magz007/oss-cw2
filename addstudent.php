@@ -22,7 +22,7 @@ if (isset($_SESSION['id'])) {
 
 First Name  :<input type= "text" name="fristname"> <br><br>
 Last Name:   <input type= "text" name="lastname"> <br><br>
-Date of Birth:<input type= "text" name="dob"> <br><br>
+Date of Birth:<input type= "float" name="dob"> <br><br>
 1st Line Address:<input type= "text" name="1st Line Address"> <br><br>
 Town :<input type= "text" name="Town"> <br><br>
 County: <input type= "text" name="County"> <br><br>
@@ -56,7 +56,7 @@ Post Code: <input type= "text" name="Post Code"> <br><br>
       $result = mysqli_query($conn,$sql);
       $row = mysqli_fetch_array($result);
 
-    
+
    }
 
    // render the template
