@@ -11,32 +11,7 @@ if (isset($_SESSION['id']))
 
    echo template("templates/partials/header.php");
    echo template("templates/partials/nav.php");
-?>
 
-   <html>
-   <head> Add New Student  </head>
-   <body style="padding-top: 100px;" >
-   <div class= "container">
-
-
-
-<form action="addstudent.php" method= "post" role = "form">
-<br>
-Student ID :  <input type= "number" name="studentid"> <br><br>
-Password :    <input type="pwd" name="password">    <br><br>
-FirstName:    <input type= "text" name="fristname"> <br><br>
-Last Name:    <input type= "text" name="lastname">  <br><br>
-Date of Birth:<input type= "text" name="dob">       <br><br>
-Address:      <input type= "text" name="house">     <br><br>
-Town :        <input type= "text" name="town">      <br><br>
-County:       <input type= "text" name="county">    <br><br>
-Conutry:      <input type= "text" name="country">   <br><br>
-Post Code:    <input type= "text" name="postcode">  <br><br>
-             <button type= "button" name="insert" value= "SUBMIT">
-</form>
-
-
-<?php
 $studentid=$_POST["studentid"];
 $password= $_POST["password"];
  $fristname= $_POST['fristname'];
@@ -55,8 +30,8 @@ $password= $_POST["password"];
     $result = mysqli_query($conn, $sql);
 
     header("./Location: index.php? addstudent= success");
-
-/* else
+}
+ else
  {
     // Build a SQL statment to return the student record with the id that
     // matches that of the session variable.
@@ -66,14 +41,11 @@ $password= $_POST["password"];
    // render the template
   echo template("templates/default.php", $data);
 
-}*/
-
 }
+
+
 
 
 echo template("templates/partials/footer.php");
 
 ?>
-</div>
-</body>
-</html>
