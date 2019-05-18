@@ -40,21 +40,21 @@ Post Code: <input type= "text" name="Post Code"> <br><br>
 
 <?php
 $value= $_POST['fristname'];
-$sql= 'INSERT INTO student (fristname) VALUE ('$value')';
+$sql = "insert into student values ('" .  $_SESSION['id'] . "','" . $_POST['firstname'] . "');";
 $value= $_POST['lastname'];
-$sql= 'INSERT INTO student (lastname) VALUE ('$value')';
+$sql = "insert into student values ('" .  $_SESSION['id'] . "','" . $_POST['firstname'] . "');";
 $value= $_POST['dob'];
-$sql= 'INSERT INTO student (dob) VALUE ('$value')';
+$sql = "insert into student values ('" .  $_SESSION['id'] . "','" . $_POST['firstname'] . "');";
 $value= $_POST['1st Line Address'];
-$sql= 'INSERT INTO student (house) VALUE ('$value')';
+$sql = "insert into student values ('" .  $_SESSION['id'] . "','" . $_POST['firstname'] . "');";
 $value= $_POST['Town'];
-$sql= 'INSERT INTO student (town) VALUE ('$value')';
+$sql = "insert into student values ('" .  $_SESSION['id'] . "','" . $_POST['firstname'] . "');";
 $value= $_POST['county'];
-$sql= 'INSERT INTO student (county) VALUE ('$value')';
+$sql = "insert into student values ('" .  $_SESSION['id'] . "','" . $_POST['firstname'] . "');";
 $value= $_POST['Country'];
-$sql= 'INSERT INTO student (country) VALUE ('$value')';
+$sql = "insert into student values ('" .  $_SESSION['id'] . "','" . $_POST['firstname'] . "');";
 $value= $_POST['Post code'];
-$sql= 'INSERT INTO student (postcode) VALUE ('$value')';
+$sql = "insert into student values ('" .  $_SESSION['id'] . "','" . $_POST['firstname'] . "');";
 
 if(!mysqli_query($sql))
 {
