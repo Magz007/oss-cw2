@@ -47,7 +47,7 @@ Post Code:     <input type="text"name="postcode"> <br><br>
  if (isset($_POST['insert']))
   {
 
-    $sql = "INSERT INTO student (firstname) VALUES( 'firstname' )";
+    $sql = "insert into student (firstname) values ('" .  $_SESSION['id'] . "','" . $_POST['firstname'] . "');";
     $sql .= "INSERT INTO student lastname ='" . $_POST['txtlastname']  . "',";
     $sql .= "house ='" . $_POST['txtdob']  . "',";
     $sql .= "1stLineAddress ='" . $_POST['txthouse']  . "',";
