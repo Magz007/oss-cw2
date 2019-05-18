@@ -24,13 +24,8 @@ if (isset($_SESSION['id']))
    {
      $sql = "INSERT INTO student values('" .  $_SESSION['id'] . "','$dob','$fristname','$lastname','$house', '$town', ' $county', '$country' ,'$postcode');";
 
-
-
-
-      /*(dob, firstname,lastname,house,town,county,country,postcode,)
-     values ('$dob','$fristname','$lastname','$house', '$town', ' $county', '$country' ,'$postcode');";*/
-
-    mysqli_query($conn, $sql);
+     $result = mysqli_query($conn, $sql);
+     $data['content'] .= "<p>student " . $_POST['submit'] . " has been updated </p>";
 
     header("Location: index.php?addstudent=success");
 }
