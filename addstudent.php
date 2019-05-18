@@ -24,7 +24,7 @@ if (isset($_SESSION['id']))
           $postcode= $_POST['postcode'];
 
 
-  if (isset($_POST['submitbtn']))
+  if (isset($_POST['submit']))
    {
      $sql = "INSERT INTO student (dob, firstname,lastname,house,town,county,country,postcode,)
      values ('$dob','$fristname','$lastname','$house', '$town', ' $county', '$country' ,'$postcode');";
