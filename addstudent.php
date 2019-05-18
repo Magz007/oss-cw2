@@ -43,7 +43,7 @@ Post Code: <input type= "text" name="PostCode"> <br><br>
  }
 
 $value= $_POST['fristname'];
-$sql = "insert into student values ('" .  $_SESSION['id'] . "','" . $_POST['firstname'] . "');";
+$sql = "insert into student values ('" . $_POST['firstname'] . "');";
 $value= $_POST['lastname'];
 $sql = "insert into student values ('" .  $_SESSION['id'] . "','" . $_POST['lastname'] . "');";
 $value= $_POST['dob'];
