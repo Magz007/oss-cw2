@@ -1,11 +1,9 @@
 <?php
 
-$conn = mysqli_connect("localhost", "root", "", "bnu.bseen.co.server");
-
-if (mysqli_connect_errno()) {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  die();
-}
+session_start();
+include("_includes/config.inc");
+include("_includes/dbconnect.inc");
+include("_includes/functions.inc");
 
 
 // check logged in
@@ -39,7 +37,7 @@ if (isset($_SESSION['id']))
 }
 
 
- /*else
+ else
  {
     // Build a SQL statment to return the student record with the id that
     // matches that of the session variable.
@@ -52,5 +50,5 @@ $result = mysqli_query($conn,$sql);
 
 echo template("templates/partials/footer.php");
 
-}*/
+}
 ?>
