@@ -12,8 +12,9 @@ if (isset($_SESSION['id']))
    echo template("templates/partials/header.php");
    echo template("templates/partials/nav.php");
 
+
 $studentid=$_POST["studentid"];
-$password= $_POST["password"];
+ $password= $_POST["password"];
  $fristname= $_POST['fristname'];
   $lastname= $_POST['lastname'];
    $dob= $_POST['dob'];
@@ -23,29 +24,26 @@ $password= $_POST["password"];
         $country= $_POST['country'];
           $postcode= $_POST['postcode'];
 
+  if (isset($_POST['submit'])) {
 
      $sql = "INSERT INTO student (studentid, password,firstname, lastname,dob,house,town,county,country,postcode,)
      values ('$studentid','$password','$fristname','$lastname','$dob','$house', '$town', '  $county', '  $country' ,' $postcode');";
 
-    $result = mysqli_query($conn, $sql);
+    mysqli_query($conn, $sql);
 
-    header("./Location: index.php? addstudent= success");
+    header("Location: index.php?addstudent=success");
 }
- else
- {
+// else
+// {
     // Build a SQL statment to return the student record with the id that
     // matches that of the session variable.
- $sql = "select * from student where studentid='". $_SESSION['id'] . "';";
- $result = mysqli_query($conn,$sql);
- $row = mysqli_fetch_array($result);
+// $result = mysqli_query($conn,$sql);
+ //$row = mysqli_fetch_array($result);
    // render the template
-  echo template("templates/default.php", $data);
+  //echo template("templates/default.php", $data);
 
-}
+//}
 
-
-
-
-echo template("templates/partials/footer.php");
+//echo template("templates/partials/footer.php");
 
 ?>
