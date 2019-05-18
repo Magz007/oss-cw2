@@ -33,7 +33,7 @@ Conutry:      <input type= "text" name="country">   <br><br>
 Post Code:    <input type= "text" name="postcode">  <br><br>
              <input type= "submit" name="insert "value= "SUBMIT">
 </form>
-  <?php $sr ++ ;}?>
+  <?php $sr ++ ;?>
 
 <?php
 
