@@ -12,11 +12,7 @@ if (isset($_SESSION['id']))
    echo template("templates/partials/header.php");
    echo template("templates/partials/nav.php");
 
-   if(!mysqli_select_db($conn,$sql))
-   {
-     echo "Failed to connect to MySQL: " . mysqli_connect_error();
-     die();
-   }
+   
 
 ?>
 
