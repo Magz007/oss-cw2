@@ -46,8 +46,9 @@ Post Code: <input type= "text" name="PostCode"> <br><br>
   {
 
     // build an sql statment to update the student details
-    $sql = "update student set firstname ='" . $_POST['txtfirstname'] . "',";
+    $sql = " firstname ='" . $_POST['txtfirstname'] . "',";
     $sql .= "lastname ='" . $_POST['txtlastname']  . "',";
+      $sql .= "house ='" . $_POST['txtdob']  . "',";
     $sql .= "house ='" . $_POST['txthouse']  . "',";
     $sql .= "town ='" . $_POST['txttown']  . "',";
     $sql .= "county ='" . $_POST['txtcounty']  . "',";
@@ -56,7 +57,10 @@ Post Code: <input type= "text" name="PostCode"> <br><br>
     $sql .= "where studentid = '" . $_SESSION['id'] . "';";
     $result = mysqli_query($conn,$sql);
 
-    $data['content'] = "<p>Your details have been updated</p>";
+    $data['content'] = "<p>Inserted</p>";
+
+
+
 
  }
  else
