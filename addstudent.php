@@ -12,18 +12,7 @@ if (isset($_SESSION['id']))
    echo template("templates/partials/header.php");
    echo template("templates/partials/nav.php");
 
- $sql= INSERT INTO `student` (  `dob`, `firstname`, `lastname`, `house`, `town`, `county`, `country`, `postcode`) VALUES
- (  'dob', 'firstname', 'lastname', '1stLineAddress', 'town', 'county', 'counrty', 'postcode');
-
- mysql_query($query);
- $db_seclected= mysqli_select_db($conn,$sql);
-
-  if(!$db_seclected)
-  {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    die();
-  }
-
+ 
 ?>
 
    <html>
