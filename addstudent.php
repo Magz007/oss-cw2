@@ -10,6 +10,13 @@ if (isset($_SESSION['id'])) {
 
    echo template("templates/partials/header.php");
    echo template("templates/partials/nav.php");
+
+  $db_seclected= mysql_select_db(student);
+  if(!$db_seclected)
+  {
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    die();
+  }
 ?>
 
    <html>
@@ -32,37 +39,36 @@ Post Code: <input type= "text" name="Post Code"> <br><br>
 </form>
 
 <?php
-   // if the form has been submitted
-   if (isset($_POST['Submit'])) {
+$value= $_POST['fristname'];
+$sql= 'INSERT INTO student (fristname) VALUE ('$value')';
+$value= $_POST['lastname'];
+$sql= 'INSERT INTO student (lastname) VALUE ('$value')';
+$value= $_POST['dob'];
+$sql= 'INSERT INTO student (dob) VALUE ('$value')';
+$value= $_POST['1st Line Address'];
+$sql= 'INSERT INTO student (house) VALUE ('$value')';
+$value= $_POST['Town'];
+$sql= 'INSERT INTO student (town) VALUE ('$value')';
+$value= $_POST['county'];
+$sql= 'INSERT INTO student (county) VALUE ('$value')';
+$value= $_POST['Country'];
+$sql= 'INSERT INTO student (country) VALUE ('$value')';
+$value= $_POST['Post code'];
+$sql= 'INSERT INTO student (postcode) VALUE ('$value')';
 
-      // build an sql statment to update the student details
-      $sql = "update student set firstname ='" . $_POST['txtfirstname'] . "',";
-      $sql .= "lastname ='" . $_POST['txtlastname']  . "',";
-      $sql .= "house ='" . $_POST['txthouse']  . "',";
-      $sql .= "town ='" . $_POST['txttown']  . "',";
-      $sql .= "county ='" . $_POST['txtcounty']  . "',";
-      $sql .= "country ='" . $_POST['txtcountry']  . "',";
-      $sql .= "postcode ='" . $_POST['txtpostcode']  . "' ";
-      $sql .= "where studentid = '" . $_SESSION['id'] . "';";
-      $result = mysqli_query($conn,$sql);
-
-      $data['content'] = "<p>Your Details have been added to the Database</p>";
-
-   }
-   else {
-      // Build a SQL statment to return the student record with the id that
-      // matches that of the session variable.
-      $sql = "select * from student where studentid='". $_SESSION['id'] . "';";
-      $result = mysqli_query($conn,$sql);
-      $row = mysqli_fetch_array($result);
+if(!mysqli_query($sql))
+{
+  die ('Error'. mysql_error())
+}
 
 
-   }
 
    // render the template
    echo template("templates/default.php", $data);
 
-} else {
+}
+else
+ {
    header("Location: index.php");
 }
 
