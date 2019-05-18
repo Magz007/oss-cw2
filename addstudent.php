@@ -1,8 +1,11 @@
 <?php
 
-include("_includes/config.inc");
-	$conn = mysqli_connect("localhost", "root", "", "bnu.bseen.co.server");
-include("_includes/functions.inc");
+$conn = mysqli_connect("localhost", "root", "", "bnu.bseen.co.server");
+
+if (mysqli_connect_errno()) {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  die();
+}
 
 
 // check logged in
