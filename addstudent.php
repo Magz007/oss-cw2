@@ -10,7 +10,27 @@ if (isset($_SESSION['id'])) {
 
    echo template("templates/partials/header.php");
    echo template("templates/partials/nav.php");
+?>
 
+   <html>
+   <head> Student Records </head>
+   <body style="padding-top: 100px;" >
+   <div class= "container">
+
+<form action="" method= "post" role = "form">
+
+<input type= "text" name="fristname"> <br>
+<input type= "text" name="lastname"> <br>
+<input type= "text" name="Date of Birth"> <br>
+<input type= "text" name="1st Line Address"> <br>
+<input type= "text" name="Town"> <br>
+<input type= "text" name="County"> <br>
+<input type= "text" name="Counrty"> <br>
+<input type= "text" name="Post Code"> <br>
+<input type= "Submit" name ="input" Value= "Submit">
+</form>
+
+<?php
    // if the form has been submitted
    if (isset($_POST['submit'])) {
 
@@ -73,3 +93,6 @@ EOD;
 echo template("templates/partials/footer.php");
 
 ?>
+</div>
+</body>
+</html>
