@@ -31,14 +31,14 @@ Post Code:    <input type= "text" name="postcode">  <br><br>
 <?php
 
 
- $fristname=$_POST['fristname'];
+/* $fristname=$_POST['fristname'];
   $lastname=$_POST['lastname'];
     $dob= $_POST['dob'];
     $house= $_POST['house'];
      $town= $_POST['town'];
       $county= $_POST['county'];
         $country= $_POST['country'];
-          $postcode= $_POST['postcode'];
+          $postcode= $_POST['postcode'];*/
 
 if (isset($_POST['submit']))
 {
