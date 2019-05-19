@@ -30,14 +30,16 @@ Post Code:    <input type= "text" name="postcode">  <br><br>
 
 <?php
 
-$dob= $_POST['dob'];
+
  $fristname=$_POST['fristname'];
   $lastname=$_POST['lastname'];
+    $dob= $_POST['dob'];
     $house= $_POST['house'];
      $town= $_POST['town'];
       $county= $_POST['county'];
         $country= $_POST['country'];
           $postcode= $_POST['postcode'];
+
 if (isset($_POST['submit']))
 {
 $sql = "insert into student(dob,firstname,lastname,house,town,county,country,postcode)
