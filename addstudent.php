@@ -16,16 +16,35 @@ if (isset($_SESSION['id']))
       $county= $_POST['county'];
         $country= $_POST['country'];
           $postcode= $_POST['postcode'];
+?>
+<html>
+<head> Add New Student  </head>
+<body style="padding-top: 100px;" >
+<div class= "container">
 
+<form action="addstudent.php" method= "post">
+<br>
+
+FirstName:    <input type= "text" name="fristname"> <br><br>
+Last Name:    <input type= "text" name="lastname">  <br><br>
+Date of Birth:<input type= "text" name="dob">       <br><br>
+Address:      <input type= "text" name="house">     <br><br>
+Town :        <input type= "text" name="town">      <br><br>
+County:       <input type= "text" name="county">    <br><br>
+Conutry:      <input type= "text" name="country">   <br><br>
+Post Code:    <input type= "text" name="postcode">  <br><br>
+             <button type= "submit" name="submit" value="SUBMIT" class= "btn btn-info"></button>
+</form>
+
+
+<?php
 if (isset($_POST['submit']))
 {
 $sql = "insert into student(dob,firstname,lastname,house,town,county,country,postcode)
  values('$dob','$fristname','$lastname','$house', '$town', ' $county', '$country' ,'$postcode');";
 
 mysqli_query($conn, $sql);
-
-
-
+header("Location: index.php?addstudent=success");
 }
 
 }
@@ -36,9 +55,12 @@ $result = mysqli_query($conn,$sql);
 $row =mysqli_fetch_array($result);
    // render the template
   echo template("templates/default.php", $data);
-  header("Location: index.php?addstudent=success");
+
 
 }
 echo template("templates/partials/footer.php");
 
 ?>
+</div>
+</body>
+</html>
