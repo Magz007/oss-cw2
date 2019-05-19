@@ -24,10 +24,13 @@ if (isset($_SESSION['id']))
    {
      $sql = "insert into student values('" .  $_SESSION['id'] . "','$dob','$fristname','$lastname','$house', '$town', ' $county', '$country' ,'$postcode');";
      $result = mysqli_query($conn, $sql);
+
      $data['content'] .= "<p>student " . $_POST['submit'] . " has been updated </p>";
 
-    header("Location: index.php?addstudent=success");
+     echo [$result];
+
 }
+
 }
  else
  {
@@ -36,6 +39,7 @@ $result = mysqli_query($conn,$sql);
  $row =mysqli_fetch_array($result);
    // render the template
   echo template("templates/default.php", $data);
+  header("Location: index.php?addstudent=success");
 //
 }
 echo template("templates/partials/footer.php");
