@@ -8,17 +8,7 @@ if (isset($_SESSION['id']))
 {
    echo template("templates/partials/header.php");
    echo template("templates/partials/nav.php");
-
-$dob= $_POST['dob'];
- $fristname=$_POST['fristname'];
-  $lastname=$_POST['lastname'];
-    $house= $_POST['house'];
-     $town= $_POST['town'];
-      $county= $_POST['county'];
-        $country= $_POST['country'];
-          $postcode= $_POST['postcode'];
 ?>
-
 <html>
 <head> Add New Student  </head>
 <body style="padding-top: 100px;" >
@@ -39,6 +29,15 @@ Post Code:    <input type= "text" name="postcode">  <br><br>
 </form>
 
 <?php
+
+$dob= $_POST['dob'];
+ $fristname=$_POST['fristname'];
+  $lastname=$_POST['lastname'];
+    $house= $_POST['house'];
+     $town= $_POST['town'];
+      $county= $_POST['county'];
+        $country= $_POST['country'];
+          $postcode= $_POST['postcode'];
 if (isset($_POST['submit']))
 {
 $sql = "insert into student(dob,firstname,lastname,house,town,county,country,postcode)
