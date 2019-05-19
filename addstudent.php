@@ -17,12 +17,13 @@ if (isset($_SESSION['id']))
         $country= $_POST['country'];
           $postcode= $_POST['postcode'];
 
-  if (isset($_POST['submit']))
-   {
+if (isset($_POST['submit']))
+{
      $sql = "insert into student values('" .  $_SESSION['id'] . "','$dob','$fristname','$lastname','$house', '$town', ' $county', '$country' ,'$postcode');";
-      mysqli_query($conn, $sql);
 
-      if (!mysql_query($sql,$con))
+  mysqli_query($conn, $sql);
+
+  if (!mysql_query($sql,$conn))
   {
       die('Error: ' . mysql_error());
   }
@@ -31,15 +32,15 @@ if (isset($_SESSION['id']))
 }
 
 }
- else
+else
  {
 
 $result = mysqli_query($conn,$sql);
- $row =mysqli_fetch_array($result);
+$row =mysqli_fetch_array($result);
    // render the template
   echo template("templates/default.php", $data);
   header("Location: index.php?addstudent=success");
-//
+
 }
 echo template("templates/partials/footer.php");
 
