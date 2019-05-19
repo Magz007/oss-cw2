@@ -28,9 +28,6 @@ if (isset($_SESSION['id']))
   }
   echo "1 record added";
 
-  $data['content'] .=  . $_POST['submit'] .;
-
-
 }
 
 }
