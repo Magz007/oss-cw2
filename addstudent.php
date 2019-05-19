@@ -22,7 +22,7 @@ if (isset($_SESSION['id']))
 <body style="padding-top: 100px;" >
 <div class= "container">
 
-<form action="addstudent.php" method= "post">
+<form action="" method= "post">
 <br>
 
 FirstName:    <input type= "text" name="fristname"> <br><br>
@@ -35,7 +35,6 @@ Conutry:      <input type= "text" name="country">   <br><br>
 Post Code:    <input type= "text" name="postcode">  <br><br>
              <button type= "submit" name="submit" value="SUBMIT" class= "btn btn-info"></button>
 </form>
-
 
 <?php
 if (isset($_POST['submit']))
@@ -55,8 +54,6 @@ $result = mysqli_query($conn,$sql);
 $row =mysqli_fetch_array($result);
    // render the template
   echo template("templates/default.php", $data);
-
-
 }
 echo template("templates/partials/footer.php");
 
