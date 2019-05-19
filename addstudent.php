@@ -23,9 +23,9 @@ if (isset($_POST['submit']))
 
   mysqli_query($conn, $sql);
 
-  if (!mysql_query($sql,$conn))
+  if (!mysqli_query($sql, $conn))
   {
-      die('Error: ' . mysql_error());
+      die('Error: ' . mysqli_error());
   }
   echo "1 record added";
 
