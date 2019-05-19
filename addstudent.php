@@ -1,6 +1,4 @@
 <?php
-
-session_start();
 include("_includes/config.inc");
 include("_includes/dbconnect.inc");
 include("_includes/functions.inc");
@@ -10,7 +8,6 @@ if (isset($_SESSION['id']))
 {
    echo template("templates/partials/header.php");
    echo template("templates/partials/nav.php");
-
  $fristname=$_POST['fristname'];
   $lastname=$_POST['lastname'];
    $dob= $_POST['dob'];
@@ -23,11 +20,16 @@ if (isset($_SESSION['id']))
   if (isset($_POST['submit']))
    {
      $sql = "insert into student values('" .  $_SESSION['id'] . "','$dob','$fristname','$lastname','$house', '$town', ' $county', '$country' ,'$postcode');";
-     $result = mysqli_query($conn, $sql);
+      mysqli_query($conn, $sql);
 
-     $data['content'] .= "<p>student " . $_POST['submit'] . " has been updated </p>";
+      if (!mysql_query($sql,$con))
+  {
+      die('Error: ' . mysql_error());
+  }
+  echo "1 record added";
 
-     echo [$result];
+  $data['content'] .=  . $_POST['submit'] .;
+
 
 }
 
