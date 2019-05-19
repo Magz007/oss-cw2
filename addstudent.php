@@ -21,8 +21,8 @@ if (isset($_POST['submit']))
 {
   $sql = "insert into student values('" .  $_SESSION['id'] . "','$dob','$fristname','$lastname','$house', '$town', ' $county', '$country' ,'$postcode');";
 
-  mysqli_query($conn, $sql);
-
+mysqli_query($conn, $sql);
+echo $sql;
 
 
 }
