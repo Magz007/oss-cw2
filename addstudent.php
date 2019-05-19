@@ -8,15 +8,17 @@ if (isset($_SESSION['id']))
 {
    echo template("templates/partials/header.php");
    echo template("templates/partials/nav.php");
+
+$dob= $_POST['dob'];
  $fristname=$_POST['fristname'];
   $lastname=$_POST['lastname'];
-   $dob= $_POST['dob'];
     $house= $_POST['house'];
      $town= $_POST['town'];
       $county= $_POST['county'];
         $country= $_POST['country'];
           $postcode= $_POST['postcode'];
 ?>
+
 <html>
 <head> Add New Student  </head>
 <body style="padding-top: 100px;" >
@@ -58,6 +60,7 @@ $row =mysqli_fetch_array($result);
 echo template("templates/partials/footer.php");
 
 ?>
+
 </div>
 </body>
 </html>
