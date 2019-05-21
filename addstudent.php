@@ -30,19 +30,28 @@ Post Code:    <input type= "text" name= 'postcode' ><br><br>
 </form>
 
 <?php
- $dob= $_POST['dob'];
+ /*$dob= $_POST['dob'];
  $fristname=$_POST['fristname'];
  $lastname=$_POST['lastname'];
  $house=$_POST['house'];
  $town=$_POST['town'];
  $county= $_POST['county'];
  $country=$_POST['country'];
- $postcode=$_POST['postcode'];
+ $postcode=$_POST['postcode'];*/
 
 if (isset($_POST['submit']))
 {
 $sql = "insert into student(dob,firstname,lastname,house,town,county,country,postcode)
- values('$dob','$firstname','$lastname','$house, '$town', ' $county', '$country' ,'$postcode');";
+ values(
+   '{ $mysqli->real_escape_string ($_POST['dob'])}',
+    '{ $mysqli->real_escape_string ($_POST['fristname'])}',
+      '{ $mysqli->real_escape_string ($_POST['lastname'])}',
+        '{ $mysqli->real_escape_string ($_POST['house'])}',
+          '{ $mysqli->real_escape_string ($_POST['town'])}',
+            '{ $mysqli->real_escape_string ($_POST['county'])}',
+              '{ $mysqli->real_escape_string ($_POST['conutry'])}',
+                '{ $mysqli->real_escape_string ($_POST['postcode'])}',
+   );";
 
 mysqli_query($conn, $sql);
 header("Location: index.php?addstudent=success");
