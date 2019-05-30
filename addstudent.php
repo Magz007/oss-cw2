@@ -51,10 +51,11 @@ if (mysqli_query($conn,$sql))
     echo "New record created successfully";
 }
 
+}
 else
 {
 
-   // render the template
+ // render the template
 echo template("templates/default.php", $data);
 }
 echo template("templates/partials/footer.php");
