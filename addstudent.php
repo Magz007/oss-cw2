@@ -27,8 +27,8 @@ Post Code:    <input type= "text" name= 'postcode' ><br><br>
 </form>
 
 <?php
- $studentid=$_POST['studentid']
- $dob= $_POST['dob'];
+ $studentid=$_POST['studentid'];
+ $dob=$_POST['dob'];
  $fristname=$_POST['fristname'];
  $lastname=$_POST['lastname'];
  $house=$_POST['house'];
@@ -37,7 +37,7 @@ Post Code:    <input type= "text" name= 'postcode' ><br><br>
  $country=$_POST['country'];
  $postcode=$_POST['postcode'];*/
 
-$sql= "INSERT INTO student (studentid, dob,firstname,lastname, house, town, county, country, postcode)
+$sql= "INSERT INTO student (studentid,dob,firstname,lastname, house, town, county, country, postcode)
 Values('$studentid','$dob','$firstname','$lastname','$house','$town','$county',' $country','$postcode')"
 mysqli_query($conn, $sql);
 
