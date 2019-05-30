@@ -41,7 +41,7 @@ $sql= "INSERT INTO student (studentid,dob,firstname,lastname, house, town, count
 Values('$studentid','$dob','$firstname','$lastname','$house','$town','$county',' $country','$postcode')"
 //mysqli_query($conn, $sql);
 
-header("Location: index.php?addstudent=success");
+
 
  //ref:https://www.w3schools.com/php/php_mysql_insert.asp
 if ($conn,$sql) ===TRUE)
@@ -63,7 +63,7 @@ else
   echo template("templates/default.php", $data);
 }
 echo template("templates/partials/footer.php");
-
+header("Location: index.php?addstudent=success");
 ?>
 
 </div>
