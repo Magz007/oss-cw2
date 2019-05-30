@@ -4,6 +4,10 @@ include("_includes/dbconnect.inc");
 include("_includes/functions.inc");
 
 // check logged in
+if (isset($_SESSION['id'])) {
+
+   echo template("templates/partials/header.php");
+   echo template("templates/partials/nav.php");
 
 ?>
 
@@ -46,14 +50,14 @@ if (mysqli_query($conn,$sql))
 {
     echo "New record created successfully";
 }
-else 
+else
 {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
 $conn->close();
 
-
+}
 else
 {
 
