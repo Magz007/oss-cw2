@@ -39,7 +39,7 @@ Post Code:    <input type= "text" name= 'postcode' ><br><br>
 
 $sql= "INSERT INTO student (studentid,dob,firstname,lastname, house, town, county, country, postcode)
 Values('$studentid','$dob','$firstname','$lastname','$house','$town','$county',' $country','$postcode')"
-mysqli_query($conn, $sql);
+//mysqli_query($conn, $sql);
 
 header("Location: index.php?addstudent=success");
 
