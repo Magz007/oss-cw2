@@ -40,8 +40,10 @@ Post Code:    <input type= "text" name= 'postcode' ><br><br>
 $sql= "INSERT INTO student (studentid, dob,firstname,lastname, house, town, county, country, postcode)
 Values('$studentid','$dob','$firstname','$lastname','$house','$town','$county',' $country','$postcode')"
 mysqli_query($conn, $sql);
+
 header("Location: index.php?addstudent=success");
 
+ //ref:https://www.w3schools.com/php/php_mysql_insert.asp
 if ($conn,$sql) ===TRUE)
 {
     echo "New record created successfully";
