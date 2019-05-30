@@ -13,9 +13,8 @@
       echo template("templates/partials/nav.php");
 
       // Build SQL statment that selects a student's database
-    $sql = "select * from student  where studentid =  '" . $_SESSION['id'] ."';";
-
-      $result = mysqli_query($conn,$sql);
+    mysqli_query ("select * from student  where studentid =  '" . $_SESSION['id'] ."';";)
+    $result = mysqli_query($conn,$sql);
 ?>
 <html>
 <head> Student Records </head>
@@ -38,7 +37,7 @@
 
      </tr>
 <?php
-      // Display the students  within the html table
+      // Display a number at the beginging for the table
     $sr=1;
 
       while($row = mysqli_fetch_array($result))
@@ -69,14 +68,14 @@
     // Codes the delete button
     if (isset($_POST['btndelete']))
     {
-      $i=0;
-      while ($i<$Key)
-      {
+        $i=0;
         $keyToDelete=$_POST['records[]'][$i];
 
+    foreach ($keyToDelete as ['btndelete'])
+      {
         mysql_query("Delete * from student where studentid='". $_POST['id'] . "';"; )
         $result = mysqli_query($conn,$sql);
-        $row = mysqli_fetch_array($result);
+
 
         $i++;
       }
