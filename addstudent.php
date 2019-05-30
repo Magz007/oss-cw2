@@ -50,19 +50,12 @@ if (mysqli_query($conn,$sql))
 {
     echo "New record created successfully";
 }
-else
-{
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
 
-$conn->close();
-
-}
 else
 {
 
    // render the template
-  echo template("templates/default.php", $data);
+echo template("templates/default.php", $data);
 }
 echo template("templates/partials/footer.php");
 header("Location: index.php?addstudent=success");
