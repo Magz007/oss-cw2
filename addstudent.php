@@ -4,10 +4,7 @@ include("_includes/dbconnect.inc");
 include("_includes/functions.inc");
 
 // check logged in
-if (isset($_SESSION['id']))
-{
-   echo template("templates/partials/header.php");
-   echo template("templates/partials/nav.php");
+
 ?>
 
 <html>
@@ -44,11 +41,21 @@ $sql= "INSERT INTO student (studentid, dob,firstname,lastname, house, town, coun
 Values('$studentid','$dob','$firstname','$lastname','$house','$town','$county',' $country','$postcode')"
 mysqli_query($conn, $sql);
 header("Location: index.php?addstudent=success");
-}
 
+if ($conn,$sql) ===TRUE)
+{
+    echo "New record created successfully";
 }
 else
- {
+{
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+
+
+else
+{
 
    // render the template
   echo template("templates/default.php", $data);
