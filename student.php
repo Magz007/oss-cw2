@@ -68,18 +68,23 @@
     // Codes the delete button
     if (isset($_POST['btndelete']))
     {
-        $i=0;
-        $keyToDelete=$_POST['records[]'][$i];
+        $delete=$_POST['btndelete']
+        $keyToDelete=$_POST['records[]'];
 
-    foreach ($keyToDelete as ['btndelete'])
+    foreach ($keyToDelete as $delete)
       {
-        mysql_query("Delete * from student where studentid='". $_POST['id'] . "';"; )
+        $sql= ("Delete * from student where studentid='". $delete . "';"; )
         $result = mysqli_query($conn,$sql);
 
-
-        $i++;
+      }
+      //ref: https://www.w3schools.com/php/php_mysql_delete.asp
+      if ($result) === TRUE) {
+          echo "Record deleted successfully";
+      } else {
+          echo "Error deleting record: " . $conn->error;
       }
 
+      $conn->close();
 
 
     /*if(isset($_POST ['submitDeleteBtn']))
