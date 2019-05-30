@@ -46,7 +46,7 @@ if (mysqli_query($conn,$sql))
 {
     echo "New record created successfully";
 }
-else if
+else 
 {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
