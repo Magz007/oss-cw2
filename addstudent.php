@@ -41,14 +41,12 @@ $sql= "INSERT INTO student (studentid,dob,firstname,lastname, house, town, count
 Values('$studentid','$dob','$firstname','$lastname','$house','$town','$county',' $country','$postcode')"
 //mysqli_query($conn, $sql);
 
-
-
  //ref:https://www.w3schools.com/php/php_mysql_insert.asp
 if ($conn,$sql) ===TRUE)
 {
     echo "New record created successfully";
 }
-else
+else if
 {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
