@@ -42,7 +42,7 @@ Values('$studentid','$dob','$firstname','$lastname','$house','$town','$county','
 //mysqli_query($conn, $sql);
 
  //ref:https://www.w3schools.com/php/php_mysql_insert.asp
-if (mysqli_query($conn,$sql) ===TRUE))
+if (mysqli_query($conn,$sql))
 {
     echo "New record created successfully";
 }
