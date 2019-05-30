@@ -57,7 +57,7 @@
                    <td><?php echo $row['country'] ;?> </td>
                     <td><?php echo $row['postcode'] ;?> </td>
                      <td> <input type= "checkbox" name= "records[]" value=<?php echo $row['studentid'] ;?> required></td>
-                      <td> <input type= "button" name="btndelete" value="DELETE" class= "btn btn-info"> </td>
+                      <td> <input type= "submit" name="btndelete" value="DELETE" class= "btn btn-info"> </td>
   </form>
      </tr>
 
@@ -73,7 +73,7 @@
       while ($i<$Key)
       {
         $keyToDelete=$_POST['records[]'][$i];
-        
+
         mysql_query("Delete * from student where studentid='". $_POST['id'] . "';"; )
         $result = mysqli_query($conn,$sql);
         $row = mysqli_fetch_array($result);
