@@ -35,7 +35,7 @@ Post Code:    <input type= "text" name= 'postcode' ><br><br>
  $town=$_POST['town'];
  $county= $_POST['county'];
  $country=$_POST['country'];
- $postcode=$_POST['postcode'];*/
+ $postcode=$_POST['postcode'];
 
 $sql= "INSERT INTO student (studentid,dob,firstname,lastname, house, town, county, country, postcode)
 Values('$studentid','$dob','$firstname','$lastname','$house','$town','$county',' $country','$postcode')"
