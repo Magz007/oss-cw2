@@ -30,7 +30,8 @@ Post Code:    <input type= "text" name= 'postcode' ><br><br>
 </form>
 
 <?php
- /*$dob= $_POST['dob'];
+ $studentid=$_POST['studentid']
+ $dob= $_POST['dob'];
  $fristname=$_POST['fristname'];
  $lastname=$_POST['lastname'];
  $house=$_POST['house'];
@@ -39,20 +40,8 @@ Post Code:    <input type= "text" name= 'postcode' ><br><br>
  $country=$_POST['country'];
  $postcode=$_POST['postcode'];*/
 
-if (isset($_POST['submit']))
-{
-$sql = "insert into student(dob,firstname,lastname,house,town,county,country,postcode)
- values(
-   '{ $mysqli->real_escape_string ($_POST['dob'])}',
-    '{ $mysqli->real_escape_string ($_POST['fristname'])}',
-      '{ $mysqli->real_escape_string ($_POST['lastname'])}',
-        '{ $mysqli->real_escape_string ($_POST['house'])}',
-          '{ $mysqli->real_escape_string ($_POST['town'])}',
-            '{ $mysqli->real_escape_string ($_POST['county'])}',
-              '{ $mysqli->real_escape_string ($_POST['conutry'])}',
-                '{ $mysqli->real_escape_string ($_POST['postcode'])}',
-   );";
-
+$sql= "INSERT INTO student (studentid, dob,firstname,lastname, house, town, county, country, postcode)
+Values('$studentid','$dob','$firstname','$lastname','$house','$town','$county',' $country','$postcode')"
 mysqli_query($conn, $sql);
 header("Location: index.php?addstudent=success");
 }
@@ -61,8 +50,6 @@ header("Location: index.php?addstudent=success");
 else
  {
 
-$result = mysqli_query($conn,$sql);
-$row =mysqli_fetch_array($result);
    // render the template
   echo template("templates/default.php", $data);
 }
