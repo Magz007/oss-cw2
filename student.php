@@ -63,7 +63,9 @@ while($row = mysqli_fetch_array($result))
     // Codes the delete button
      if (isset($_POST['submit']))
      {
-      $sql= ("Delete * from student where studentid = $_POST['records'])";
+      $st=$_POST['records']
+
+      $sql= ("Delete * from student where studentid = $st)";
 
       mysqli_query($conn,$sql);
      }
