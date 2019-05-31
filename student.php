@@ -60,7 +60,7 @@ while($row = mysqli_fetch_array($result))
 
 }
 
-    /*Codes the delete button
+  //Codes the delete button
      if (isset($_POST['submit']))
      {
        while($st )
@@ -74,7 +74,7 @@ while($row = mysqli_fetch_array($result))
 
      mysqli_close($conn);
 }
-}*/
+}
 }
 }
 else
@@ -85,7 +85,7 @@ else
 
 }
 echo template("templates/default.php", $data);
-    $data['content'] .= 
+    $data['content'] .=
 
 ?>
 
