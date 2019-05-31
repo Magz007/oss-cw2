@@ -9,7 +9,7 @@ if (isset($_SESSION['id'])) {
    echo template("templates/partials/header.php");
    echo template("templates/partials/nav.php");
 
-
+ $studentid=$_POST['studentid'];
  $dob=$_POST['dob'];
  $fristname=$_POST['fristname'];
  $lastname=$_POST['lastname'];
@@ -19,7 +19,7 @@ if (isset($_SESSION['id'])) {
  $country=$_POST['country'];
  $postcode=$_POST['postcode'];
 
-$sql= "INSERT INTO student (dob,firstname,lastname, house, town, county, country, postcode)
+$sql= "INSERT INTO student (studentid,dob,firstname,lastname, house, town, county, country, postcode)
 Values('$studentid','$dob',' $fristname','$lastname','$house','$town','$county',' $country','$postcode')";
 
 
