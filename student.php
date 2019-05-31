@@ -13,19 +13,15 @@
       echo template("templates/partials/nav.php");
 // Build SQL statment that selects a student's database
       $sql= ("SELECT * from student  where studentid = '" . $_SESSION['id'] ."';");
-
-
-
 ?>
-      <html>
-      <head> Student Records </head>
-      <body style="padding-top: 100px;" >
-      <div class= "container">
+  <html>
+  <head> Student Records </head>
+  <body style="padding-top: 100px;" >
+  <div class= "container">
 
         <table class='table' table border= "1px">
           <tr>
             <th> </th>
-
              <th>D.O.B</th>
               <th>First Name</th>
                <th>Last Name</th>
@@ -37,12 +33,12 @@
                       <th> Select Checkbox </th>
                  </tr>
 
-     <?php
+<?php
                  // Display a number at the beginging for the table
  $sr=1;
-               while($row = mysqli_fetch_array($result))
-            {
-    ?>
+while($row = mysqli_fetch_array($result))
+  {?>
+
     <tr>
     <form action="" method= "post" role = "form">
           <td><?php echo $sr ;?> </td>
@@ -59,34 +55,45 @@
                       <td> <input type="submit" name="submit" value="DELETE">   </td>
   </form>
      </tr>
-     <?php $sr ++ ;?>
-}
 
+     <?php $sr ++ ;?>
+  }
 
 <?php
     // Codes the delete button
-    if (isset($_POST['submit']))
-    {
+     if (isset($_POST['submit']))
+     {
       $sql= ("Delete * from student where studentid = '" . $_POST['records'] ."';");
 
-      $result= mysqli_query($conn,$sql);
+        if (mysqli_query($conn,$sql))
+        {
+          echo "record Deleted";
+        }
+        elseif  (!mysqli_query($conn,$sql))
+        {
+        echo "unable to Delete Records"
+        }
 
-    }
+      header("Location: index.php?");
 
-      // render the template
-      echo template("templates/default.php", $data);
+     }
 
-   }
+
+}
+
    else
    {
-      header("Location: index.php");
+     // render the template
+     echo template("templates/default.php", $data);
+
    }
 
-   echo template("templates/partials/footer.php");
-  $data['content'] .= "</table>";
+
+
+    $data['content'] .= "</table>";
 ?>
 
-</table>
+
 </div>
 </body>
 </html>
