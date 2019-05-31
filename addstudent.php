@@ -35,7 +35,8 @@ header("Location: index.php?addstudent=success");
 else
 {
  // render the template
-echo template("templates/default.php", $data);
+//echo template("templates/default.php", $data);
+echo templete ("templates/student.php", $data);
 }
 echo template("templates/partials/footer.php");
 

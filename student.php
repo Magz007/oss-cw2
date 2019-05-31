@@ -12,6 +12,7 @@ if (isset($_SESSION['id']))
       echo template("templates/partials/nav.php");
 // Build SQL statment that selects a student's database
       $sql= ("SELECT * from student  where studentid = '" . $_SESSION['id'] ."';");
+
       $result=(mysqli_query($conn,$sql));
 
 ?>
@@ -76,7 +77,6 @@ while($row = mysqli_fetch_array($result))
         }
 
       header("Location: index.php?");
-
      }
 
 }
