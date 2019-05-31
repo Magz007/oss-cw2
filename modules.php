@@ -16,12 +16,8 @@
       $sql = "select * from studentmodules;";
       $result = mysqli_query($conn,$sql);
       $checkresult= mysqli_num_rows($result);
-      if($checkresult >0 )
-      {
-        while ($row =mysqli_fetch_array($result))
-        {
-          echo $row['studentid'] . "<br>";
-        }
+
+
 
       // prepare page content
       $data['content'] .= "<table border='1'>";
@@ -29,11 +25,14 @@
       $data['content'] .= "<tr><th>Code</th><th>Type</th><th>Level</th></tr>";
 
       // Display the modules within the html table
-      while($row = mysqli_fetch_array($checkresult))
+      if($checkresult >0 )
+      {
+      while($row = mysqli_fetch_array($result))
        {
          $data['content'] .= "<tr><td> $row[modulecode] </td><td> $row[name] </td>";
          $data['content'] .= "<td> $row[level] </td></tr>";
       }
+    }
       $data['content'] .= "</table>";
 
       // render the template
