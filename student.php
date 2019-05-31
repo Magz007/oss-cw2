@@ -61,7 +61,7 @@
 <?php
 
      $sr ++ ;
-   }
+                }
 
     // Codes the delete button
     if (isset($_POST['submit']))
@@ -75,7 +75,7 @@
 
       }
 
-    }
+    
 
     ?>
 
@@ -86,7 +86,7 @@
       // render the template
       echo template("templates/default.php", $data);
 
-   
+   }
    else
    {
       header("Location: index.php");
