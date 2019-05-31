@@ -32,7 +32,7 @@
          //echo $row['studentid'] ."<br>";
     }
     //}
-      $data['content'] .= "</table>";
+      //$data['content'] .= "</table>";
 
       // render the template
       echo template("templates/default.php", $data);
