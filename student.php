@@ -68,7 +68,12 @@
     {
       $sql= ("Delete * from student where studentid = '" .  $_SESSION['id'] . "','" .   $_POST['records'] . "'");
 
-       mysqli_query($conn,$sql);
+      if (mysqli_query($conn,$sql))
+      {
+          echo "New record created successfully";
+      }
+
+      }
 
     }
 
