@@ -46,9 +46,9 @@ $sr ++;
 
      <?php
                  // Display a number at the beginging for the table
- //$sr=1;
-               //while($row = mysqli_fetch_array($result))
-            //{<?php $sr ++ ;}
+ $sr=1;
+               while($row = mysqli_fetch_array($result))
+            {
     ?>
     <tr>
     <form action="" method= "post" role = "form">
@@ -66,8 +66,8 @@ $sr ++;
                       <td> <input type="submit" name="submit" value="DELETE">   </td>
   </form>
      </tr>
-
-
+}
+<?php $sr ++ ;?>
 
 <?php
 
