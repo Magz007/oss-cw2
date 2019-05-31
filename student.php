@@ -71,20 +71,9 @@
     {
       $sql= ("Delete * from student where studentid = '" . $_POST['records'] ."';");
 
-      if (mysqli_query($conn,$sql))
-      {
-          echo "New record created successfully";
-      }
+      $result= mysqli_query($conn,$sql);
 
-      }
-
-
-
-    ?>
-
- <?php
-
-
+    }
 
       // render the template
       echo template("templates/default.php", $data);
