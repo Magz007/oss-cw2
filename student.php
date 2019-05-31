@@ -65,7 +65,7 @@ while($row = mysqli_fetch_array($result))
      {
       $st=$_POST['records']
 
-      $sql= ("Delete * from student where studentid = $st)";
+      $sql= ("Delete * from student where studentid ='". $_SESSION['id'] . "';)";
 
       mysqli_query($conn,$sql);
      }
