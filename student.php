@@ -13,8 +13,15 @@
       echo template("templates/partials/nav.php");
 // Build SQL statment that selects a student's database
       $sql= ("SELECT * from student  where studentid = '" . $_SESSION['id'] ."';");
-      $result = mysqli_query($conn,$sql);
 
+ $sr=1;
+ while ($sr<1)
+ {
+   
+$result = mysqli_query($conn,$sql)
+$sr++;
+
+  }
 
 
 ?>
