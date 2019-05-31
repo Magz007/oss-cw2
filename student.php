@@ -14,7 +14,7 @@ if (isset($_SESSION['id']))
 // Build SQL statment that selects a student's database
 $sql = "select * from student" ;
 $result = mysqli_query($conn,$sql);
-$row = mysqli_fetch_array($result);
+
 
 ?>
   <html>
@@ -66,7 +66,7 @@ while($row = mysqli_fetch_array($result))
      {
       $st=$_POST['records']
 
-      $sql= ("Delete * from student where studentid ='". $_SESSION['id'] . "';)";
+      $sql= ("Delete * from student where studentid =$_POST['records'];)";
 
       mysqli_query($conn,$sql);
      }
