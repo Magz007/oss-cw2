@@ -5,7 +5,6 @@
    include("_includes/functions.inc");
    include("css/index.html");
 
-
    // check logged in
 if (isset($_SESSION['id']))
 {
@@ -20,15 +19,16 @@ if($checkresult >0 )
   while ($row =mysqli_fetch_array($result))
   {
     echo $row['studentid'] ;
-}
+  }
 ?>
+
   <html>
   <head> Student Records </head>
   <body style="padding-top: 100px;" >
   <div class= "container">
         <table class='table' table border= "1px">
           <tr>
-
+            <th>Password</th>
              <th>D.O.B</th>
               <th>First Name</th>
                <th>Last Name</th>
@@ -64,10 +64,13 @@ while($row = mysqli_fetch_array($result))
 <?php $sr++;?>
 
 <?php
-    // Codes the delete button
+
+    /*Codes the delete button
      if (isset($_POST['submit']))
      {
-      $st=$_POST['records']
+       while($st )
+
+         $st=$_POST['records']
 
       $sql= ("Delete * from student where studentid =$_POST['studentid'];";
 
@@ -76,7 +79,7 @@ while($row = mysqli_fetch_array($result))
 
      mysqli_close($conn);
 }
-}
+}*/
 else
 {
  // render the template
