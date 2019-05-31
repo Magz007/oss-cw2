@@ -24,7 +24,7 @@
       // Display the modules within the html table
       //if($checkresult >0 )
     //  {
-     while($row = mysqli_fetch_array($result))
+     while($row = mysqli_fetch_array($checkresult))
       {
 
          $data['content'] .= "<tr><td> $row[studentid] </td><td> $row[name] </td> <td> $row[modulecode] </td>";
