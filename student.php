@@ -59,14 +59,11 @@
                       <td> <input type="submit" name="submit" value="DELETE">   </td>
   </form>
      </tr>
+     <?php $sr ++ ;?>
 }
-<?php $sr ++ ;?>
+
 
 <?php
-
-
-
-
     // Codes the delete button
     if (isset($_POST['submit']))
     {
