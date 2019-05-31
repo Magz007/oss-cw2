@@ -17,12 +17,11 @@
  $sr=1;
  while ($sr<1)
  {
-   
+
 $result = mysqli_query($conn,$sql)
-$sr++;
 
   }
-
+$sr ++;
 
 ?>
       <html>
