@@ -57,7 +57,9 @@ while($row = mysqli_fetch_array($result))
   </form>
      </tr>
 
-<?php $sr++;}?>
+<?php $sr++;?>
+
+}
 
 
 <?php
@@ -71,8 +73,6 @@ while($row = mysqli_fetch_array($result))
      }
 
      mysqli_close($conn);
-
-
 }
 
 else
