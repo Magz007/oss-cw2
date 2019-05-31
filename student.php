@@ -57,7 +57,7 @@ while($row = mysqli_fetch_array($result))
   </form>
      </tr>
 
-    }
+
 
 
 <?php
@@ -67,9 +67,10 @@ while($row = mysqli_fetch_array($result))
       $sql= ("Delete * from student where studentid = '" . $_POST['records'] ."';");
 
       mysqli_query($conn,$sql);
-      echo "</table>";
-      mysqli_close($conn);
+
      }
+     echo "</table>";
+     mysqli_close($conn);
 }
 }
 
