@@ -81,12 +81,12 @@ while($row = mysqli_fetch_array($result))
 
 }
 
-   else
-   {
-     // render the template
-     echo template("templates/default.php", $data);
-
-   }
+else
+{
+ // render the template
+echo template("templates/default.php", $data);
+}
+echo template("templates/partials/footer.php");
 
 
 
