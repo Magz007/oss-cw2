@@ -10,7 +10,7 @@ if (isset($_SESSION['id'])) {
    echo template("templates/partials/header.php");
    echo template("templates/partials/nav.php");
 
- $studentid=$_POST['studentid'];
+ $Password=$_POST['password'];
  $dob=$_POST['dob'];
  $firstname=$_POST['$firstname'];
  $lastname=$_POST['lastname'];
@@ -20,8 +20,8 @@ if (isset($_SESSION['id'])) {
  $country=$_POST['country'];
  $postcode=$_POST['postcode'];
 
-$sql= "INSERT INTO student (studentid,dob,firstname,lastname, house, town, county, country, postcode)
-Values('$studentid','$dob',' $firstname','$lastname','$house','$town','$county',' $country','$postcode')";
+$sql= "INSERT INTO student (password,dob,firstname,lastname, house, town, county, country, postcode)
+Values('$Password','$dob',' $firstname','$lastname','$house','$town','$county',' $country','$postcode')";
  //ref:https://www.w3schools.com/php/php_mysql_insert.asp
 if (mysqli_query($conn,$sql))
 {
