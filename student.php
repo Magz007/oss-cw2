@@ -68,7 +68,7 @@
     {
       $sql= ("Delete * from student where studentid =('" .  $_SESSION['id'] . "','" .   $_POST['records'] . "');");
 
-       mysqli_query($conn,$sql));
+       mysqli_query($conn,$sql);
 
     }
 
