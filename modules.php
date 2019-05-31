@@ -13,7 +13,7 @@
       echo template("templates/partials/nav.php");
 
       // Build SQL statment that selects a student's modules
-      $sql = "select * from studentmodules;";
+      $sql = "select * from studentmodules, module;";
       $result = mysqli_query($conn,$sql);
       $checkresult= mysqli_num_rows($result);
 
@@ -30,7 +30,7 @@
       while($row = mysqli_fetch_array($result))
        {
 
-         $data['content'] .= "<tr><td> $row[studentid] </td> <td> $row[name] </td>";
+         $data['content'] .= "<tr><td> $row[studentid] </td> <td> $row[modulecode] </td>";
          $data['content'] .= "<td> $row[level] </td> </tr>";
          //echo $row['studentid'] ."<br>";
       }
