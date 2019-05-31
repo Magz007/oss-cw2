@@ -20,6 +20,7 @@ if($checkresult >0 )
   {
     echo $row['studentid'] ;
   }
+}
 ?>
 
   <html>
@@ -61,9 +62,9 @@ while($row = mysqli_fetch_array($result))
   </form>
      </tr>
 }
-<?php $sr++;?>
+<?php $sr++;
 
-<?php
+
 
     /*Codes the delete button
      if (isset($_POST['submit']))
