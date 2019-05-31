@@ -15,7 +15,7 @@
       // Build SQL statment that selects a student's modules
       $sql = "select * from studentmodules, module;";
       $result = mysqli_query($conn,$sql);
-      $checkresult= mysqli_num_rows($result);
+
       // prepare page content
       $data['content'] .= "<table  border= 2px";
       $data['content'] .= "<tr><th colspan='5' align='center'>Modules</th></tr>";
@@ -24,7 +24,7 @@
       // Display the modules within the html table
       //if($checkresult >0 )
     //  {
-     while($row = mysqli_fetch_array($checkresult))
+     while($row = mysqli_fetch_array($result))
       {
 
          $data['content'] .= "<tr><td> $row[studentid] </td><td> $row[name] </td> <td> $row[modulecode] </td>";
@@ -32,7 +32,7 @@
          //echo $row['studentid'] ."<br>";
     }
     //}
-      //$data['content'] .= "</table>";
+      $data['content'] .= "</table>";
 
       // render the template
       echo template("templates/default.php", $data);
