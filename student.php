@@ -14,11 +14,6 @@ if (isset($_SESSION['id']))
       $sql= ("SELECT * from student  where studentid = '" . $_SESSION['id'] ."';");
       $result=(mysqli_query($conn,$sql));
 
-      $st=0;
-      if($result <1)
-      {
-        $st ++;
-      }
 ?>
   <html>
   <head> Student Records </head>
