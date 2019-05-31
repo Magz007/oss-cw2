@@ -16,11 +16,6 @@
       $result = mysqli_query($conn,$sql);
 
 
- while ($row = mysqli_fetch_row($result))
- {
- echo "  $row[0] $row[1] " ;
- }
-mysqli_free_result($result);
 
 ?>
       <html>
@@ -43,12 +38,12 @@ mysqli_free_result($result);
                       <th> Select Checkbox </th>
                  </tr>
 
-                 <?php
+     <?php
                  // Display a number at the beginging for the table
  $sr=1;
-
-               while($row = mysqli_fetch_array($result))
-              {?>
+               while($row = mysqli_fetch_array($result)<0)
+              {
+    ?>
     <tr>
     <form action="" method= "post" role = "form">
           <td><?php echo $sr ;?> </td>
