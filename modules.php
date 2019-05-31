@@ -22,15 +22,15 @@
       $data['content'] .= "<tr><th>Student ID</th><th>Module Code</th><th>Type</th><th>Level</th></tr>";
 
       // Display the modules within the html table
-      if($checkresult >0 )
-      {
-      while($row = mysqli_fetch_array($result))
-       {
+      //if($checkresult >0 )
+    //  {
+    //  while($row = mysqli_fetch_array($result))
+    //   {
 
          $data['content'] .= "<tr><td> $row[studentid] </td><td> $row[name] </td> <td> $row[modulecode] </td>";
          $data['content'] .= "<td> $row[level] </td> </tr>";
          //echo $row['studentid'] ."<br>";
-      }
+    //  }
     }
       $data['content'] .= "</table>";
 

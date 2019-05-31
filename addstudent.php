@@ -23,8 +23,11 @@ if (isset($_SESSION['id'])) {
 $sql= "INSERT INTO student (password,dob,firstname,lastname, house, town, county, country, postcode)
 Values('$Password','$dob',' $firstname','$lastname','$house','$town','$county',' $country','$postcode')";
  //ref:https://www.w3schools.com/php/php_mysql_insert.asp
-if (mysqli_query($conn,$sql))
+ $result= mysqli_query($conn,$sql)
+
+if ($result<0)
 {
+
     echo "New record created successfully";
 }
 
