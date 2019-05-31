@@ -81,7 +81,7 @@
 
  <?php
 
-      $data['content'] .= "</table>";
+
 
       // render the template
       echo template("templates/default.php", $data);
@@ -93,7 +93,7 @@
    }
 
    echo template("templates/partials/footer.php");
-
+  $data['content'] .= "</table>";
 ?>
 
 </table>
