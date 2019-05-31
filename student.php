@@ -14,13 +14,7 @@ if (isset($_SESSION['id']))
 $sql = "select * from student;";
 $result = mysqli_query($conn,$sql);
 $checkresult= mysqli_num_rows($result);
-if($checkresult >0 )
-{
-  while ($row =mysqli_fetch_array($result))
-  {
-    echo $row['studentid'];
-  }
-}
+
 ?>
   <html>
   <head> Student Records </head>
@@ -40,13 +34,14 @@ if($checkresult >0 )
 
                  </tr>
 <?php
-               // Display a number at the beginging for the table
-$sr=1;
+if($checkresult >0 )
+{
+  // Display a number at the beginging for the table
 while($row = mysqli_fetch_array($result))
 {?>
     <tr>
     <form action="" method= "post" role = "form">
-            <td><?php echo $row[$sr] ;?> </td>
+
             <td><?php echo $row['password'] ;?> </td>
              <td><?php echo $row['dob'] ;?> </td>
               <td><?php echo $row['firstname'] ;?> </td>
@@ -61,7 +56,7 @@ while($row = mysqli_fetch_array($result))
   </form>
      </tr>
 }
-<?php $sr++;
+}
 
 
 
