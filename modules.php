@@ -31,7 +31,7 @@
          $data['content'] .= "<td> $row[level] </td> </tr>";
          //echo $row['studentid'] ."<br>";
     //  }
-    }
+    //}
       $data['content'] .= "</table>";
 
       // render the template
