@@ -69,7 +69,7 @@ while($row = mysqli_fetch_array($result))
       mysqli_query($conn,$sql);
 
      }
-     echo "</table>";
+
      mysqli_close($conn);
 
 
