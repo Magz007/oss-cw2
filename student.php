@@ -70,7 +70,7 @@
     // Codes the delete button
     if (isset($_POST['submit']))
     {
-        $delete=$_POST['record'];
+        $delete=$_POST['records'];
 
         mysqli_query ("Delete * from student where studentid='". $delete . "';");
         //ref:https://www.w3schools.com/php/php_mysql_insert.asp
