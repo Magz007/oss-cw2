@@ -17,7 +17,7 @@
       $result = mysqli_query($conn,$sql);
       $checkresult= mysqli_num_rows($result);
       // prepare page content
-      $data['content'] .= "<table class='table' table border= "1px"";
+      $data['content'] .= "<table  border= "2px"";
       $data['content'] .= "<tr><th colspan='5' align='center'>Modules</th></tr>";
       $data['content'] .= "<tr><th>Student ID</th><th>Module Code</th><th>Type</th><th>Level</th></tr>";
 
