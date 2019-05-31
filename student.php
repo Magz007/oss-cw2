@@ -37,13 +37,13 @@ if (isset($_SESSION['id']))
 
 <?php
                  // Display a number at the beginging for the table
- $sr=1;
+
 while($row = mysqli_fetch_array($result))
   {?>
 
     <tr>
     <form action="" method= "post" role = "form">
-          <td><?php echo $sr ;?> </td>
+
             <td><?php echo $row['studentid'] ;?> </td>
              <td><?php echo $row['dob'] ;?> </td>
               <td><?php echo $row['firstname'] ;?> </td>
@@ -58,8 +58,8 @@ while($row = mysqli_fetch_array($result))
   </form>
      </tr>
 
-     <?php $sr ++ ;?>
-}
+
+    }
 
 <?php
     // Codes the delete button
@@ -71,12 +71,6 @@ while($row = mysqli_fetch_array($result))
         {
           echo "record Deleted";
         }
-        elseif  (!mysqli_query($conn,$sql))
-        {
-        echo "unable to Delete Records";
-        }
-
-
      }
 }
 
