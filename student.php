@@ -58,9 +58,7 @@ while($row = mysqli_fetch_array($result))
      </tr>
 
     }
-  <?php  echo "</table>";
 
-mysqli_close($con);?>
 
 <?php
     // Codes the delete button
@@ -72,10 +70,22 @@ mysqli_close($con);?>
         {
           echo "record Deleted";
         }
+         echo "</table>";
 
+        mysqli_close($conn);
      }
 }
 
+
+else
+{
+ // render the template
+ echo template("templates/partials/footer.php");
+ header("Location: index.php?");
+
+}
+echo template("templates/default.php", $data);
+    $data['content'] .= "</table>";
 
 ?>
 
