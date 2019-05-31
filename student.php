@@ -57,8 +57,8 @@ while($row = mysqli_fetch_array($result))
   </form>
      </tr>
 
-
-
+<?php $sr++;?>
+}
 
 <?php
     // Codes the delete button
@@ -71,8 +71,8 @@ while($row = mysqli_fetch_array($result))
      }
      echo "</table>";
      mysqli_close($conn);
-     $sr++;
-}
+
+
 }
 
 else
