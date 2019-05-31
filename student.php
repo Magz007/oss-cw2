@@ -11,7 +11,7 @@ if (isset($_SESSION['id']))
       echo template("templates/partials/header.php");
       echo template("templates/partials/nav.php");
 // Build SQL statment that selects a student's database
-$sql = "select * from student where studentid='". $_SESSION['id'] . "';";
+$sql = "select * from student" ;
 $result = mysqli_query($conn,$sql);
 $row = mysqli_fetch_array($result);
 
@@ -63,10 +63,9 @@ while($row = mysqli_fetch_array($result))
     // Codes the delete button
      if (isset($_POST['submit']))
      {
-      $sql= ("Delete * from student where studentid = '" . $_POST['records'] ."';");
+      $sql= ("Delete * from student where studentid = $_POST['records'])";
 
       mysqli_query($conn,$sql);
-
      }
 
      mysqli_close($conn);
