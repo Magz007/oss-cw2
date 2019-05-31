@@ -24,7 +24,7 @@
         <table class='table' table border= "1px">
           <tr>
             <th> </th>
-            <th> Stduent ID</th>
+            
              <th>D.O.B</th>
               <th>First Name</th>
                <th>Last Name</th>
