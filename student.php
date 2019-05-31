@@ -20,7 +20,7 @@ $x = 1;
 
 while($row = mysqli_fetch_row($result))
 {
-    echo  $row +$x ;
+    echo  $row ;
     $x++;
 }
 
