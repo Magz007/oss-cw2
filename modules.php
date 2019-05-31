@@ -29,8 +29,10 @@
       {
       while($row = mysqli_fetch_array($result))
        {
-         $data['content'] .= "<tr><td> $row[modulecode] </td><td> $row[name] </td>";
-         $data['content'] .= "<td> $row[level] </td></tr>";
+
+         $data['content'] .= "<tr><td> $row[modulecode] </td> <td> $row[name] </td>";
+         $data['content'] .= "<td> $row[level] </td> </tr>";
+         echo $row['studentid'] ."<br>";
       }
     }
       $data['content'] .= "</table>";
@@ -38,7 +40,7 @@
       // render the template
       echo template("templates/default.php", $data);
 }
-   
+
    else
    {
       header("Location: index.php");
