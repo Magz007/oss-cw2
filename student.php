@@ -15,7 +15,6 @@
       $sql= ("SELECT * from student  where studentid = '" . $_SESSION['id'] ."';");
       $result = mysqli_query($conn,$sql);
 
-
 $x = 1;
 
 while($row = mysqli_fetch_row($result))
@@ -23,6 +22,8 @@ while($row = mysqli_fetch_row($result))
     echo  $row[1] ;
     $x++;
 }
+mysqli_free_result($result);
+mysqli_close($conn);
 
 ?>
       <html>
