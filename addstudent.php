@@ -21,21 +21,21 @@ if (isset($_SESSION['id'])) {
 
 $sql= "INSERT INTO student (studentid,dob,firstname,lastname, house, town, county, country, postcode)
 Values('$studentid','$dob',' $firstname','$lastname','$house','$town','$county',' $country','$postcode')";
-
-
  //ref:https://www.w3schools.com/php/php_mysql_insert.asp
 if (mysqli_query($conn,$sql))
 {
     echo "New record created successfully";
 }
 
+header("Location: index.php?addstudent=success");
+
 }
+
 else
 {
-
  // render the template
 echo template("templates/default.php", $data);
 }
 echo template("templates/partials/footer.php");
-header("Location: index.php?addstudent=success");
+
 ?>

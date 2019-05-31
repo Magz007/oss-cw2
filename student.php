@@ -15,6 +15,13 @@
       $sql= ("SELECT * from student  where studentid = '" . $_SESSION['id'] ."';");
       $result = mysqli_query($conn,$sql);
 
+      $ar=1;
+      while( ($row = mysqli_fetch_row($result))
+      {
+        echo $row +1;
+
+      }
+     $ar++;
 ?>
       <html>
       <head> Student Records </head>
