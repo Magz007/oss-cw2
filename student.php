@@ -46,9 +46,9 @@ $sr ++;
 
      <?php
                  // Display a number at the beginging for the table
- $sr=1;
-               while($row = mysqli_fetch_array($result))
-              {
+ //$sr=1;
+               //while($row = mysqli_fetch_array($result))
+            //{
     ?>
     <tr>
     <form action="" method= "post" role = "form">
