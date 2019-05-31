@@ -13,9 +13,14 @@
       echo template("templates/partials/nav.php");
 
       // Build SQL statment that selects a student's modules
-      $sql = "select * from studentmodules sm, module m where m.modulecode = sm.modulecode and sm.studentid = '" . $_SESSION['id'] ."';";
-
+      $sql = "select * from studentmodules;";
       $result = mysqli_query($conn,$sql);
+      $checkresult= mysqli_num_rows($result);
+      if($checkresult >0 )
+      {
+        while ($row =mysqli_fetch_array($result))
+        {
+          echo $row['studentid'] ;
 
       // prepare page content
       $data['content'] .= "<table border='1'>";
