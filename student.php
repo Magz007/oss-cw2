@@ -13,6 +13,10 @@ if (isset($_SESSION['id']))
 // Build SQL statment that selects a student's database
       $sql= ("SELECT * from student  where studentid = '" . $_SESSION['id'] ."';");
       $result=(mysqli_query($conn,$sql));
+      if(  $result=(mysqli_query($conn,$sql)))
+      {
+        $sr ++;
+      }
 ?>
   <html>
   <head> Student Records </head>
@@ -77,7 +81,7 @@ while($row = mysqli_fetch_array($result))
       header("Location: index.php?");
 
      }
-}
+
 }
 else
 {
