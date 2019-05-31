@@ -11,7 +11,7 @@
 
       echo template("templates/partials/header.php");
       echo template("templates/partials/nav.php");
-
+// Build SQL statment that selects a student's database
       $sql= ("select * from student  where studentid =  '" . $_SESSION['id'] ."';");
       $result = mysqli_query($conn,$sql);
 
@@ -63,39 +63,16 @@
      $sr ++ ;
    }
 
-
-   // Build SQL statment that selects a student's database
-
-
     // Codes the delete button
     if (isset($_POST['submit']))
     {
-      
+      $sql= ("Delete * from student where studentid =('" .  $_SESSION['id'] . "','" .   $_POST['records'] . "');");
+        
+       mysqli_query($conn,$sql))
 
-        $sql= ("Delete * from student where studentid values('" .  $_SESSION['id'] . "','" .   $_POST['records'] . "');");
-        //ref:https://www.w3schools.com/php/php_mysql_insert.asp
-       if (mysqli_query($conn,$sql))
-       {
-           echo "New record created successfully";
-       }
+    }
 
-      }
-      //ref: https://www.w3schools.com/php/php_mysql_delete.asp
-      if (mysqli_query($conn,$sql))
-      {
-          echo "New record created successfully";
-      }
-    /*if(isset($_POST ['submitDeleteBtn']))
-     {
-       $key= $_POST['btndelete'];
-       $result=mysqli_query($link,"SELECT * from test where id='$key'");
-       if (mysqli_num_rows($result)>0)
-       {
-         $queryDelete=mysqli_query($link,"DELETE * from test where id = '$key'");
-       }
-     }
-*/
-  ?>
+    ?>
 
  <?php
 
