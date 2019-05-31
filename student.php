@@ -18,11 +18,10 @@ if($checkresult >0 )
 {
   while ($row =mysqli_fetch_array($result))
   {
-    echo $row['studentid'] ;
+    echo $row['studentid'];
   }
 }
 ?>
-
   <html>
   <head> Student Records </head>
   <body style="padding-top: 100px;" >
@@ -81,6 +80,7 @@ while($row = mysqli_fetch_array($result))
      mysqli_close($conn);
 }
 }*/
+}
 }
 else
 {
