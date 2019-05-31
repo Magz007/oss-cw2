@@ -18,7 +18,7 @@
 
  while ($row = mysqli_fetch_row($result))
  {
- echo ' $row[0] $row[1] <br/>' ;
+ echo  $row[0] $row[1] <br/> ;
  }
 
 ?>
