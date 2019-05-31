@@ -13,7 +13,8 @@
       echo template("templates/partials/nav.php");
 
       $sql= ("select * from student  where studentid =  '" . $_SESSION['id'] ."';");
-      mysqli_query($conn,$sql);
+      $result = mysqli_query($conn,$sql);
+
 ?>
       html>
       <head> Student Records </head>
@@ -39,7 +40,7 @@
                  // Display a number at the beginging for the table
                  $sr=1;
 
-               while($row = mysqli_fetch_array($conn,$sql))
+               while($row = mysqli_fetch_array($result))
               {?>
     <tr>
     <form action="" method= "post" role = "form">
