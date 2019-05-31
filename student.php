@@ -12,39 +12,14 @@
       echo template("templates/partials/header.php");
       echo template("templates/partials/nav.php");
 
-      // Build SQL statment that selects a student's database
-    mysqli_query ("select * from student  where studentid =  '" . $_SESSION['id'] ."';";)
-    $result = mysqli_query($conn,$sql);
-?>
-<html>
-<head> Student Records </head>
-<body style="padding-top: 100px;" >
-<div class= "container">
-
-  <table class='table' table border= "1px">
-    <tr>
-      <th> </th>
-       <th>Student ID</th>
-        <th>First Name</th>
-         <th>Last Name</th>
-          <th>D.O.B</th>
-           <th>1st Line Address</th>
-            <th>Town</th>
-             <th>County</th>
-              <th>Country</th>
-               <th>Post Code</th>
-                <th> Select Checkbox </th>
-
-     </tr>
-<?php
       // Display a number at the beginging for the table
     $sr=1;
 
-      while($row = mysqli_fetch_array($result))
+      while($row = mysqli_fetch_array($conn, $sql))
        {?>
 
     <tr>
-    <form action="" method= "post" role = "form">
+    <form action="newstudent.html" method= "post" role = "form">
           <td><?php echo $sr ;?> </td>
             <td><?php echo $row['studentid'] ;?> </td>
              <td><?php echo $row['firstname'] ;?> </td>
@@ -56,15 +31,20 @@
                    <td><?php echo $row['country'] ;?> </td>
                     <td><?php echo $row['postcode'] ;?> </td>
                      <td> <input type= "checkbox" name= "records[]" value=<?php echo $row['studentid'] ;?> required></td>
-                      <td> <input type= "submit" name="btndelete" value="DELETE" class= "btn btn-info"> </td>
+                      <td> <input type= "submit" name="btndelete" value="DELETE" > </td>
   </form>
      </tr>
 
 
-    <?php $sr ++ ;}?>
+    <?php $sr ++ ;}
 
 
-    <?php
+      // Build SQL statment that selects a student's database
+    $sql= ("SELECT * from student  where studentid =  '" . $_SESSION['id'] ."';";)
+    mysqli_query($conn,$sql);
+
+
+
     // Codes the delete button
     if (isset($_POST['btndelete']))
     {
@@ -73,20 +53,15 @@
 
     foreach ($keyToDelete as $delete)
       {
-        $sql= ("Delete * from student where studentid='". $delete . "';"; )
+        $sql= ("Delete * from student where studentid='". $keyToDelete . "';"; )
         $result = mysqli_query($conn,$sql);
 
       }
       //ref: https://www.w3schools.com/php/php_mysql_delete.asp
-      if ($result) === TRUE) {
-          echo "Record deleted successfully";
-      } else {
-          echo "Error deleting record: " . $conn->error;
+      if (mysqli_query($conn,$sql))
+      {
+          echo "New record created successfully";
       }
-
-      $conn->close();
-
-
     /*if(isset($_POST ['submitDeleteBtn']))
      {
        $key= $_POST['btndelete'];
@@ -115,7 +90,3 @@
    echo template("templates/partials/footer.php");
 
 ?>
-</table>
-</div>
-</body>
-</html>
