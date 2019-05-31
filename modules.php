@@ -19,7 +19,7 @@
       // prepare page content
       $data['content'] .= "<table border='1'>";
       $data['content'] .= "<tr><th colspan='5' align='center'>Modules</th></tr>";
-      $data['content'] .= "<tr><th>Code</th><th>Type</th><th>Level</th></tr>";
+      $data['content'] .= "<tr><th>Student ID</th><th>Module Code</th><th>Type</th><th>Level</th></tr>";
 
       // Display the modules within the html table
       if($checkresult >0 )
