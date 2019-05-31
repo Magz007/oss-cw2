@@ -13,14 +13,13 @@ if (isset($_SESSION['id']))
 // Build SQL statment that selects a student's database
       $sql= ("SELECT * from student  where studentid = '" . $_SESSION['id'] ."';");
 
-      $result=(mysqli_query($conn,$sql));
+      $result = mysqli_query($conn,$sql);
 
 ?>
   <html>
   <head> Student Records </head>
   <body style="padding-top: 100px;" >
   <div class= "container">
-
         <table class='table' table border= "1px">
           <tr>
             <th> </th>
@@ -36,7 +35,7 @@ if (isset($_SESSION['id']))
                  </tr>
 
 <?php
-                 // Display a number at the beginging for the table
+               // Display a number at the beginging for the table
 
 while($row = mysqli_fetch_array($result))
   {?>
@@ -54,10 +53,9 @@ while($row = mysqli_fetch_array($result))
                    <td><?php echo $row['country'] ;?> </td>
                     <td><?php echo $row['postcode'] ;?> </td>
                      <td> <input type= "checkbox" name= "records" value=<?php echo $row['studentid'] ;?> required></td>
-                      <td> <input type="submit" name="submit" value="DELETE">   </td>
+                      <td> <input type="submit" name="submit" value="DELETE"></td>
   </form>
      </tr>
-
 
     }
 
@@ -74,7 +72,7 @@ while($row = mysqli_fetch_array($result))
      }
 }
 
-echo template("templates/default.php", $data);
+
 
 
 else
@@ -84,6 +82,7 @@ else
  header("Location: index.php?");
 
 }
+echo template("templates/default.php", $data);
     $data['content'] .= "</table>";
 ?>
 
