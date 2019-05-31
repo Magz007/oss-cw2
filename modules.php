@@ -20,7 +20,8 @@
       {
         while ($row =mysqli_fetch_array($result))
         {
-          echo $row['studentid'] ;<br>}
+          echo $row['studentid'] . "<br>";
+        }
 
       // prepare page content
       $data['content'] .= "<table border='1'>";
