@@ -77,17 +77,6 @@ mysqli_close($con);?>
 }
 
 
-
-
-else
-{
- // render the template
- echo template("templates/partials/footer.php");
- header("Location: index.php?");
-
-}
-echo template("templates/default.php", $data);
-    $data['content'] .= "</table>";
 ?>
 
 
