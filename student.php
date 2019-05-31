@@ -6,13 +6,13 @@
 
 
    // check logged in
-   if (isset($_SESSION['id']))
-    {
-
+if (isset($_SESSION['id']))
+{
       echo template("templates/partials/header.php");
       echo template("templates/partials/nav.php");
 // Build SQL statment that selects a student's database
       $sql= ("SELECT * from student  where studentid = '" . $_SESSION['id'] ."';");
+      $result=(mysqli_query($conn,$sql));
 ?>
   <html>
   <head> Student Records </head>
@@ -57,7 +57,7 @@ while($row = mysqli_fetch_array($result))
      </tr>
 
      <?php $sr ++ ;?>
-  }
+}
 
 <?php
     // Codes the delete button
@@ -77,10 +77,8 @@ while($row = mysqli_fetch_array($result))
       header("Location: index.php?");
 
      }
-
-
 }
-
+}
 else
 {
  // render the template
