@@ -34,6 +34,13 @@
                      <th>Post Code</th>
                       <th> Select Checkbox </th>
                  </tr>
+
+                 <?php
+                 // Display a number at the beginging for the table
+                 $sr=1;
+
+               while($row = mysqli_fetch_array($conn,$sql))
+              {?>
     <tr>
     <form action="" method= "post" role = "form">
           <td><?php echo $sr ;?> </td>
@@ -50,13 +57,8 @@
                       <td> <input type="submit" name="submit" value="DELETE">   </td>
   </form>
      </tr>
+<?php
 
-     <?php
-     // Display a number at the beginging for the table
-     $sr=1;
-
-       while($row = mysqli_fetch_array($conn,$sql))
-  {
      $sr ++ ;
    }
 
