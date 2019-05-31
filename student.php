@@ -12,8 +12,15 @@ if (isset($_SESSION['id']))
       echo template("templates/partials/header.php");
       echo template("templates/partials/nav.php");
 // Build SQL statment that selects a student's database
-$sql = "select * from student" ;
+$sql = "select * from student;";
 $result = mysqli_query($conn,$sql);
+$checkresult= mysqli_num_rows($result);
+if($checkresult >0 )
+{
+  while ($row =mysqli_fetch_array($result))
+  {
+    echo $row['studentid'] ;
+}
 
 
 ?>
