@@ -11,7 +11,7 @@ if (isset($_SESSION['id'])) {
 
  $studentid=$_POST['studentid'];
  $dob=$_POST['dob'];
- $fristname=$_POST['fristname'];
+ $firstname=$_POST['$firstname'];
  $lastname=$_POST['lastname'];
  $house=$_POST['house'];
  $town=$_POST['town'];
@@ -20,7 +20,7 @@ if (isset($_SESSION['id'])) {
  $postcode=$_POST['postcode'];
 
 $sql= "INSERT INTO student (studentid,dob,firstname,lastname, house, town, county, country, postcode)
-Values('$studentid','$dob',' $fristname','$lastname','$house','$town','$county',' $country','$postcode')";
+Values('$studentid','$dob',' $firstname','$lastname','$house','$town','$county',' $country','$postcode')";
 
 
  //ref:https://www.w3schools.com/php/php_mysql_insert.asp
