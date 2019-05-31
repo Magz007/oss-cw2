@@ -21,7 +21,7 @@ if (isset($_SESSION['id'])) {
    {
 
      // Build sql statment that selects all the modules
-     $sql = "select * from module where studentid='". $_SESSION['id'] . "';";
+     $sql = "select * from module ";
       $result=(mysqli_query($conn,$sql))
 
      $data['content'] .= "<form name='frmassignmodule' action='' method='post' >";
