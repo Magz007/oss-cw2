@@ -24,9 +24,9 @@
           <tr>
             <th> </th>
              <th>Student ID</th>
+             <th>D.O.B</th>
               <th>First Name</th>
                <th>Last Name</th>
-                <th>D.O.B</th>
                  <th>1st Line Address</th>
                   <th>Town</th>
                    <th>County</th>
@@ -34,20 +34,13 @@
                      <th>Post Code</th>
                       <th> Select Checkbox </th>
                  </tr>
-    <?php
-    // Display a number at the beginging for the table
-    $sr=1;
-
-      while($row = mysqli_fetch_array($conn, $sql))
-       {?>
-
     <tr>
     <form action="" method= "post" role = "form">
           <td><?php echo $sr ;?> </td>
             <td><?php echo $row['studentid'] ;?> </td>
-             <td><?php echo $row['firstname'] ;?> </td>
-              <td><?php echo $row['lastname'] ;?> </td>
-               <td><?php echo $row['dob'] ;?> </td>
+             <td><?php echo $row['dob'] ;?> </td>
+              <td><?php echo $row['firstname'] ;?> </td>
+               <td><?php echo $row['lastname'] ;?> </td>
                 <td><?php echo $row['house'] ;?> </td>
                  <td><?php echo $row['town'] ;?> </td>
                   <td><?php echo $row['county'] ;?> </td>
@@ -58,23 +51,30 @@
   </form>
      </tr>
 
+     <?php
+     // Display a number at the beginging for the table
+     $sr=1;
 
-    <?php $sr ++ ;}
+       while($row = mysqli_fetch_array($conn,$sql))
+  {
+     $sr ++ ;
+   }
 
 
-      // Build SQL statment that selects a student's database
-
-
+   // Build SQL statment that selects a student's database
 
 
     // Codes the delete button
-    if (isset($_POST['btndelete']))
+    if (isset($_POST['submit']))
     {
-        $delete=$_POST['btndelete'];
-        $keyToDelete=$_POST['records'];
+        $delete=$_POST['record'];
 
-        $sql= ("Delete * from student where studentid='". $keyToDelete . "';");
-        $result = mysqli_query($conn,$sql);
+        mysqli_query ("Delete * from student where studentid='". $delete . "';");
+        //ref:https://www.w3schools.com/php/php_mysql_insert.asp
+       if (mysqli_query($conn,$sql))
+       {
+           echo "New record created successfully";
+       }
 
       }
       //ref: https://www.w3schools.com/php/php_mysql_delete.asp
