@@ -66,13 +66,9 @@ while($row = mysqli_fetch_array($result))
      {
       $sql= ("Delete * from student where studentid = '" . $_POST['records'] ."';");
 
-        if (mysqli_query($conn,$sql))
-        {
-          echo "record Deleted";
-        }
-         echo "</table>";
-
-        mysqli_close($conn);
+      mysqli_query($conn,$sql);
+      echo "</table>";
+      mysqli_close($conn);
      }
 }
 
