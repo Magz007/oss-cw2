@@ -43,7 +43,7 @@ while($row = mysqli_fetch_array($result))
     <tr>
     <form action="" method= "post" role = "form">
             <td><?php echo $row[$sr] ;?> </td>
-            <td><?php echo $row['studentid'] ;?> </td>
+
              <td><?php echo $row['dob'] ;?> </td>
               <td><?php echo $row['firstname'] ;?> </td>
                <td><?php echo $row['lastname'] ;?> </td>
@@ -52,7 +52,7 @@ while($row = mysqli_fetch_array($result))
                   <td><?php echo $row['county'] ;?> </td>
                    <td><?php echo $row['country'] ;?> </td>
                     <td><?php echo $row['postcode'] ;?> </td>
-                     <td> <input type= "checkbox" name= "records" value=<?php echo $row['records'] ;?> required></td>
+                     <td> <input type= "checkbox" name= "records" value=<?php echo $row['studentid'] ;?> required></td>
                       <td> <input type="submit" name="submit" value="DELETE"></td>
   </form>
      </tr>
