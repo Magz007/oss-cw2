@@ -53,7 +53,7 @@
                   <td><?php echo $row['county'] ;?> </td>
                    <td><?php echo $row['country'] ;?> </td>
                     <td><?php echo $row['postcode'] ;?> </td>
-                     <td> <input type= "checkbox" name= "records[]" value=<?php echo $row['studentid'] ;?> required></td>
+                     <td> <input type= "checkbox" name= "records" value=<?php echo $row['studentid'] ;?> required></td>
                       <td> <input type="submit" name="submit" value="DELETE">   </td>
   </form>
      </tr>
@@ -71,9 +71,9 @@
     if (isset($_POST['btndelete']))
     {
         $delete=$_POST['btndelete']
-        $keyToDelete=$_POST['records[]'];
+        $keyToDelete=$_POST['records'];
 
-        $sql= ("Delete * from student where studentid='". $keyToDelete . "';"; )
+        $sql= ("Delete * from student where studentid='". $keyToDelete . "';" );
         $result = mysqli_query($conn,$sql);
 
       }
