@@ -1,6 +1,6 @@
 
 <?php
-include("_css/index.html");
+include("css/index.html");
 
 ?>
 <div id="main-nav">
