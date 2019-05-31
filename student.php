@@ -16,6 +16,11 @@
       $result = mysqli_query($conn,$sql);
 
 
+ while ($row = mysqli_fetch_row($result))
+ {
+ echo ' $row[0] $row[1] <br/>' ;
+ }
+
 ?>
       <html>
       <head> Student Records </head>
