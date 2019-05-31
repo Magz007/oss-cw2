@@ -76,17 +76,19 @@ while($row = mysqli_fetch_array($result))
         echo "unable to Delete Records";
         }
 
-      header("Location: index.php?");
-     }
 
+     }
 }
+echo template("templates/default.php", $data);
+
+
 else
 {
  // render the template
-echo template("templates/default.php", $data);
+
 }
 echo template("templates/partials/footer.php");
-
+header("Location: index.php?");
 
 
     $data['content'] .= "</table>";
