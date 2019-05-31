@@ -27,7 +27,7 @@
       while($row = mysqli_fetch_array($result))
        {
 
-         $data['content'] .= "<tr><td> $row[studentid] </td> <td> $row[modulecode] </td>";
+         $data['content'] .= "<tr><td> $row[studentid] </td><td> $row[name] </td> <td> $row[modulecode] </td>";
          $data['content'] .= "<td> $row[level] </td> </tr>";
          //echo $row['studentid'] ."<br>";
       }
