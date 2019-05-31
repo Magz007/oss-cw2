@@ -70,10 +70,10 @@
     // Codes the delete button
     if (isset($_POST['btndelete']))
     {
-        $delete=$_POST['btndelete']
+        $delete=$_POST['btndelete'];
         $keyToDelete=$_POST['records'];
 
-        $sql= ("Delete * from student where studentid='". $keyToDelete . "';" );
+        $sql= ("Delete * from student where studentid='". $keyToDelete . "';" ;);
         $result = mysqli_query($conn,$sql);
 
       }
