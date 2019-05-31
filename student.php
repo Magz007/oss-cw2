@@ -58,6 +58,9 @@ while($row = mysqli_fetch_array($result))
      </tr>
 
     }
+  <?php  echo "</table>";
+
+mysqli_close($con);?>
 
 <?php
     // Codes the delete button
@@ -69,6 +72,7 @@ while($row = mysqli_fetch_array($result))
         {
           echo "record Deleted";
         }
+
      }
 }
 
