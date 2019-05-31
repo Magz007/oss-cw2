@@ -23,7 +23,7 @@ while($row = mysqli_fetch_row($result))
     $x++;
 }
 mysqli_free_result($result);
-mysqli_close($conn);
+
 
 ?>
       <html>
