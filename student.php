@@ -72,7 +72,7 @@
     {
         $delete=$_POST['records'];
 
-        mysqli_query ("Delete * from student where studentid='". $delete . "';");
+        mysqli_query ("Delete * from student where studentid = $delete");
         //ref:https://www.w3schools.com/php/php_mysql_insert.asp
        if (mysqli_query($conn,$sql))
        {
