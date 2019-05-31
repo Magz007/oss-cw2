@@ -36,13 +36,13 @@ $row = mysqli_fetch_array($result);
 
 <?php
                // Display a number at the beginging for the table
-
+$sr=1;
 while($row = mysqli_fetch_array($result))
   {?>
 
     <tr>
     <form action="" method= "post" role = "form">
-
+             <td><?php echo $sr ;?> </td>
             <td><?php echo $row['studentid'] ;?> </td>
              <td><?php echo $row['dob'] ;?> </td>
               <td><?php echo $row['firstname'] ;?> </td>
@@ -71,6 +71,7 @@ while($row = mysqli_fetch_array($result))
      }
      echo "</table>";
      mysqli_close($conn);
+     $sr++;
 }
 }
 
