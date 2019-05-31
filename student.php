@@ -66,7 +66,7 @@
     // Codes the delete button
     if (isset($_POST['submit']))
     {
-      $sql= ("Delete * from student where studentid = '" .  $_SESSION['id'] . "','" .   $_POST['studentid'] . "'");
+      $sql= ("Delete * from student where studentid = '" .  $_SESSION['id'] . "','" .   $_row['records'] . "'");
 
        mysqli_query($conn,$sql);
 
