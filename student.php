@@ -71,7 +71,7 @@ while($row = mysqli_fetch_array($result))
         }
         elseif  (!mysqli_query($conn,$sql))
         {
-        echo "unable to Delete Records"
+        echo "unable to Delete Records";
         }
 
       header("Location: index.php?");
