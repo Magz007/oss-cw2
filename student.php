@@ -12,14 +12,37 @@
       echo template("templates/partials/header.php");
       echo template("templates/partials/nav.php");
 
-      // Display a number at the beginging for the table
+      $sql= ("SELECT * from student  where studentid =  '" . $_SESSION['id'] ."';";)
+      mysqli_query($conn,$sql);
+?>
+      html>
+      <head> Student Records </head>
+      <body style="padding-top: 100px;" >
+      <div class= "container">
+
+        <table class='table' table border= "1px">
+          <tr>
+            <th> </th>
+             <th>Student ID</th>
+              <th>First Name</th>
+               <th>Last Name</th>
+                <th>D.O.B</th>
+                 <th>1st Line Address</th>
+                  <th>Town</th>
+                   <th>County</th>
+                    <th>Country</th>
+                     <th>Post Code</th>
+                      <th> Select Checkbox </th>
+                 </tr>
+    <?php
+    // Display a number at the beginging for the table
     $sr=1;
 
       while($row = mysqli_fetch_array($conn, $sql))
        {?>
 
     <tr>
-    <form action="newstudent.html" method= "post" role = "form">
+    <form action="" method= "post" role = "form">
           <td><?php echo $sr ;?> </td>
             <td><?php echo $row['studentid'] ;?> </td>
              <td><?php echo $row['firstname'] ;?> </td>
@@ -31,7 +54,7 @@
                    <td><?php echo $row['country'] ;?> </td>
                     <td><?php echo $row['postcode'] ;?> </td>
                      <td> <input type= "checkbox" name= "records[]" value=<?php echo $row['studentid'] ;?> required></td>
-                      <td> <input type= "submit" name="btndelete" value="DELETE" > </td>
+                      <td> <input type="submit" name="submit" value="DELETE">   </td>
   </form>
      </tr>
 
@@ -40,8 +63,7 @@
 
 
       // Build SQL statment that selects a student's database
-    $sql= ("SELECT * from student  where studentid =  '" . $_SESSION['id'] ."';";)
-    mysqli_query($conn,$sql);
+
 
 
 
@@ -51,8 +73,6 @@
         $delete=$_POST['btndelete']
         $keyToDelete=$_POST['records[]'];
 
-    foreach ($keyToDelete as $delete)
-      {
         $sql= ("Delete * from student where studentid='". $keyToDelete . "';"; )
         $result = mysqli_query($conn,$sql);
 
@@ -90,3 +110,8 @@
    echo template("templates/partials/footer.php");
 
 ?>
+
+</table>
+</div>
+</body>
+</html>
