@@ -18,7 +18,7 @@
  while ($sr<1)
  {
 
-$result = mysqli_query($conn,$sql)
+$result = mysqli_query($conn,$sql);
 
   }
 $sr ++;
