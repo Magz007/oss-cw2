@@ -13,9 +13,11 @@ if (isset($_SESSION['id']))
 // Build SQL statment that selects a student's database
       $sql= ("SELECT * from student  where studentid = '" . $_SESSION['id'] ."';");
       $result=(mysqli_query($conn,$sql));
-      if(  $result=(mysqli_query($conn,$sql)))
+
+      $st=0;
+      if($result <1)
       {
-        $sr ++;
+        $st ++;
       }
 ?>
   <html>
