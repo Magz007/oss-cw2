@@ -30,7 +30,7 @@ if($checkresult >0 )
   <div class= "container">
         <table class='table' table border= "1px">
           <tr>
-            <th> </th>
+
              <th>D.O.B</th>
               <th>First Name</th>
                <th>Last Name</th>
@@ -73,7 +73,7 @@ while($row = mysqli_fetch_array($result))
      {
       $st=$_POST['records']
 
-      $sql= ("Delete * from student where studentid =$_POST['records'];)";
+      $sql= ("Delete * from student where studentid =$_POST['studentid'];";
 
       mysqli_query($conn,$sql);
      }
