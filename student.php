@@ -16,7 +16,7 @@
       $result = mysqli_query($conn,$sql);
 
 ?>
-      html>
+      <html>
       <head> Student Records </head>
       <body style="padding-top: 100px;" >
       <div class= "container">
