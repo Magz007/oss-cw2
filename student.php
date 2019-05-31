@@ -41,7 +41,7 @@
      <?php
                  // Display a number at the beginging for the table
  $sr=1;
-               while($row = mysqli_fetch_array($result)>10)
+               while($row = mysqli_fetch_array($result)=>1)
               {
     ?>
     <tr>
