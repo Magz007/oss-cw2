@@ -16,9 +16,6 @@
       $sql = "select * from studentmodules, module;";
       $result = mysqli_query($conn,$sql);
       $checkresult= mysqli_num_rows($result);
-
-
-
       // prepare page content
       $data['content'] .= "<table border='1'>";
       $data['content'] .= "<tr><th colspan='5' align='center'>Modules</th></tr>";
