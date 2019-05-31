@@ -85,12 +85,11 @@ else
 
 }
 echo template("templates/default.php", $data);
-    $data['content'] .= "</table>";
+    $data['content'] .= 
 
 ?>
 
-
+</table>
 </div>
-
 </body>
 </html>
