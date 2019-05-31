@@ -1,7 +1,7 @@
 
 <?php
 include("css/index.html");
-
+include("js/index.html");
 ?>
 <div id="main-nav">
 
