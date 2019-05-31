@@ -12,7 +12,7 @@
       echo template("templates/partials/header.php");
       echo template("templates/partials/nav.php");
 // Build SQL statment that selects a student's database
-      $sql= ("select * from student  where studentid =  '" . $_SESSION['id'] ."';");
+      $sql= ("select * from student  where studentid = '" . $_SESSION['id'] ."';");
       $result = mysqli_query($conn,$sql);
 
 ?>
