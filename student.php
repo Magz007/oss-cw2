@@ -59,6 +59,6 @@ else
  echo template("templates/partials/footer.php");
  header("Location: index.php?");
 }
-;
+
 
 ?>
