@@ -14,9 +14,10 @@ if (isset($_SESSION['id']))
 // Build sql statment that selects all the modules
 $sql = "select * from student where studentid='". $_SESSION['id'] . "';";
 $result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_array($result);
 $rn=1;
 // Display the mstudent details
-while($row = mysqli_fetch_array($result)=<1)
+while($row = mysqli_fetch_array($result)=>1)
 {?>
     <tr>
     <form action="student.html" method= "post" role = "form">
