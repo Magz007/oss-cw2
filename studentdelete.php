@@ -37,7 +37,7 @@ $data['content'] .= "<tr>
 </tr>";
 
 $sr=1
-while($row= mysqli_fetch_array($result))
+while($row= mysqli_fetch_assoc($result))
 {  ?>
     <tr>
     <form action="" method= "post" role = "form">
@@ -55,7 +55,9 @@ while($row= mysqli_fetch_array($result))
       <td> <button type= "submit" name="submit" value="Delete" class-= "btn btn-info"> </button>  </td>
      </form>
 </tr>
-<?php $sr ++ ;}
+<?php
+ $sr ++ ;
+}
 ?>
 
 <?php
