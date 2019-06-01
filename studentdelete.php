@@ -68,7 +68,6 @@ while($row= mysqli_fetch_assoc($result))
       {
      $i=0;
 
-     $studentid=$_POST['studentid'];
      $keyToDelete=$_row['checkbox'];
       while ($i<$keyToDelete)
       {
