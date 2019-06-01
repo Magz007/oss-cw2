@@ -19,7 +19,7 @@ if($checkresult>0)
 {
   while($row= mysqli_fetch_assoc($result))
   {
-    echo $row[studentid];
+    echo $row['studentid'];
   }
 }
 
