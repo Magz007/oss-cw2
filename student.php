@@ -15,7 +15,7 @@ if (isset($_SESSION['id']))
 $sql = "select * from student where studentid='". $_SESSION['id'] . "';";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_array($result
-echo $row=['studentid'].'<br>';
+echo $_SESSION['id'].'<br>';
 
 }
 else
