@@ -19,7 +19,7 @@ if($checkresult>0)
 {
   while($row= mysqli_fetch_assoc($result))
   {?>
-
+<table table class='table' table border= "1px">
 <tr>
 <td><?php echo $row['password'];?> </td>
 <td><?php echo $row['password'] ;?> </td>
@@ -33,7 +33,7 @@ if($checkresult>0)
                    <td><?php echo $row['country'] ;?> </td>
                     <td><?php echo $row['postcode'] ;?> </td>
                   </tr>
-
+</table>
 <?php
   }
 }
