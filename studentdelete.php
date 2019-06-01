@@ -69,12 +69,7 @@ while($row= mysqli_fetch_assoc($result))
       $checkbox=$row['studentid'];
       $sql = "Delete * from student where studentid='".$checkbox . "'; ";
       $result=mysqli_query($conn,$sql);
-      $row = mysqli_fetch_array($result);
-
-      if($row = mysqli_fetch_array($result))
-      {
-        echo "Record Deleted";
-      }
+      
       }
 }
 else
