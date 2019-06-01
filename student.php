@@ -19,19 +19,8 @@ if($checkresult>0)
 {
   while($row= mysqli_fetch_assoc($result))
   {?>
-<table class='table' table border= "1px" >
-  <tr>
 
-    <th>Password</th>
-     <th>D.O.B></th>
-      <th>First Name </th>
-       <th>Last Name</th>
-         <th>1st Line Address</th>
-          <th>Town</th>
-           <th>County</th>
-            <th>Country</th>
-             <th>Post Code</th>
-
+<tr>
 <td><?php echo $row['password'];?> </td>
 <td><?php echo $row['password'] ;?> </td>
 <td><?php echo $row['dob'] ;?></td>
@@ -44,7 +33,7 @@ if($checkresult>0)
                    <td><?php echo $row['country'] ;?> </td>
                     <td><?php echo $row['postcode'] ;?> </td>
                   </tr>
-</table>
+
 <?php
   }
 }
