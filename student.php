@@ -15,7 +15,7 @@ if (isset($_SESSION['id']))
 $sql = "select * from student; ";
 $result = mysqli_query($conn, $sql);
 
-$data['content'] .= "<table  class='table' table border= "2px";
+$data['content'] .= "<table  class='table' table border= "2px">;
 $data['content'] .= "<tr>
 <th>Student ID</th>
 <th>D.O.B</th>
