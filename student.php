@@ -18,9 +18,8 @@ $result = mysqli_query($conn, $sql);
 $data['content'] .= "<table  border= 2px";
 $data['content'] .= "<tr>
 <th>Student ID</th>
-
 <th>D.O.B</th>
-<th>First Name</th
+<th>First Name</th>
 <th>Last Name</th>
 <th>1st Line Address</th>
 <th>Town</th>
@@ -34,7 +33,6 @@ while ($row= mysqli_fetch_array($result))
   $data['content'] .= "<tr>
 
   <td>$row[studentid]</td>
-
   <td>$row[dob]</td>
   <td>$row[firstname]</td>
   <td>$row[lastname]</td>
