@@ -19,19 +19,18 @@ if($checkresult>0)
 {
   while($row= mysqli_fetch_assoc($result))
   {?>
-    <table, th, td {
-      border: 1px solid black;
-    }
+    <table>
+
 <tr>
-            <td><?php echo $row['studentid'];?></td>
-             <td><?php echo $row['dob'] ;?></td>
-            <td><?php echo $row['firstname'] ;?> </td>
-               <td><?php echo $row['lastname'] ;?> </td>
-                <td><?php echo $row['house'] ;?> </td>
-                 <td><?php echo $row['town'] ;?> </td>
-                  <td><?php echo $row['county'] ;?> </td>
-                   <td><?php echo $row['country'] ;?> </td>
-                    <td><?php echo $row['postcode'] ;?> </td>
+            <td><?php echo $row['studentid'];?></td><br>
+             <td><?php echo $row['dob'] ;?></td><br>
+            <td><?php echo $row['firstname'] ;?> </td><br>
+               <td><?php echo $row['lastname'] ;?> </td><br>
+                <td><?php echo $row['house'] ;?> </td><br>
+                 <td><?php echo $row['town'] ;?> </td><br>
+                  <td><?php echo $row['county'] ;?> </td><br>
+                   <td><?php echo $row['country'] ;?> </td><br>
+                    <td><?php echo $row['postcode'] ;?> </td><br>
                   </tr>
 </table>
 <?php
