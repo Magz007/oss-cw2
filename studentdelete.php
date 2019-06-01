@@ -24,6 +24,7 @@ $result = mysqli_query($conn, $sql);
 
 ?>
 <tr>
+<th>#</th>
 <th>Student ID</th>
 <th>D.O.B</th>
 <th>First Name</th>
