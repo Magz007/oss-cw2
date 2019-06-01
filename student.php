@@ -45,9 +45,13 @@ while ($row= mysqli_fetch_array($result))
   <td>$row[country]</td>
   <td>$row[postcode]</td>
 
+
   </tr>";
 }
   $data['content'] .= "</table>";
+
+
+
 
   echo template("templates/default.php", $data);
 
