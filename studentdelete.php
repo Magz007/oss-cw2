@@ -65,14 +65,13 @@ while($row= mysqli_fetch_assoc($result))
 ?>
 <?php
     if (isset($_POST['submit']))
-      {
+      { 
         $sql = "Delete * from student where studentid='". $_SESSION['id'] . "'; ";
-        $result = mysqli_query($conn,$sql);
-        $row = mysqli_fetch_array($result);
+       mysqli_query($conn,$sql);
 
 
       }
-      
+
 }
 
 else
