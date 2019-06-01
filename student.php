@@ -36,6 +36,7 @@ $checkresult=mysqli_num_rows($result);
         </tr>
           </thead>
             <tbody>
+              <tr>
         <?php
 
     if($checkresult>1)
@@ -45,7 +46,7 @@ $checkresult=mysqli_num_rows($result);
         {?>
 
 
-    <tr>
+
       <td><?php echo $sr;?> </td>
       <td><?php echo $row['studentid'];?> </td>
        <td><?php echo $row['dob'] ;?> </td>
