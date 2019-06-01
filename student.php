@@ -21,8 +21,7 @@ if($checkresult>0)
   {?>
 <table table class='table' table border= "1px">
 <tr>
-<td><?php echo $row['password'];?> </td>
-<td><?php echo $row['password'] ;?> </td>
+<td><?php echo $row['studentid'];?> </td>
 <td><?php echo $row['dob'] ;?></td>
              <td><?php echo $row['dob'] ;?> </td>
               <td><?php echo $row['firstname'] ;?> </td>
