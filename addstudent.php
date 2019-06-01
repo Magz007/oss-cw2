@@ -10,7 +10,7 @@ include("js/index.html")
   //echo template("templates/partials/header.php");
    //echo template("templates/partials/nav.php");
 
- $Password=$_POST['password'];
+ //$Password=$_POST['password'];
  $dob=$_POST['dob'];
  $firstname=$_POST['$firstname'];
  $lastname=$_POST['lastname'];
@@ -20,8 +20,8 @@ include("js/index.html")
  $country=$_POST['country'];
  $postcode=$_POST['postcode'];
 
-$sql= "INSERT INTO student (password,dob,firstname,lastname, house, town, county, country, postcode)
-Values('$Password','$dob',' $firstname','$lastname','$house','$town','$county',' $country','$postcode')";
+$sql= "INSERT INTO student (dob,firstname,lastname, house, town, county, country, postcode)
+Values('$dob',' $firstname','$lastname','$house','$town','$county',' $country','$postcode')";
  //ref:https://www.w3schools.com/php/php_mysql_insert.asp
  $result= mysqli_query($conn,$sql)
 //}
