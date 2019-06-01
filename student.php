@@ -18,9 +18,22 @@ $checkresult=mysqli_num_rows($result);
 if($checkresult>0)
 {
   while($row= mysqli_fetch_assoc($result))
-  {
-    echo  $row ["studentid"]. $row["password"].$row["dob"].$row["firstname"].$row["lastname"].$row["house"].$row["town"].$row["county"].$row["country"].$row["postcode"]. "<br>";
+  {?>
 
+    <tr>
+           <td><?php echo $row['studentid'];?> <td>
+            <td><?php echo $row['password'] ;?> </td>
+             <td><?php echo $row['dob'] ;?> </td>
+              <td><?php echo $row['firstname'] ;?> </td>
+               <td><?php echo $row['lastname'] ;?> </td>
+                <td><?php echo $row['house'] ;?> </td>
+                 <td><?php echo $row['town'] ;?> </td>
+                  <td><?php echo $row['county'] ;?> </td>
+                   <td><?php echo $row['country'] ;?> </td>
+                    <td><?php echo $row['postcode'] ;?> </td>
+                  </tr>
+
+<?php
   }
 }
 
