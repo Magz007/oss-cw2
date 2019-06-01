@@ -5,12 +5,12 @@ include("_includes/functions.inc");
 include("css/index.html");
 include("js/index.html")
 // check logged in
-//if (isset($_SESSION['id']))
- //{
-  //echo template("templates/partials/header.php");
-   //echo template("templates/partials/nav.php");
+if (isset($_SESSION['id']))
+ {
+  echo template("templates/partials/header.php");
+  echo template("templates/partials/nav.php");
 
- //$Password=$_POST['password'];
+ $Password=$_POST['password'];
  $dob=$_POST['dob'];
  $firstname=$_POST['$firstname'];
  $lastname=$_POST['lastname'];
@@ -24,16 +24,14 @@ $sql= "INSERT INTO student (dob,firstname,lastname, house, town, county, country
 Values('$dob',' $firstname','$lastname','$house','$town','$county',' $country','$postcode')";
  //ref:https://www.w3schools.com/php/php_mysql_insert.asp
  $result= mysqli_query($conn,$sql)
-//}
+}
 
-//else
-//{
-
-
+else
+{
  // render the template
 //echo template("templates/default.php", $data);
 echo templete ("templates/student.php", $data);
-//}
+}
 echo template("templates/partials/footer.php");
 
 ?>
