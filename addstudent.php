@@ -13,7 +13,7 @@ if (isset($_SESSION['id']))
 $studentid=$_POST['studentid'];
  $Password=$_POST['password'];
  $dob=$_POST['dob'];
- $firstname=$_POST['$firstname'];
+ $firstname=$_POST['firstname'];
  $lastname=$_POST['lastname'];
  $house=$_POST['house'];
  $town=$_POST['town'];
