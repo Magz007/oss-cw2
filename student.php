@@ -52,13 +52,12 @@ while($row = mysqli_fetch_array($result))
       }
       }
 }
-}
+
 else
 {
- // render the template
- echo template("templates/partials/footer.php");
- header("Location: index.php?");
+  header("Location: index.php");
 }
-$keyToDelete=$_row['records[]'];
+
+echo template("templates/partials/footer.php");
 
 ?>
