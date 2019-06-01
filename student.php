@@ -19,6 +19,7 @@ $rn=1;
 // Display the mstudent details
 while($row = mysqli_fetch_array($result)<0)
 {?>
+     <form action="addstudent.html" method= "post" role = "form">
     <tr>
           <td><?php echo $row[$rn] ;?> </td>
             <td><?php echo $row['password'] ;?> </td>
