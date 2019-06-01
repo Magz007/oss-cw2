@@ -38,10 +38,10 @@ $checkresult=mysqli_num_rows($result);
 
     if($checkresult>0)
     {
-          $sr=1;
+        $sr=1;
         while($row= mysqli_fetch_assoc($result))
         {?>
-</thead>
+        </thead>
       <tbody>
     <tr>
       <td><?php echo $sr;?> </td>
@@ -65,6 +65,13 @@ $checkresult=mysqli_num_rows($result);
 <?php $sr ++  ;?>
 
 <?php
+
+}
+if(mysqli_query($conn,$sql))
+{
+  echo "new Record Created";
+}
+
 
 }
 }
