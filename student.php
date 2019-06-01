@@ -24,13 +24,13 @@ if($checkresult>0)
 <tr>
             <td><?php echo $row['studentid'];?></td>
              <td><?php echo $row['dob'] ;?></td>
-            <td><?php echo $row['firstname'];?> </td><br>
-               <td><?php echo $row['lastname'] ;?> </td><br>
-                <td><?php echo $row['house'] ;?> </td><br>
-                 <td><?php echo $row['town'] ;?> </td><br>
-                  <td><?php echo $row['county'] ;?> </td><br>
-                   <td><?php echo $row['country'] ;?> </td><br>
-                    <td><?php echo $row['postcode'] ;?> </td><br>
+            <td><?php echo $row['firstname'];?> </td>
+               <td><?php echo $row['lastname'] ;?> </td>
+                <td><?php echo $row['house'] ;?> </td>
+                 <td><?php echo $row['town'] ;?> </td>
+                  <td><?php echo $row['county'] ;?> </td>
+                   <td><?php echo $row['country'] ;?> </td>
+                    <td><?php echo $row['postcode'] ;?> </td>
                   </tr>
 </table>
 <?php
