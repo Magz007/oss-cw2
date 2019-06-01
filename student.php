@@ -12,11 +12,11 @@ if (isset($_SESSION['id']))
       echo template("templates/partials/nav.php");
 // Build SQL statment that selects a student's database
 // Build sql statment that selects all the modules
-$sql = "select * from student";
+$sql = "select * from student where studentid='". $_SESSION['id'] . "';";
 $result = mysqli_query($conn, $sql);
 $rn=1;
 // Display the mstudent details
-while($row = mysqli_fetch_array($result)<0)
+while($row = mysqli_fetch_array($result)=<1)
 {?>
     <tr>
     <form action="student.html" method= "post" role = "form">
@@ -34,27 +34,23 @@ while($row = mysqli_fetch_array($result)<0)
                       <td> <input type="submit" name="submit" value="DELETE"></td>
   </form>
      </tr>
-
-
-}
-
-<?php> $rn ++;
+<?php $rn ++;
 
     if (isset($_POST['submit']))
       {
      $i=0;
-     $keyToDelete=$_row['records[]'];
-      while ($i<$keyToDelete)
-      {
-        $sql = "Delete * from student where studentid='". $_SESSION['id'] . "';";
-        $result = mysqli_query($conn,$sql);
-        $row = mysqli_fetch_array($result);
+     $keyToDelete=$_row['studentid[]'];
+          while ($i<$keyToDelete)
+          {
+         $sql = "Delete * from student where studentid='". $_SESSION['id'] . "';";
+         $result = mysqli_query($conn,$sql);
+         $row = mysqli_fetch_array($result);
 
-        $i++;
-      }
+         $i++;
+          }
       }
 }
-
+}
 else
 {
   header("Location: index.php");
