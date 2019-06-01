@@ -19,12 +19,13 @@ if($checkresult>0)
 {
   while($row= mysqli_fetch_assoc($result))
   {?>
+    <div class= "container">
     <table class='table' table border= "1px" >
 
 <tr>
-            <td><?php echo $row['studentid'];?></td>
-             <td><?php echo $row['dob'] ;?></td>
-            <td><?php echo $row['firstname'];?> </td>
+            <td><?php echo $row['studentid'];?> </td>
+             <td><?php echo $row['dob'] ;?> </td>
+             <td><?php echo $row['firstname'];?> </td>
                <td><?php echo $row['lastname'] ;?> </td>
                 <td><?php echo $row['house'] ;?> </td>
                  <td><?php echo $row['town'] ;?> </td>
@@ -33,6 +34,8 @@ if($checkresult>0)
                     <td><?php echo $row['postcode'] ;?> </td>
                   </tr>
 </table>
+</div>
+
 <?php
   }
 }
