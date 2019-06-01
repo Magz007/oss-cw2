@@ -63,12 +63,11 @@ while($row= mysqli_fetch_assoc($result))
  $data['content'] .= "</table>";
 }
 ?>
-
 <?php
     if (isset($_POST['submit']))
       {
      $i=0;
-     $keyToDelete=$_row['studentid'];
+     $keyToDelete=$_row['checkbox'];
       while ($i<$keyToDelete)
       {
         $sql = "Delete * from student where studentid=$keyToDelete;";
@@ -78,9 +77,6 @@ while($row= mysqli_fetch_assoc($result))
         $i++;
       }
       }
-
-
-
 }
 
 else
