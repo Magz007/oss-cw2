@@ -57,7 +57,7 @@ if($checkresult<0)
     </tr>
 }
   <?php $sr ++  ;?>
-
+</tbody>
 }
 
 <?php
@@ -69,6 +69,7 @@ if(mysqli_query($conn,$sql))
 
 
 }
+}
 else
 {
   header("Location: index.php");
@@ -77,6 +78,6 @@ else
 echo template("templates/partials/footer.php");
 
 ?>
-</tbody>
+
 </table>
 </div>
