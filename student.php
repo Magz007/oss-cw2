@@ -11,36 +11,16 @@ if (isset($_SESSION['id']))
       echo template("templates/partials/header.php");
       echo template("templates/partials/nav.php");
 // Build SQL statment that selects a student's database
-$sql = "select * from student;";
-$result = mysqli_query($conn,$sql);
-$checkresult= mysqli_num_rows($result);
+// Build sql statment that selects all the modules
+$sql = "select * from student";
+$result = mysqli_query($conn, $sql);
+$data['content'] .= "<form name='frmassignmodule' action='' method='post' >";
 
-?>
-  <html>
-  <head> Student Records </head>
-  <body style="padding-top: 100px;" >
-  <div class= "container">
-        <table class='table' table border= "1px">
-          <tr>
-            <th>Password</th>
-             <th>D.O.B</th>
-              <th>First Name</th>
-               <th>Last Name</th>
-                 <th>1st Line Address</th>
-                  <th>Town</th>
-                   <th>County</th>
-                    <th>Country</th>
-                     <th>Post Code</th>
-
-                 </tr>
-<?php
-if($checkresult >0 )
-{
-  // Display a number at the beginging for the table
+// Display the mstudent details
 while($row = mysqli_fetch_array($result))
 {?>
     <tr>
-    <form action="" method= "post" role = "form">
+    <form action="student.html" method= "post" role = "form">
 
             <td><?php echo $row['password'] ;?> </td>
              <td><?php echo $row['dob'] ;?> </td>
@@ -51,30 +31,25 @@ while($row = mysqli_fetch_array($result))
                   <td><?php echo $row['county'] ;?> </td>
                    <td><?php echo $row['country'] ;?> </td>
                     <td><?php echo $row['postcode'] ;?> </td>
-                     <td> <input type= "checkbox" name= "records" value=<?php echo $row['studentid'] ;?> required></td>
+                     <td> <input type= "checkbox" name= "records[]" value=<?php echo $row['studentid'] ;?> required></td>
                       <td> <input type="submit" name="submit" value="DELETE"></td>
   </form>
      </tr>
+<?php>
 }
-}
+if (isset($_POST['submit']))
+{
+$i=0;
+      while ($i<$Key)
+      {
+        $keyToDelete=$_SESSION['records[]'][$i];
+        $sql = "Delete * from student where studentid='". $_SESSION['id'] . "';";
+        $result = mysqli_query($conn,$sql);
+        $row = mysqli_fetch_array($result);
 
-}
+        $i++;
+      }
 
-  //Codes the delete button
-     if (isset($_POST['submit']))
-     {
-       while($st )
-
-         $st=$_POST['records']
-
-      $sql= ("Delete * from student where studentid =$_POST['studentid'];";
-
-      mysqli_query($conn,$sql);
-     }
-
-     mysqli_close($conn);
-}
-}
 }
 }
 else
@@ -88,8 +63,3 @@ echo template("templates/default.php", $data);
     $data['content'] .=
 
 ?>
-
-</table>
-</div>
-</body>
-</html>

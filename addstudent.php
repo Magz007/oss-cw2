@@ -5,8 +5,8 @@ include("_includes/functions.inc");
 include("css/index.html");
 include("js/index.html")
 // check logged in
-if (isset($_SESSION['id'])) {
-
+if (isset($_SESSION['id']))
+ {
    echo template("templates/partials/header.php");
    echo template("templates/partials/nav.php");
 
@@ -24,19 +24,12 @@ $sql= "INSERT INTO student (password,dob,firstname,lastname, house, town, county
 Values('$Password','$dob',' $firstname','$lastname','$house','$town','$county',' $country','$postcode')";
  //ref:https://www.w3schools.com/php/php_mysql_insert.asp
  $result= mysqli_query($conn,$sql)
-
-if ($result<0)
-{
-
-    echo "New record created successfully";
-}
-
-header("Location: index.php?addstudent=success");
-
 }
 
 else
 {
+
+
  // render the template
 //echo template("templates/default.php", $data);
 echo templete ("templates/student.php", $data);
