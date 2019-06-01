@@ -44,7 +44,7 @@ if (isset($_POST['submit']))
 $keyToDelete=$_row['records[]'];
       while ($i<$keyToDelete)
       {
-          $sql = "Delete * from student where studentid='". $_SESSION['id'] . "';";
+        $sql = "Delete * from student where studentid='". $_SESSION['id'] . "';";
         $result = mysqli_query($conn,$sql);
         $row = mysqli_fetch_array($result);
 
@@ -59,6 +59,6 @@ else
  echo template("templates/partials/footer.php");
  header("Location: index.php?");
 }
-echo template("templates/default.php", $data);
+;
 
 ?>

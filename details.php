@@ -66,7 +66,9 @@ EOD;
    // render the template
    echo template("templates/default.php", $data);
 
-} else {
+}
+ else
+ {
    header("Location: index.php");
 }
 
