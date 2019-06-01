@@ -12,6 +12,8 @@ if (isset($_SESSION['id']))
       echo template("templates/partials/nav.php");
 // Build SQL statment that selects a student's database
 // Build sql statment that selects all the modules
+
+
 $sql = "select * from student; ";
 $result = mysqli_query($conn, $sql);
 
@@ -26,6 +28,7 @@ $data['content'] .= "<tr>
 <th>County</th>
 <th>Counrty</th>
 <th>Post Code</th>
+<th>Check</th>
 </tr>";
 
 while ($row= mysqli_fetch_array($result))
@@ -41,6 +44,9 @@ while ($row= mysqli_fetch_array($result))
   <td>$row[county]</td>
   <td>$row[country]</td>
   <td>$row[postcode]</td>
+  <td>$row[]</td>
+  <td> <input type="checkbox" name="checkbox" value=$row['studentid'] </td>
+  
 
   </tr>";
 }
