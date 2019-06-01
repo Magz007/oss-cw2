@@ -14,67 +14,39 @@ if (isset($_SESSION['id']))
 // Build sql statment that selects all the modules
 $sql = "select * from student; ";
 $result = mysqli_query($conn, $sql);
-$checkresult= mysqli_num_rows($result);
 
-  ?>
+$data['content'] .= "<table  border= 2px";
+$data['content'] .= "<tr>
+<th>Student ID</th>
+<th>Password</th>
+<th>D.O.B</th>
+<th>First Name</th
+<th>Last Name</th>>
+<th>1st Line Address</th>
+<th>Town</th>
+<th>County</th>
+<th>Counrty</th>
+<th>Post Code</th>
+</tr>";
 
-    <div class= "container">
-      <table class="table table-bordered">
-        <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Student Number</th>
-          <th scope="col">D.O.B</th>
-          <th scope="col">Fisrt Name</th>
-          <th scope="col">Last Name</th>
-          <th scope="col">1st Line Address</th>
-          <th scope="col">Town</th>
-          <th scope="col">County</th>
-          <th scope="col">Country</th>
-          <th scope="col">PostCode</th>
+while ($row= mysqli_fetch_array($result)){
+  $data['content'] .= "<tr>
 
-        </tr>
-          </thead>
-            <tbody>
-              <tr>
-        <?php
+  <td>$row[studentid]</td>
+  <td>$row[password]</td>
+  <td>$row[dob]</td>
+  <td>$row[firstname]</td>
+  <td>$row[lastname]</td>
+  <td>$row[house]</td>
+  <td>$row[town]</td>
+  <td>$row[county]</td>
+  <td>$row[counrty]</td>
+  <td>$row[postcode]</td>
 
-if($checkresult<0)
-{
-            $sr=1;
-    while($row= mysqli_fetch_assoc($result))
-        {?>
-      <td><?php echo $sr;?> </td>
-      <td><?php echo $row['studentid'];?> </td>
-       <td><?php echo $row['dob'] ;?> </td>
-        <td><?php echo $row['firstname'];?> </td>
-         <td><?php echo $row['lastname'] ;?> </td>
-          <td><?php echo $row['house'] ;?> </td>
-           <td><?php echo $row['town'] ;?> </td>
-            <td><?php echo $row['county'] ;?> </td>
-             <td><?php echo $row['country'] ;?> </td>
-              <td><?php echo $row['postcode'] ;?> </td>
-    </tr>
+  </tr>";
 }
-  <?php $sr ++  ;?>
-</tbody>
-</table>
-</div>
-}
+  $data['content'] .= "</table>";
 
-<?php
-if(mysqli_query($conn,$sql))
-{
-  echo "new Record Created";
-}
-
-}
-}
-else
-{
-  header("Location: index.php");
-}
-
-echo template("templates/partials/footer.php");
+echo template("templates/default.php",$data);
 
 ?>
