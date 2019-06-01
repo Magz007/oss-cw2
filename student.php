@@ -44,7 +44,7 @@ while ($row= mysqli_fetch_array($result))
   <td>$row[county]</td>
   <td>$row[country]</td>
   <td>$row[postcode]</td>
-  <td> <input type= "checkbox" name= "btndelete" value= $row['ID']> required></td>
+  <td> <input type='checkbox' name="checkbox" value= $row['ID']> required></td>
 
 
   </tr>";
