@@ -27,6 +27,7 @@ Values('$studentid','$Password','$dob',' $firstname','$lastname','$house','$town
  $result= mysqli_query($conn,$sql)
 
 }
+}
 else
 {
  // render the template
