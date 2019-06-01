@@ -40,6 +40,7 @@ $checkresult=mysqli_num_rows($result);
 </thead>
       <tbody>
     <tr>
+        <td><?php echo $row[$sr];?> </td>
       <td><?php echo $row['studentid'];?> </td>
        <td><?php echo $row['dob'] ;?> </td>
        <td><?php echo $row['firstname'];?> </td>
@@ -56,9 +57,10 @@ $checkresult=mysqli_num_rows($result);
 
 </table>
 </div>
-}
-<?php
 
+<?php
+}
+$sr ++;
 
 
 }
