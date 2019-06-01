@@ -44,7 +44,7 @@ while ($row= mysqli_fetch_array($result))
   <td>$row[county]</td>
   <td>$row[country]</td>
   <td>$row[postcode]</td>
-  <td><input type="checkbox" name="name1" />&nbsp;</td>
+  <td><input type="checkbox" name="name1" ;</td>
 
 
   </tr>";
