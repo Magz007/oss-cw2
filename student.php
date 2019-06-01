@@ -22,7 +22,7 @@ if($checkresult>0)
     echo  $row['studentid']. "<br>";
       echo  $row['password']. "<br>";
         echo  $row['dob']. "<br>"
-          echo  $row['fristname']. "<br>";
+          echo  $row['firstname']. "<br>";
             echo  $row['$lastname']. "<br>";
               echo  $row['$house']. "<br>";
                 echo  $row['county']. "<br>";
