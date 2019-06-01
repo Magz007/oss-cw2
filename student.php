@@ -60,6 +60,6 @@ else
 
 }
 echo template("templates/default.php", $data);
-    $data['content'] .=
+
 
 ?>
