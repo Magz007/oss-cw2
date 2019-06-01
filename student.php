@@ -34,6 +34,8 @@ $checkresult=mysqli_num_rows($result);
           <th scope="col">PostCode</th>
 
         </tr>
+          </thead>
+            <tbody>
         <?php
 
     if($checkresult>1)
@@ -41,8 +43,8 @@ $checkresult=mysqli_num_rows($result);
         $sr=1;
         while($row= mysqli_fetch_assoc($result))
         {?>
-        </thead>
-      <tbody>
+
+
     <tr>
       <td><?php echo $sr;?> </td>
       <td><?php echo $row['studentid'];?> </td>
