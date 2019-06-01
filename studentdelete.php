@@ -67,7 +67,7 @@ while($row= mysqli_fetch_assoc($result))
      $keyToDelete=$_row['checkbox'];
       while ($i<$keyToDelete)
       {
-        $sql = "Delete * from student where studentid='". $_SESSION['id'] . "';";
+        $sql = "Delete * from student where studentid=$keyToDelete;";
         $result = mysqli_query($conn,$sql);
         $row = mysqli_fetch_array($result);
 
