@@ -17,7 +17,7 @@ if (isset($_SESSION['id']))
 <head> Delete Record </head>
 <body style="padding-top: 100px;" >
 <div class= "container">
-
+<table class='table' table border= "5px">
   <?php
 $sql = "select * from student; ";
 $result = mysqli_query($conn, $sql);
@@ -87,3 +87,7 @@ else
 echo template("templates/partials/footer.php");
 
 ?>
+</table>
+</div>
+</body>
+</html>
