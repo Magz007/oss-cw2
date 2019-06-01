@@ -13,7 +13,7 @@
       echo template("templates/partials/nav.php");
 
       // Build SQL statment that selects a student's modules
-      $sql = "select * from studentmodules, module;";
+      $sql = "select * from studentmodules";
       $result = mysqli_query($conn,$sql);
 
       // prepare page content
