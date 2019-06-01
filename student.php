@@ -24,7 +24,7 @@ if($checkresult>0)
            <td><?php echo $row['studentid'];?> <td>
             <td><?php echo $row['password'] ;?> </td>
              <td><?php echo $row['dob'] ;?> </td>
-              <td><?php echo $row['fristname'] ;?> </td>
+              <td><?php echo $row['firstname'] ;?> </td>
                <td><?php echo $row['lastname'] ;?> </td>
                 <td><?php echo $row['house'] ;?> </td>
                  <td><?php echo $row['town'] ;?> </td>
