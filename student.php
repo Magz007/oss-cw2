@@ -14,7 +14,7 @@ if (isset($_SESSION['id']))
 // Build sql statment that selects all the modules
 $sql = "select * from student";
 $result = mysqli_query($conn, $sql);
-$data['content'] .= "<form name='frmassignmodule' action='' method='post' >";
+
 
 // Display the mstudent details
 while($row = mysqli_fetch_array($result))
