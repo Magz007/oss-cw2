@@ -36,7 +36,7 @@ $checkresult=mysqli_num_rows($result);
         </tr>
         <?php
         $sr=1;
-        while($row= mysqli_fetch_assoc($result)>0)
+        while($row= mysqli_fetch_assoc($result))
         {?>
 </thead>
       <tbody>
