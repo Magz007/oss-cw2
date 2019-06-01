@@ -24,7 +24,11 @@ $studentid=$_POST['studentid'];
 $sql= "INSERT INTO student (studentid,password,dob,firstname,lastname, house, town, county, country, postcode)
 Values('$studentid','$Password','$dob',' $firstname','$lastname','$house','$town','$county',' $country','$postcode');";
  //ref:https://www.w3schools.com/php/php_mysql_insert.asp
- mysqli_query($conn,$sql)
+
+ if(mysqli_query($conn,$sql))
+ {
+   echo "new Record Created";
+ }
 
 
 }
@@ -36,5 +40,6 @@ echo templete ("templates/student.php", $data);
 }
 echo template("templates/partials/footer.php");
 header("Location: index.php");
+header('Location: index.php?addstudent=success');
 
 ?>
