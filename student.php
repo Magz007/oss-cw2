@@ -36,7 +36,7 @@ $checkresult=mysqli_num_rows($result);
         </tr>
         <?php
 
-    if($checkresult>0)
+    if($checkresult>1)
     {
         $sr=1;
         while($row= mysqli_fetch_assoc($result))
@@ -61,8 +61,9 @@ $checkresult=mysqli_num_rows($result);
 
 </table>
 </div>
-}
 <?php $sr ++  ;?>
+}
+
 
 <?php
 
