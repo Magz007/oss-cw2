@@ -14,8 +14,8 @@ if (isset($_SESSION['id']))
 // Build sql statment that selects all the modules
 $sql = "select * from student where studentid='". $_SESSION['id'] . "';";
 $result = mysqli_query($conn, $sql);
-$row = mysqli_fetch_array($result)
-echo $row['studentid'].'<br>';
+//$row = mysqli_fetch_array($result)
+echo $result;
 
 }
 else
