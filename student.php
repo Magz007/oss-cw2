@@ -14,7 +14,7 @@ if (isset($_SESSION['id']))
 // Build sql statment that selects all the modules
 $sql = "select * from student; ";
 $result = mysqli_query($conn, $sql);
-$checkresult=mysqli_num_rows($result);
+$checkresult= mysqli_num_rows($result);
 
   ?>
 
@@ -39,14 +39,15 @@ $checkresult=mysqli_num_rows($result);
               <tr>
         <?php
 
-
+if($checkresult<0)
+{
             $sr=1;
-        while($row= mysqli_fetch_assoc($result))
+    while($row= mysqli_fetch_assoc($result))
         {?>
       <td><?php echo $sr;?> </td>
       <td><?php echo $row['studentid'];?> </td>
        <td><?php echo $row['dob'] ;?> </td>
-       <td><?php echo $row['firstname'];?> </td>
+        <td><?php echo $row['firstname'];?> </td>
          <td><?php echo $row['lastname'] ;?> </td>
           <td><?php echo $row['house'] ;?> </td>
            <td><?php echo $row['town'] ;?> </td>
@@ -54,19 +55,13 @@ $checkresult=mysqli_num_rows($result);
              <td><?php echo $row['country'] ;?> </td>
               <td><?php echo $row['postcode'] ;?> </td>
     </tr>
+
+  <?php $sr ++  ;?>
   </tbody>
-
-
-
-</table>
-</div>
-<?php $sr ++  ;?>
+}
 }
 
-
 <?php
-
-
 if(mysqli_query($conn,$sql))
 {
   echo "new Record Created";
@@ -83,3 +78,5 @@ else
 echo template("templates/partials/footer.php");
 
 ?>
+</table>
+</div>
