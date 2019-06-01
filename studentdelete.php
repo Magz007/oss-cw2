@@ -58,6 +58,7 @@ while($row= mysqli_fetch_assoc($result))
 </tr>
 <?php
  $sr ++ ;
+ $data['content'] .= "</table>";
 }
 ?>
 
