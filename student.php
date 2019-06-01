@@ -18,6 +18,7 @@ $checkresult=mysqli_num_rows($result);
 
   while($row= mysqli_fetch_assoc($result))
   {?>
+
     <div class= "container">
       <table class="table table-bordered">
         <thead>
@@ -33,7 +34,7 @@ $checkresult=mysqli_num_rows($result);
           <th scope="col">PostCode</th>
 
         </tr>
-      </thead>
+
       <tbody>
     <tr>
       <td><?php echo $row['studentid'];?> </td>
@@ -48,7 +49,7 @@ $checkresult=mysqli_num_rows($result);
     </tr>
   </tbody>
 
-
+  </thead>
 
 </table>
 </div>
