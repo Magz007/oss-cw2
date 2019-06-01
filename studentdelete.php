@@ -22,8 +22,8 @@ if (isset($_SESSION['id']))
 $sql = "select * from student; ";
 $result = mysqli_query($conn, $sql);
 
-$data['content'] .= "<table  class='table' table border= '2px'>";
-$data['content'] .= "<tr>
+?>
+<tr>
 <th>Student ID</th>
 <th>D.O.B</th>
 <th>First Name</th>
@@ -35,8 +35,8 @@ $data['content'] .= "<tr>
 <th>Post Code</th>
 <th>Check</th>
 </tr>";
-$data['content'] .= "</table>";
 
+<?php
 $sr=1;
 while($row= mysqli_fetch_assoc($result))
 {  ?>
