@@ -19,7 +19,7 @@ if($checkresult>0)
 {
   while($row= mysqli_fetch_assoc($result))
   {?>
-<table  border= 1px solid black >
+<table class='table' table border= "1px" >
     <tr>
            <td><?php echo $row['studentid'];?> <td>
             <td><?php echo $row['password'] ;?> </td>
