@@ -24,9 +24,9 @@ $studentid=$_POST['studentid'];
 $sql= "INSERT INTO student (studentid,password,dob,firstname,lastname, house, town, county, country, postcode)
 Values('$studentid','$Password','$dob',' $firstname','$lastname','$house','$town','$county',' $country','$postcode');";
  //ref:https://www.w3schools.com/php/php_mysql_insert.asp
- $result= mysqli_query($conn,$sql)
+ mysqli_query($conn,$sql)
 
-}
+
 }
 else
 {
