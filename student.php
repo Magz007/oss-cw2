@@ -20,7 +20,7 @@ if($checkresult>0)
   while($row= mysqli_fetch_assoc($result))
   {?>
     <div class= "container">
-    <table class='table' table border= "3px" >
+    <table  table border= "3px" >
 
 <tr>
   <br>
