@@ -35,31 +35,30 @@ while($row = mysqli_fetch_array($result))
                       <td> <input type="submit" name="submit" value="DELETE"></td>
   </form>
      </tr>
+
 <?php>
 }
 if (isset($_POST['submit']))
 {
-$i=0;
-      while ($i<$Key)
+  $i=0;
+$keyToDelete=$_row['records[]'];
+      while ($i<$keyToDelete)
       {
-        $keyToDelete=$_SESSION['records[]'][$i];
-        $sql = "Delete * from student where studentid='". $_SESSION['id'] . "';";
+          $sql = "Delete * from student where studentid='". $_SESSION['id'] . "';";
         $result = mysqli_query($conn,$sql);
         $row = mysqli_fetch_array($result);
 
         $i++;
       }
+}
+}
 
-}
-}
 else
 {
  // render the template
  echo template("templates/partials/footer.php");
  header("Location: index.php?");
-
 }
 echo template("templates/default.php", $data);
-
 
 ?>
