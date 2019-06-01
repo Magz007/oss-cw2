@@ -53,11 +53,11 @@ while($row = mysqli_fetch_array($result))
       }
 }
 
-/*else
+else
 {
   header("Location: index.php");
 }
 
-echo template("templates/partials/footer.php");*/
+echo template("templates/partials/footer.php");
 
 ?>
