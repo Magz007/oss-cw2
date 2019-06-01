@@ -33,8 +33,8 @@ $data['content'] .= "<tr>
 
 while ($row= mysqli_fetch_array($result))
 {
-  $data['content'] .= "<tr>
 
+  $data['content'] .= "<tr>
   <td>$row[studentid]</td>
   <td>$row[dob]</td>
   <td>$row[firstname]</td>
@@ -44,7 +44,7 @@ while ($row= mysqli_fetch_array($result))
   <td>$row[county]</td>
   <td>$row[country]</td>
   <td>$row[postcode]</td>
-  <td><input type="checkbox" name="name1" ;</td>
+  echo '<td><input type="checkbox" name="ticked[]" value="' . $row['studentid'] . '"></td>';
 
 
   </tr>";
