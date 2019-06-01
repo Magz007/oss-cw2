@@ -20,9 +20,7 @@ $rn=1;
 while($row = mysqli_fetch_array($result)<0)
 {?>
     <tr>
-    <form action="student.html" method= "post" role = "form">
-
-            <td><?php echo $row[$rn] ;?> </td>
+          <td><?php echo $row[$rn] ;?> </td>
             <td><?php echo $row['password'] ;?> </td>
              <td><?php echo $row['dob'] ;?> </td>
               <td><?php echo $row['firstname'] ;?> </td>
