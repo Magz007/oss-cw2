@@ -39,14 +39,10 @@ $checkresult=mysqli_num_rows($result);
               <tr>
         <?php
 
-    if($checkresult>1)
-    {
-        $sr=1;
+
+            $sr=1;
         while($row= mysqli_fetch_assoc($result))
         {?>
-
-
-
       <td><?php echo $sr;?> </td>
       <td><?php echo $row['studentid'];?> </td>
        <td><?php echo $row['dob'] ;?> </td>
@@ -70,7 +66,7 @@ $checkresult=mysqli_num_rows($result);
 
 <?php
 
-}
+
 if(mysqli_query($conn,$sql))
 {
   echo "new Record Created";
