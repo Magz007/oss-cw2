@@ -14,10 +14,9 @@ if (isset($_SESSION['id']))
 // Build sql statment that selects all the modules
 $sql = "select * from student";
 $result = mysqli_query($conn, $sql);
-
-
+$rn=1;
 // Display the mstudent details
-while($row = mysqli_fetch_array($result))
+while($row = mysqli_fetch_array($result)<0)
 {?>
     <tr>
     <form action="student.html" method= "post" role = "form">
@@ -36,8 +35,11 @@ while($row = mysqli_fetch_array($result))
   </form>
      </tr>
 
-<?php>
+
 }
+
+<?php> $rn ++;
+
     if (isset($_POST['submit']))
       {
      $i=0;
