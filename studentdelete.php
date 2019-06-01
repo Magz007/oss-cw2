@@ -35,6 +35,7 @@ $data['content'] .= "<tr>
 <th>Post Code</th>
 <th>Check</th>
 </tr>";
+$data['content'] .= "</table>";
 
 $sr=1;
 while($row= mysqli_fetch_assoc($result))
