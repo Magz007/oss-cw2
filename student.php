@@ -16,8 +16,7 @@ $sql = "select * from student; ";
 $result = mysqli_query($conn, $sql);
 $checkresult=mysqli_num_rows($result);
 
-  while($row= mysqli_fetch_assoc($result))
-  {?>
+  ?>
 
     <div class= "container">
       <table class="table table-bordered">
@@ -34,6 +33,9 @@ $checkresult=mysqli_num_rows($result);
           <th scope="col">PostCode</th>
 
         </tr>
+        <?php
+        while($row= mysqli_fetch_assoc($result))
+        {?>
 </thead>
       <tbody>
     <tr>
