@@ -15,8 +15,7 @@ if (isset($_SESSION['id']))
 $sql = "select * from student; ";
 $result = mysqli_query($conn, $sql);
 $checkresult=mysqli_num_rows($result);
-if($checkresult>0)
-{
+
   while($row= mysqli_fetch_assoc($result))
   {?>
     <div class= "container">
@@ -56,7 +55,7 @@ if($checkresult>0)
 
 <?php
   }
-}
+
 
 }
 else
