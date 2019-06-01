@@ -20,20 +20,37 @@ if($checkresult>0)
   while($row= mysqli_fetch_assoc($result))
   {?>
     <div class= "container">
-    <table  class= 'table' table border= "3px" >
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th scope="col">Student Number</th>
+          <th scope="col">D.O.B</th>
+          <th scope="col">Fisrt Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">1st Line Address</th>
+          <th scope="col">Town</th>
+          <th scope="col">County</th>
+          <th scope="col">Country</th>
+          <th scope="col">PostCode</th>
 
-<tr>
-  <br>
-            <td><?php echo $row['studentid'];?> </td>
-             <td><?php echo $row['dob'] ;?> </td>
-             <td><?php echo $row['firstname'];?> </td>
-               <td><?php echo $row['lastname'] ;?> </td>
-                <td><?php echo $row['house'] ;?> </td>
-                 <td><?php echo $row['town'] ;?> </td>
-                  <td><?php echo $row['county'] ;?> </td>
-                   <td><?php echo $row['country'] ;?> </td>
-                    <td><?php echo $row['postcode'] ;?> </td>
-                  </tr>
+        </tr>
+      </thead>
+      <tbody>
+    <tr>
+      <td><?php echo $row['studentid'];?> </td>
+       <td><?php echo $row['dob'] ;?> </td>
+       <td><?php echo $row['firstname'];?> </td>
+         <td><?php echo $row['lastname'] ;?> </td>
+          <td><?php echo $row['house'] ;?> </td>
+           <td><?php echo $row['town'] ;?> </td>
+            <td><?php echo $row['county'] ;?> </td>
+             <td><?php echo $row['country'] ;?> </td>
+              <td><?php echo $row['postcode'] ;?> </td>
+    </tr>
+  </tbody>
+
+
+
 </table>
 </div>
 

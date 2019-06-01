@@ -39,8 +39,7 @@ while($row = mysqli_fetch_array($result)<0)
                   <td><?php echo $row['county'] ;?> </td>
                    <td><?php echo $row['country'] ;?> </td>
                     <td><?php echo $row['postcode'] ;?> </td>
-                     <td> <input type= "checkbox" name= "records[]" value=<?php echo $row['studentid'] ;?> required></td>
-                      <td> <input type="submit" name="submit" value="DELETE"></td>
+                     $Password=$_POST['password'];
   </form>
      </tr>
 <?php $rn ++;
