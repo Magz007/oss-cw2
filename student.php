@@ -58,6 +58,8 @@ if($checkresult<0)
 }
   <?php $sr ++  ;?>
 </tbody>
+</table>
+</div>
 }
 
 <?php
@@ -65,8 +67,6 @@ if(mysqli_query($conn,$sql))
 {
   echo "new Record Created";
 }
-
-
 
 }
 }
@@ -78,6 +78,3 @@ else
 echo template("templates/partials/footer.php");
 
 ?>
-
-</table>
-</div>
