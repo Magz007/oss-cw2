@@ -20,8 +20,8 @@ if (isset($_SESSION['id']))
  $country=$_POST['country'];
  $postcode=$_POST['postcode'];
 
-$sql= "INSERT INTO student (dob,firstname,lastname, house, town, county, country, postcode)
-Values('$dob',' $firstname','$lastname','$house','$town','$county',' $country','$postcode')";
+$sql= "INSERT INTO student (password,dob,firstname,lastname, house, town, county, country, postcode)
+Values('$Password','$dob',' $firstname','$lastname','$house','$town','$county',' $country','$postcode')";
  //ref:https://www.w3schools.com/php/php_mysql_insert.asp
  $result= mysqli_query($conn,$sql)
 }
@@ -33,5 +33,6 @@ else
 echo templete ("templates/student.php", $data);
 }
 echo template("templates/partials/footer.php");
+header("Location: index.php");
 
 ?>
