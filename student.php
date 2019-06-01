@@ -44,8 +44,6 @@ while ($row= mysqli_fetch_array($result))
   <td>$row[county]</td>
   <td>$row[country]</td>
   <td>$row[postcode]</td>
-  <td><input type="checkbox" name="ticked[]" value="' . $row['studentid'] . '"></td>';
-
 
   </tr>";
 }
