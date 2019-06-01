@@ -55,7 +55,7 @@ while($row= mysqli_fetch_assoc($result))
       <td><?php echo $row['country'] ;?> </td>
       <td><?php echo $row['postcode'] ;?> </td>
       <td> <input type= "checkbox" name= "checkbox" value=<?php echo $row['studentid'] ;?> required></td>
-      <td> <button type= "submit" name="submit" value="Delete" class-= "btn btn-info"> </button>  </td>
+      <td> <input type= "submit" name="submit" value="Delete" class-= "btn btn-info">  </td>
      </form>
 </tr>
 <?php
