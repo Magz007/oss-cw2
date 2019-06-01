@@ -19,7 +19,7 @@ if($checkresult>0)
 {
   while($row= mysqli_fetch_assoc($result))
   {
-    echo  $row ["studentid"]. $row["password"]. "<br>";
+    echo  $row ["studentid"]. $row["password"].$row["dob"].$row["firstname"].$row["lastname"].$row["house"].$row["town"].$row["county"].$row["country"].$row["postcode"]. "<br>";
 
   }
 }
