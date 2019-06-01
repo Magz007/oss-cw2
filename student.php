@@ -61,9 +61,9 @@ $checkresult=mysqli_num_rows($result);
 
 </table>
 </div>
-
-<?php $sr ++  ;?>
 }
+<?php $sr ++  ;?>
+
 <?php
 
 }
