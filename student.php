@@ -14,13 +14,14 @@ if (isset($_SESSION['id']))
 // Build sql statment that selects all the modules
 $sql = "select * from student where studentid='". $_SESSION['id'] . "';";
 $result = mysqli_query($conn, $sql);
-$data['content'] .= "</form>";
+
 $rn=1;
 // Display the mstudent details
-while($row = mysqli_fetch_array($result)=>1)
+while($row = mysqli_fetch_array($result)<0)
 {?>
     <tr>
     <form action="student.html" method= "post" role = "form">
+
             <td><?php echo $row[$rn] ;?> </td>
             <td><?php echo $row['password'] ;?> </td>
              <td><?php echo $row['dob'] ;?> </td>
