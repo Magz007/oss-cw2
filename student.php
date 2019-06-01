@@ -23,6 +23,7 @@ if($checkresult>0)
     <table class='table' table border= "3px" >
 
 <tr>
+  <br>
             <td><?php echo $row['studentid'];?> </td>
              <td><?php echo $row['dob'] ;?> </td>
              <td><?php echo $row['firstname'];?> </td>
