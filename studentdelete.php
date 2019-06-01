@@ -66,7 +66,8 @@ while($row= mysqli_fetch_assoc($result))
 <?php
     if (isset($_POST['submit']))
       {
-      $sql = "Delete * from student where studentid='".$row['studentid'] . "'; ";
+      $checkbox=$row['studentid'];
+      $sql = "Delete * from student where studentid='".$checkbox . "'; ";
       $result=mysqli_query($conn,$sql);
       $row = mysqli_fetch_array($result);
 
