@@ -22,6 +22,7 @@ $checkresult=mysqli_num_rows($result);
       <table class="table table-bordered">
         <thead>
         <tr>
+          <th scope="col">#</th>
           <th scope="col">Student Number</th>
           <th scope="col">D.O.B</th>
           <th scope="col">Fisrt Name</th>
