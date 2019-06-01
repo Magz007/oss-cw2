@@ -55,10 +55,9 @@ if($checkresult<0)
              <td><?php echo $row['country'] ;?> </td>
               <td><?php echo $row['postcode'] ;?> </td>
     </tr>
-
-  <?php $sr ++  ;?>
-  </tbody>
 }
+  <?php $sr ++  ;?>
+
 }
 
 <?php
@@ -78,5 +77,6 @@ else
 echo template("templates/partials/footer.php");
 
 ?>
+</tbody>
 </table>
 </div>
