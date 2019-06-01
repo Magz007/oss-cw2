@@ -29,7 +29,8 @@ $data['content'] .= "<tr>
 <th>Post Code</th>
 </tr>";
 
-while ($row= mysqli_fetch_array($result)){
+while ($row= mysqli_fetch_array($result))
+{
   $data['content'] .= "<tr>
 
   <td>$row[studentid]</td>
@@ -47,6 +48,14 @@ while ($row= mysqli_fetch_array($result)){
 }
   $data['content'] .= "</table>";
 
-echo template("templates/default.php",$data);
+  echo template("templates/default.php", $data);
 
-?>
+ }
+ else
+ {
+  header("Location: index.php");
+ }
+
+ echo template("templates/partials/footer.php");
+
+ ?>
