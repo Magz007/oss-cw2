@@ -22,9 +22,9 @@ if($checkresult>0)
 <table class='table' table border= "1px" >
   <tr>
 
-    <th>Password<td><?php echo $row['password'];?> <td></th>
-     <th>D.O.B<td><?php echo $row['password'] ;?> </td></th>
-      <th>First Name<td><?php echo $row['dob'] ;?> </td></th>
+    <th>Password</th>
+     <th>D.O.B></th>
+      <th>First Name </th>
        <th>Last Name</th>
          <th>1st Line Address</th>
           <th>Town</th>
@@ -32,8 +32,9 @@ if($checkresult>0)
             <th>Country</th>
              <th>Post Code</th>
 
-
-
+<td><?php echo $row['password'];?> </td>
+<td><?php echo $row['password'] ;?> </td>
+<td><?php echo $row['dob'] ;?></td>
              <td><?php echo $row['dob'] ;?> </td>
               <td><?php echo $row['firstname'] ;?> </td>
                <td><?php echo $row['lastname'] ;?> </td>
