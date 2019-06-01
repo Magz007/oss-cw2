@@ -35,7 +35,8 @@ $result = mysqli_query($conn, $sql);
 <th>Counrty</th>
 <th>Post Code</th>
 <th>Check</th>
-</tr>";
+<th>Submit </th>
+</tr>
 
 <?php
 $sr=1;
