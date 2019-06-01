@@ -36,7 +36,7 @@ $data['content'] .= "<tr>
 <th>Check</th>
 </tr>";
 
-$sr=1
+$sr=1;
 while($row= mysqli_fetch_assoc($result))
 {  ?>
     <tr>
