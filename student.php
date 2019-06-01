@@ -41,7 +41,7 @@ while ($row= mysqli_fetch_array($result))
   <td>$row[house]</td>
   <td>$row[town]</td>
   <td>$row[county]</td>
-  <td>$row[counrty]</td>
+  <td>$row[country]</td>
   <td>$row[postcode]</td>
 
   </tr>";
