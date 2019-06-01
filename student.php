@@ -22,9 +22,9 @@ if($checkresult>0)
     <table class='table' table border= "1px" >
 
 <tr>
-            <td><?php echo $row['studentid'];?></td><br>
-             <td><?php echo $row['dob'] ;?></td><br>
-            <td><?php echo $row['firstname'] ;?> </td><br>
+            <td><?php echo $row['studentid'];?></td>
+             <td><?php echo $row['dob'] ;?></td>
+            <td><?php echo $row['firstname'];?> </td><br>
                <td><?php echo $row['lastname'] ;?> </td><br>
                 <td><?php echo $row['house'] ;?> </td><br>
                  <td><?php echo $row['town'] ;?> </td><br>
