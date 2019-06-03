@@ -15,7 +15,10 @@ if (isset($_SESSION['id']))
 ?>
 
 <html>
-<head> Delete Record </head>
+<head>
+  <link rel="stylesheet" href="<?php echo (CSSPATH . "$cssItem"); ?>" type="text/css">
+   <h2>Delete Record</h2>
+  </head>
 <body >
 <div >
 <table class='table' table border= "1px">
