@@ -18,7 +18,7 @@ if (isset($_SESSION['id']))
 <head> Delete Record </head>
 <body >
 <div >
-<table>
+<table class='table' table border= "5px">
 
 <thread>
 
