@@ -13,15 +13,15 @@ if (isset($_SESSION['id']))
 // Build sql statment that selects all the modules
 
 
- $Password=($conn, $_POST['password']);
- $dob=($conn, $_POST['dob']);
- $firstname=($conn, $_POST['firstname']);
- $lastname= ($conn, $_POST['lastname']);
- $house=($conn,  $_POST['house']);
- $town= ($conn, $_POST['town']);
- $county=  ($conn,  $_POST['county']);
- $country=  ($conn, $_POST['country']);
- $postcode=($conn,  $_POST['postcode']);
+ $Password=( $_POST['password']);
+ $dob=( $_POST['dob']);
+ $firstname=( $_POST['firstname']);
+ $lastname= ( $_POST['lastname']);
+ $house=(  $_POST['house']);
+ $town= ( $_POST['town']);
+ $county=  ( $_POST['county']);
+ $country=  ( $_POST['country']);
+ $postcode=(  $_POST['postcode']);
 
 $sql= "INSERT INTO student (password,dob,firstname,lastname, house, town, county, country, postcode)
 Values('$Password','$dob',' $firstname','$lastname','$house','$town','$county',' $country','$postcode');";
