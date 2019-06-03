@@ -24,7 +24,7 @@ if (isset($_SESSION['id']))
 <tr>
 <th>#</th>
 <th>D.O.B</th><th>First Name</th><th>Last Name</th><th>1st Line Address</th><th>Town</th><th>County</th>
-<th>Counrty</th><th>Post Code</th>
+<th>Counrty</th><th>Post Code</th><th>Select</th>
 </tr>
 </thread>
 
