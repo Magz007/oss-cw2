@@ -15,7 +15,7 @@ if (isset($_SESSION['id']))
 <head> Existing Students Records</head>
 <body style="padding-top: 100px;" >
 <div class= "container">
-<table class='table' table border= "5px">
+<table class='table' table border= "1px">
 <?php
 $sql = "select * from student; ";
 $result = mysqli_query($conn, $sql);
