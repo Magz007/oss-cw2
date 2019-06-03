@@ -23,8 +23,8 @@ if (isset($_SESSION['id']))
 
 <tr>
 <th>#</th>
-<th>Student ID</th><th>D.O.B</th><th>First Name</th><th>Last Name</th><th>1st Line Address</th><th>Town</th><th>County</th>
-<th>Counrty</th><th>Post Code</th><th>Check</th><th>Submit </th>
+<th>D.O.B</th><th>First Name</th><th>Last Name</th><th>1st Line Address</th><th>Town</th><th>County</th>
+<th>Counrty</th><th>Post Code</th>
 </tr>
 </thread>
 
