@@ -12,15 +12,15 @@ if (isset($_SESSION['id']))
 // Build SQL statment that selects a student's database
 // Build sql statment that selects all the modules
 
- $Password=( $_POST['password']);
- $dob=( $_POST['dob']);
- $firstname=( $_POST['firstname']);
- $lastname= ( $_POST['lastname']);
- $house=(  $_POST['house']);
- $town= ( $_POST['town']);
- $county=  ( $_POST['county']);
- $country=  ( $_POST['country']);
- $postcode=(  $_POST['postcode']);
+ $Password=mysqli_real_escape_string($conn, $_POST['password']);
+ $dob=mysqli_real_escape_string($conn, $_POST['dob']);
+ $firstname=mysqli_real_escape_string($conn, $_POST['firstname']);
+ $lastname=mysqli_real_escape_string ($conn, $_POST['lastname']);
+ $house=mysqli_real_escape_string($conn,  $_POST['house']);
+ $town= mysqli_real_escape_string($conn, $_POST['town']);
+ $county=mysqli_real_escape_string  ($conn, $_POST['county']);
+ $country= mysqli_real_escape_string ($conn, $_POST['country']);
+ $postcode=mysqli_real_escape_string($conn,  $_POST['postcode']);
 
 $sql= "INSERT INTO student (password,dob,firstname,lastname, house, town, county, country, postcode)
 Values('$Password','$dob',' $firstname','$lastname','$house','$town','$county',' $country','$postcode');";
@@ -28,7 +28,7 @@ Values('$Password','$dob',' $firstname','$lastname','$house','$town','$county','
 
  if(mysqli_query($conn,$sql))
  {
-   echo "new Record Created";
+   echo "New Record Created";
  }
 
 
