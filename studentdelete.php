@@ -57,7 +57,7 @@ while($row= mysqli_fetch_assoc($result)){
 <?php
 if (isset($_POST['delete']))
 {
- $checkedcheckbox =($_POST['checkbox']);
+ $checkedcheckbox =($_POST['checkbox'][]);
  $i=0;
  while($i<$checkedcheckbox)
  {
