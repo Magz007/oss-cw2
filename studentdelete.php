@@ -63,6 +63,7 @@ if (isset($_POST['delete']))
  {
    $key=$_POST['checkbox'][$i];
    $sql= "DELETE from student  where studentid ='$key';";
+   mysqli_query($conn,$sql
    $i++;
  }
 
@@ -70,7 +71,7 @@ if (isset($_POST['delete']))
 }
 else
 {
-  header("Location: index.php");
+header("Location: index.php");
 }
 echo template("templates/partials/footer.php");
  ?>
