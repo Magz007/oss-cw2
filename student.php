@@ -3,7 +3,9 @@
 include("_includes/config.inc");
 include("_includes/dbconnect.inc");
 include("_includes/functions.inc");
-// include("css/index.html");
+include("css/index.html");
+include("js/index.html");
+
 // check logged in
 if (isset($_SESSION['id']))
 {

@@ -4,6 +4,8 @@
    include("_includes/config.inc");
    include("_includes/dbconnect.inc");
    include("_includes/functions.inc");
+   include("css/index.html");
+   include("js/index.html");
 
    // If the student has already been authenticated the $_SESSION['id'] variable
    // will been assigned their student id.

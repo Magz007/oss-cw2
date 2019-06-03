@@ -4,7 +4,7 @@
    include("_includes/dbconnect.inc");
    include("_includes/functions.inc");
    include("css/index.html");
-
+   include("js/index.html");
    echo template("templates/partials/header.php");
 
    if (isset($_GET['return'])) {
