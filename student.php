@@ -28,7 +28,7 @@ $data['content'] .= "<tr>
 <th>County</th>
 <th>Counrty</th>
 <th>Post Code</th>
-<th>Check</th>
+
 </tr>";
 
 while ($row= mysqli_fetch_array($result))
