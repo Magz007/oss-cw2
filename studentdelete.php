@@ -16,7 +16,7 @@ if (isset($_SESSION['id']))
 
 <html>
 <head>
-  <link rel="stylesheet" href="<?php echo (CSSPATH . "$cssItem"); ?>" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
    <h2>Delete Record</h2>
   </head>
 <body >
