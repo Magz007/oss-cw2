@@ -16,10 +16,19 @@ if (isset($_SESSION['id']))
 
 <html>
 <head>
-  <link rel='stylesheet' type='text/css' href='stylesheet.css'> 
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       <script>
+           $(document).ready(function () {
+               $(window).scroll(function () {
+                   $("#rightside").fadeOut();
+               });
+
+           });
+       </script>
    <h2>Delete Record</h2>
   </head>
 <body >
+  <div    id="rightside">
 <div >
 <table class='table' table border= "1px">
 
@@ -80,5 +89,9 @@ header("Location: index.php");
 echo template("templates/partials/footer.php");
  ?>
 </div>
+
+
+           <img src="images/about/ab1.jpg" style="margin-left: 30px;">
+       </div>
 </body>
 </html>
