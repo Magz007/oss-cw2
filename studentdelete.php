@@ -42,8 +42,8 @@ while($row= mysqli_fetch_assoc($result)){
       <td><?php echo $row['town'] ;?> </td>  <td><?php echo $row['county'] ;?> </td>  <td><?php echo $row['country'] ;?> </td>
       <td><?php echo $row['postcode'] ;?> </td>
 
-      <form action="" method="post">
-      <td> <input type= "checkbox" name= "checkbox[]" value=<?php echo $row['studentid'] ;?>></td>
+  <form action="" method="post">
+  <td> <input type= "checkbox" name= "checkbox[]" value=<?php echo $row['studentid'] ;?>></td>
 
 </tr>
 <?php $sr ++ ;}?>
