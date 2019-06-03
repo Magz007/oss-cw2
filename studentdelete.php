@@ -47,6 +47,7 @@ while($row= mysqli_fetch_assoc($result)){
 
 </tr>
 <?php $sr ++ ;}?>
+</tbody>
 <div class="row">
   <div class="form-group">
     <input type="submit" name="delete"value="DELETE" class-= "btn btn-info">
@@ -75,7 +76,7 @@ header("Location: index.php");
 }
 echo template("templates/partials/footer.php");
  ?>
-</tbody>
+
 </table>
 
 
