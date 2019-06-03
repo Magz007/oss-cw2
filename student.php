@@ -13,7 +13,7 @@ if (isset($_SESSION['id']))
 // Build sql statment that selects all the modules
 ?>
 <html>
-<head> Delete Record </head>
+<head> Existing Students Records</head>
 <body style="padding-top: 100px;" >
 <div class= "container">
 <table class='table' table border= "5px">
@@ -24,7 +24,7 @@ $result = mysqli_query($conn, $sql);
 <tr>
 <th>#</th>
 <th>Student ID</th><th>D.O.B</th><th>First Name</th><th>Last Name</th><th>1st Line Address</th><th>Town</th><th>County</th>
-<th>Counrty</th><th>Post Code</th><th>Check</th><th>Submit </th>
+<th>Counrty</th><th>Post Code</th>
 </tr>
 <?php
 $sr=1;
@@ -45,7 +45,7 @@ while($row= mysqli_fetch_assoc($result))
 }
 ?>
 <?php
-    
+
 }
 else
 {
