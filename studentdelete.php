@@ -4,6 +4,7 @@ include("_includes/config.inc");
 include("_includes/dbconnect.inc");
 include("_includes/functions.inc");
 include("css/index.html");
+include("js/index.html");
 // check logged in
 if (isset($_SESSION['id']))
 {
@@ -15,9 +16,9 @@ if (isset($_SESSION['id']))
 
 <html>
 <head> Delete Record </head>
-<body style="padding-top: 100px;" >
-<div class= "container">
-<table class='table' table border= "5px">
+<body >
+<div >
+<table>
 
 <thread>
 
@@ -67,7 +68,6 @@ if (isset($_POST['delete']))
    mysqli_query($conn,$sql);
    $i++;
  }
-
 }
 }
 else
