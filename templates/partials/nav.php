@@ -1,8 +1,14 @@
 
-<?php
-include("css/index.html");
-include("js/index.html");
-?>
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+
+
+
 <div id="main-nav">
 
    <a href="modules.php">My Modules</a> |
@@ -12,5 +18,12 @@ include("js/index.html");
     <a href="addstudent.html">Add New Student</a> |
     <a href="studentdelete.php">Delete Student Record</a> |
    <a href="logout.php">Logout</a>
-
+  </head>
 </div>
+
+
+<body>
+</body>
+
+
+</html>
