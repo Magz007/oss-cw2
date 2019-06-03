@@ -16,7 +16,7 @@ if (isset($_SESSION['id']))
 
 <html>
 <head>
-  <link rel='stylesheet' type='text/css' href='stylesheet.css' />"; 
+  <link rel='stylesheet' type='text/css' href='stylesheet.css'> 
    <h2>Delete Record</h2>
   </head>
 <body >
