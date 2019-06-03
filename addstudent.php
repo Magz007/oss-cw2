@@ -11,7 +11,7 @@ if (isset($_SESSION['id']))
   echo template("templates/partials/nav.php");
 
 $studentid= mysqli_real_escape_string ($conn, $_POST['studentid'];
- $Password= mysqli_real_escape_string ($conn, $_POST['password']];
+ $Password= mysqli_real_escape_string ($conn, $_POST['password'];
  $dob=mysqli_real_escape_string ($conn, $_POST['dob'];
  $firstname= mysqli_real_escape_string ($conn, $_POST['firstname'];
  $lastname= mysqli_real_escape_string ($conn, $_POST['lastname'];
