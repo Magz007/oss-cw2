@@ -41,6 +41,6 @@ echo templete ("templates/student.php", $data);
 }
 echo template("templates/partials/footer.php");
 
-header('Location: index.php?');
+
 
 ?>
