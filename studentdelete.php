@@ -65,7 +65,7 @@ if (isset($_POST['delete']))
    $sql= "DELETE from student  where studentid ='$key';";
    $i++;
  }
-header("Location: studentdelete.php");
+header("Location:index.php");
 echo template("templates/partials/footer.php");
 }
 }
