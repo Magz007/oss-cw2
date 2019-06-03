@@ -11,15 +11,15 @@ if (isset($_SESSION['id']))
   echo template("templates/partials/nav.php");
 
 
- $Password=  ($conn, $_POST['password'];
- $dob=($conn, $_POST['dob'];
- $firstname=($conn, $_POST['firstname'];
- $lastname= ($conn, $_POST['lastname'];
- $house=($conn,  $_POST['house'];
- $town= ($conn, $_POST['town'];
- $county=  ($conn,  $_POST['county'];
- $country=  ($conn, $_POST['country'];
- $postcode=($conn,  $_POST['postcode'];
+ $Password=($conn, $_POST['password']);
+ $dob=($conn, $_POST['dob']);
+ $firstname=($conn, $_POST['firstname']);
+ $lastname= ($conn, $_POST['lastname']);
+ $house=($conn,  $_POST['house']);
+ $town= ($conn, $_POST['town']);
+ $county=  ($conn,  $_POST['county']);
+ $country=  ($conn, $_POST['country']);
+ $postcode=($conn,  $_POST['postcode']);
 
 $sql= "INSERT INTO student (password,dob,firstname,lastname, house, town, county, country, postcode)
 Values('$Password','$dob',' $firstname','$lastname','$house','$town','$county',' $country','$postcode');";
