@@ -41,7 +41,7 @@ while($row= mysqli_fetch_assoc($result)){
       <td><?php echo $row['firstname'] ;?> </td> <td><?php echo $row['lastname'] ;?> </td> <td><?php echo $row['house'] ;?> </td>
       <td><?php echo $row['town'] ;?> </td>  <td><?php echo $row['county'] ;?> </td>  <td><?php echo $row['country'] ;?> </td>
       <td><?php echo $row['postcode'] ;?> </td>
-</div>
+
   <form action="" method="post">
   <td> <input type= "checkbox" name= "checkbox[]" value=<?php echo $row['studentid'] ;?>></td>
 
@@ -80,6 +80,6 @@ echo template("templates/partials/footer.php");
 
 
 </table>
-
+</div>
 </body>
 </html>
