@@ -63,7 +63,7 @@ if (isset($_POST['delete']))
  {
    $key=$_POST['checkbox'][$i];
    $sql= "DELETE from student  where studentid ='$key';";
-   mysqli_query($conn,$sql
+   mysqli_query($conn,$sql);
    $i++;
  }
 
