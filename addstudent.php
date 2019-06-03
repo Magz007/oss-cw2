@@ -11,7 +11,10 @@ if (isset($_SESSION['id']))
    echo template("templates/partials/nav.php");
 // Build SQL statment that selects a student's database
 // Build sql statment that selects all the modules
+?>
 
+
+ <?php
  $Password=mysqli_real_escape_string($conn, $_POST['password']);
  $dob=mysqli_real_escape_string($conn, $_POST['dob']);
  $firstname=mysqli_real_escape_string($conn, $_POST['firstname']);
