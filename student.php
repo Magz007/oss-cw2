@@ -9,8 +9,7 @@ if (isset($_SESSION['id']))
 {
    echo template("templates/partials/header.php");
    echo template("templates/partials/nav.php");
-// Build SQL statment that selects a student's database
-// Build sql statment that selects all the modules
+// Build SQL statment that selects all student's database
 ?>
 <html>
 <head> Existing Students Records</head>
@@ -36,23 +35,17 @@ while($row= mysqli_fetch_assoc($result))
       <td><?php echo $row['firstname'] ;?> </td> <td><?php echo $row['lastname'] ;?> </td> <td><?php echo $row['house'] ;?> </td>
       <td><?php echo $row['town'] ;?> </td>  <td><?php echo $row['county'] ;?> </td>  <td><?php echo $row['country'] ;?> </td>
       <td><?php echo $row['postcode'] ;?> </td>
-
-
 </tr>
-<?php
- $sr ++ ;
+<?php $sr ++ ;
  $data['content'] .= "</table>";
 }
-?>
-<?php
-
+?><?php
 }
 else
 {
   header("Location: index.php");
 }
 echo template("templates/partials/footer.php");
-
 ?>
 </table>
 </div>
