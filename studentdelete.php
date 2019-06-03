@@ -36,7 +36,6 @@ $sr=1;
 while($row= mysqli_fetch_assoc($result)){
 ?>
     <tr>
-
       <td><?php echo $sr ;?> </td>    <td><?php echo $row['dob'] ;?> </td>
       <td><?php echo $row['firstname'] ;?> </td> <td><?php echo $row['lastname'] ;?> </td> <td><?php echo $row['house'] ;?> </td>
       <td><?php echo $row['town'] ;?> </td>  <td><?php echo $row['county'] ;?> </td>  <td><?php echo $row['country'] ;?> </td>
@@ -44,7 +43,6 @@ while($row= mysqli_fetch_assoc($result)){
 
   <form action="" method="post">
   <td> <input type= "checkbox" name= "checkbox[]" value=<?php echo $row['studentid'] ;?>></td>
-
 </tr>
 <?php $sr ++ ;}?>
 </tbody>
@@ -78,8 +76,6 @@ header("Location: index.php");
 }
 echo template("templates/partials/footer.php");
  ?>
-
-
 </div>
 </body>
 </html>
