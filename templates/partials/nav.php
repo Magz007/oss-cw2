@@ -1,13 +1,8 @@
 
-
-
-<!doctype html>
-<html lang="en">
-  <head>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-  <style type="text/css">
-
-
+<?php
+include("css/index.html");
+include("js/index.html");
+?>
 
 <div id="main-nav">
 
@@ -20,10 +15,3 @@
    <a href="logout.php">Logout</a>
   </head>
 </div>
-
-
-<body>
-</body>
-
-
-</html>
